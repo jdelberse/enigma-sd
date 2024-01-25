@@ -12,3 +12,7 @@
 	path = oslo-bids
 	url = ./oslo-bids
 	datalad-id = 36a3a837-3fa0-4e41-9ced-27cc4ab9b10f
+[submodule "bruxelles-bids"]
+	path = bruxelles-bids
+	url = ./bruxelles-bids
+	datalad-id = 9e697ab6-5174-44fa-bf68-1f5351c90e21
