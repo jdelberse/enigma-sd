@@ -16,3 +16,8 @@
 	path = bruxelles-bids
 	url = ./bruxelles-bids
 	datalad-id = 9e697ab6-5174-44fa-bf68-1f5351c90e21
+[submodule "juelich-petcoffee"]
+	path = juelich-petcoffee
+	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
+	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
+	datalad-url = "ria+file:/data/project/sleep_ENIGMA_deprivation/dataladstore#~PETcoffee_BIDS"
