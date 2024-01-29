@@ -21,3 +21,8 @@
 	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
 	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
 	datalad-url = "ria+file:/data/project/sleep_ENIGMA_deprivation/dataladstore#~PETcoffee_BIDS"
+[submodule "stockholm-sleepybrains"]
+	path = stockholm-sleepybrains
+	url = /data/project/sleep_ADNI_Insomnia/glymSD_pilot/sleepybrains
+	datalad-id = d7c9cd1c-89f8-11e8-ad8e-0242ac120013
+	datalad-url = /data/project/sleep_ADNI_Insomnia/glymSD_pilot/sleepybrains
