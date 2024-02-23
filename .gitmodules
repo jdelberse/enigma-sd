@@ -23,7 +23,7 @@
 	path = montreal-bids
 	url = ./montreal-bids
 	datalad-id = 0698985b-977d-4a0f-9c6c-d5521eb5bc7a
-[submodule "juelich-petcoffee-bids"]
-	path = juelich-petcoffee-bids
+[submodule "juelich-pcoff"]
+	path = juelich-pcoff
 	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
 	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
