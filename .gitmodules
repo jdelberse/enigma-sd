@@ -11,10 +11,6 @@
 	path = bruxelles-bids
 	url = ./bruxelles-bids
 	datalad-id = 9e697ab6-5174-44fa-bf68-1f5351c90e21
-[submodule "juelich-soms"]
-	path = juelich-soms
-	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/Somnosafe_BIDS
-	datalad-id = 4cc7d2a4-42f3-442c-b0a6-e3f2b66b4d77
 [submodule "stockholm-bids"]
 	path = stockholm-bids
 	url = /data/project/sleep_ADNI_Insomnia/glymSD_pilot/sleepybrains
@@ -27,3 +23,7 @@
 	path = juelich-pcoff
 	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
 	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
+[submodule "juelich-somnosafe-bids"]
+	path = juelich-somnosafe-bids
+	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/Somnosafe_BIDS
+	datalad-id = 4cc7d2a4-42f3-442c-b0a6-e3f2b66b4d77
