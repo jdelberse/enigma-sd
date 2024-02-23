@@ -19,11 +19,11 @@
 	path = montreal-bids
 	url = ./montreal-bids
 	datalad-id = 0698985b-977d-4a0f-9c6c-d5521eb5bc7a
-[submodule "juelich-pcoff"]
-	path = juelich-pcoff
-	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
-	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
 [submodule "juelich-somnosafe-bids"]
 	path = juelich-somnosafe-bids
 	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/Somnosafe_BIDS
 	datalad-id = 4cc7d2a4-42f3-442c-b0a6-e3f2b66b4d77
+[submodule "juelich-petcoffee-bids"]
+	path = juelich-petcoffee-bids
+	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
+	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
