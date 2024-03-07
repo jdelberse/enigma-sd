@@ -27,3 +27,7 @@
 	path = juelich-petcoffee-bids
 	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
 	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
+[submodule "melbourne-bids"]
+	path = melbourne-bids
+	url = ./melbourne-bids
+	datalad-id = c5dfa93d-dc99-42b2-87ff-a95be3f668db
