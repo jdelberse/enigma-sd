@@ -31,3 +31,7 @@
 	path = melbourne-bids
 	url = ./melbourne-bids
 	datalad-id = c5dfa93d-dc99-42b2-87ff-a95be3f668db
+[submodule "zurich-bids"]
+	path = zurich-bids
+	url = ./zurich-bids
+	datalad-id = cce4691f-ebf6-4ff1-b72b-b2375c34e84c
