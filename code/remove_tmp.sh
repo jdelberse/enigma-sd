@@ -1,0 +1,1 @@
+chmod -R +w ./tmp/.git/annex; rm -rf ./tmp
