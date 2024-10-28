@@ -1,0 +1,14 @@
+```{r}
+packrat::init("~/.renvs/enigma-sd")
+```
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+packages = c('dplyr','tidyverse','lme4','reshape','tidyr','broom.mixed',
+             'ggpubr','ggstatsplot','nlme','lmerTest')
+new.packages <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+require(packages)
+lapply(packages, require, character.only = TRUE)
+```
+
