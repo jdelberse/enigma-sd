@@ -1,8 +1,3 @@
-[submodule "containers"]
-	path = containers
-	url = https://datasets.datalad.org/repronim/containers/.git
-	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
-	datalad-url = ///repronim/containers
 [submodule "oslo-bids"]
 	path = oslo-bids
 	url = ./oslo-bids
