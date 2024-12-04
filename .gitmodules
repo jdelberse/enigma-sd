@@ -38,3 +38,8 @@
 	path = ntnu-bids
 	url = ./ntnu-bids
 	datalad-id = 42e9f2e8-7895-48d2-8949-2d9fcf18bfe4
+[submodule "code/containers"]
+	path = code/containers
+	url = https://datasets.datalad.org/repronim/containers/.git
+	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
+	datalad-url = ///repronim/containers
