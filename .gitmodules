@@ -43,3 +43,7 @@
 	url = https://datasets.datalad.org/repronim/containers/.git
 	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
 	datalad-url = ///repronim/containers
+[submodule "singapore-alfie-bids"]
+	path = singapore-alfie-bids
+	url = ./singapore-alfie-bids
+	datalad-id = 068b37d7-b45b-4740-89c8-9c003a60d8b3
