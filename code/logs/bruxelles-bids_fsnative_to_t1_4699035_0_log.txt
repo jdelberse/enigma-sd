@@ -1,0 +1,26 @@
+000 (4699035.000.000) 2024-12-23 11:27:46 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_2381332_4280>
+...
+001 (4699035.000.000) 2024-12-23 11:27:48 Job executing on host: <10.0.9.29:9618?addrs=10.0.9.29-9618&alias=cpu29.htc.inm7.de&noUDP&sock=startd_3048_40c1>
+...
+006 (4699035.000.000) 2024-12-23 11:27:49 Image size of job updated: 40000
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (4699035.000.000) 2024-12-23 11:27:49 Job terminated.
+	(0) Abnormal termination (signal 6)
+	(0) No core file
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 4         4 
+	   Disk (KB)            :    40000 94371840  96728948 
+	   Memory (MB)          :        0    32768     32768 
+
+	Job terminated of its own accord at 2024-12-23T10:27:49Z with signal 6.
+...

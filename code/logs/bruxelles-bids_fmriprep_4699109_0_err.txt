@@ -1,0 +1,13 @@
+2024-12-23 11:43:04,211 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2024-12-23 11:43:04,416 [ WARNING] Matplotlib created a temporary cache directory at /tmp/matplotlib-0einonrs because the default path (/home/fmriprep/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/run.py", line 40, in main
+    parse_args()
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/parser.py", line 903, in parse_args
+    validate_input_dir(
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/utils/bids.py", line 242, in validate_input_dir
+    raise RuntimeError(error_msg % ','.join(bad_labels))
+RuntimeError: Data for requested participant(s) label(s) not found. Could not find data for participant(s): 028--anat-only. Please verify the requested participant labels. This error can be caused by the input data not being accessible inside the singularity container. Please make sure all paths are mapped properly (see https://www.sylabs.io/guides/3.0/user-guide/bind_paths_and_mounts.html)
