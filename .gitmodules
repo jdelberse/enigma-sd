@@ -51,3 +51,7 @@
 	path = code/shiva
 	url = https://github.com/pboutinaud/SHIVA_PVS
 	datalad-url = https://github.com/pboutinaud/SHIVA_PVS
+[submodule "singapore-cheevul-bids"]
+	path = singapore-cheevul-bids
+	url = ./singapore-cheevul-bids
+	datalad-id = 97d87813-d62c-4fb7-bb62-9cb77785b3dc
