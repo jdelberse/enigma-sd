@@ -1,0 +1,64 @@
+2025-01-08 16:58:46,884 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-08 16:58:47,115 [ WARNING] Matplotlib created a temporary cache directory at /tmp/matplotlib-b2kpa99s because the default path (/home/fmriprep/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2025-01-08 16:58:48,205 [    INFO] Telemetry system to collect crashes and errors is enabled - thanks for your feedback!. Use option ``--notrack`` to opt out.
+2025-01-08 17:00:22,969 [    INFO] Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+(node:2625273) Warning: Closing directory handle on garbage collection
+(Use `node --trace-warnings ...` to show where the warning was created)
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+2025-01-08 17:01:13,913 [    INFO] generated new fontManager
+2025-01-08 17:01:16,901 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+2025-01-08 17:01:16,971 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2025-01-08 17:01:17,023 [IMPORTANT] Running fMRIPrep version 24.1.1
+
+         License NOTICE ##################################################
+         fMRIPrep 24.1.1
+         Copyright The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+2025-01-08 17:01:30,204 [IMPORTANT] Building fMRIPrep's workflow:
+           * BIDS dataset path: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids.
+           * Participant list: ['32', '37', '43', '52'].
+           * Run identifier: 20250108-165846_c1bf1581-86f3-4926-a074-0e8e813bb338.
+           * Output spaces: MNI152NLin2009cAsym:res-native.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sourcedata/freesurfer.
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/run.py", line 106, in main
+    retval = build_workflow(str(config_file), {})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/workflow.py", line 126, in build_workflow
+    retval['workflow'] = init_fmriprep_wf()
+                         ^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/workflows/base.py", line 94, in init_fmriprep_wf
+    single_subject_wf = init_single_subject_wf(subject_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/workflows/base.py", line 202, in init_single_subject_wf
+    subject_data = collect_data(
+                   ^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/niworkflows/utils/bids.py", line 248, in collect_data
+    queries[acq].update(entities)
+    ~~~~~~~^^^^^
+KeyError: 'T1w'

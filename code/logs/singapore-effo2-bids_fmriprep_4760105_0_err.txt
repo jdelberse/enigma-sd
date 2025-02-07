@@ -1,0 +1,637 @@
+2025-01-08 18:57:08,717 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-08 18:57:08,937 [ WARNING] Matplotlib created a temporary cache directory at /tmp/matplotlib-ezshehrj because the default path (/home/fmriprep/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2025-01-08 18:57:10,049 [    INFO] Telemetry system to collect crashes and errors is enabled - thanks for your feedback!. Use option ``--notrack`` to opt out.
+2025-01-08 18:58:44,167 [    INFO] Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+(node:150055) Warning: Closing directory handle on garbage collection
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-01-08 18:59:31,265 [ WARNING] WARNING: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+2025-01-08 18:59:31,484 [ WARNING] WARNING: sentry_sdk.configure_scope is deprecated and will be removed in the next major version. Please consult our migration guide to learn how to migrate to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x#scope-configuring
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+2025-01-08 18:59:40,765 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-08 18:59:41,090 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+2025-01-08 18:59:41,160 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2025-01-08 18:59:43,520 [IMPORTANT] Running fMRIPrep version 24.1.1
+
+         License NOTICE ##################################################
+         fMRIPrep 24.1.1
+         Copyright The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+2025-01-08 18:59:55,414 [IMPORTANT] Building fMRIPrep's workflow:
+           * BIDS dataset path: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids.
+           * Participant list: ['32', '37', '43', '52'].
+           * Run identifier: 20250108-185708_6619b333-3819-4904-8f17-4ed9914fb762.
+           * Output spaces: MNI152NLin2009cAsym:res-native.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sourcedata/freesurfer.
+2025-01-08 18:59:57,233 [    INFO] ANAT Stage 1: Adding template workflow
+2025-01-08 18:59:57,514 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 18:59:57,514 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 18:59:58,200 [    INFO] ANAT Stage 2: Preparing brain extraction workflow
+2025-01-08 18:59:58,279 [    INFO] ANAT Stage 3: Preparing segmentation workflow
+2025-01-08 18:59:58,284 [    INFO] ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+2025-01-08 18:59:58,293 [    INFO] ANAT Stage 5: Preparing surface reconstruction workflow
+2025-01-08 18:59:58,310 [    INFO] ANAT Stage 6: Preparing mask refinement workflow
+2025-01-08 18:59:58,312 [    INFO] ANAT No T2w images provided - skipping Stage 7
+2025-01-08 18:59:58,312 [    INFO] ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+2025-01-08 18:59:58,328 [    INFO] ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+2025-01-08 18:59:58,335 [    INFO] ANAT Stage 8a: Creating cortical ribbon mask
+2025-01-08 18:59:58,338 [    INFO] ANAT Stage 9: Creating fsLR registration sphere
+2025-01-08 18:59:58,341 [    INFO] ANAT Stage 10: Creating MSM-Sulc registration sphere
+2025-01-08 18:59:58,959 [    INFO] ANAT Stage 1: Adding template workflow
+2025-01-08 18:59:58,967 [    INFO] ANAT Stage 2: Preparing brain extraction workflow
+2025-01-08 18:59:59,025 [    INFO] ANAT Stage 3: Preparing segmentation workflow
+2025-01-08 18:59:59,029 [    INFO] ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+2025-01-08 18:59:59,036 [    INFO] ANAT Stage 5: Preparing surface reconstruction workflow
+2025-01-08 18:59:59,054 [    INFO] ANAT Stage 6: Preparing mask refinement workflow
+2025-01-08 18:59:59,056 [    INFO] ANAT No T2w images provided - skipping Stage 7
+2025-01-08 18:59:59,056 [    INFO] ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+2025-01-08 18:59:59,072 [    INFO] ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+2025-01-08 18:59:59,078 [    INFO] ANAT Stage 8a: Creating cortical ribbon mask
+2025-01-08 18:59:59,081 [    INFO] ANAT Stage 9: Creating fsLR registration sphere
+2025-01-08 18:59:59,084 [    INFO] ANAT Stage 10: Creating MSM-Sulc registration sphere
+2025-01-08 18:59:59,634 [    INFO] ANAT Stage 1: Adding template workflow
+2025-01-08 18:59:59,642 [    INFO] ANAT Stage 2: Preparing brain extraction workflow
+2025-01-08 18:59:59,701 [    INFO] ANAT Stage 3: Preparing segmentation workflow
+2025-01-08 18:59:59,705 [    INFO] ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+2025-01-08 18:59:59,713 [    INFO] ANAT Stage 5: Preparing surface reconstruction workflow
+2025-01-08 18:59:59,730 [    INFO] ANAT Stage 6: Preparing mask refinement workflow
+2025-01-08 18:59:59,732 [    INFO] ANAT No T2w images provided - skipping Stage 7
+2025-01-08 18:59:59,732 [    INFO] ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+2025-01-08 18:59:59,748 [    INFO] ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+2025-01-08 18:59:59,754 [    INFO] ANAT Stage 8a: Creating cortical ribbon mask
+2025-01-08 18:59:59,757 [    INFO] ANAT Stage 9: Creating fsLR registration sphere
+2025-01-08 18:59:59,761 [    INFO] ANAT Stage 10: Creating MSM-Sulc registration sphere
+2025-01-08 19:00:00,519 [    INFO] ANAT Stage 1: Adding template workflow
+2025-01-08 19:00:00,528 [    INFO] ANAT Stage 2: Preparing brain extraction workflow
+2025-01-08 19:00:00,593 [    INFO] ANAT Stage 3: Preparing segmentation workflow
+2025-01-08 19:00:00,597 [    INFO] ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+2025-01-08 19:00:00,605 [    INFO] ANAT Stage 5: Preparing surface reconstruction workflow
+2025-01-08 19:00:00,621 [    INFO] ANAT Stage 6: Preparing mask refinement workflow
+2025-01-08 19:00:00,623 [    INFO] ANAT No T2w images provided - skipping Stage 7
+2025-01-08 19:00:00,623 [    INFO] ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+2025-01-08 19:00:00,641 [    INFO] ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+2025-01-08 19:00:00,647 [    INFO] ANAT Stage 8a: Creating cortical ribbon mask
+2025-01-08 19:00:00,650 [    INFO] ANAT Stage 9: Creating fsLR registration sphere
+2025-01-08 19:00:00,653 [    INFO] ANAT Stage 10: Creating MSM-Sulc registration sphere
+2025-01-08 19:00:03,180 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-08 19:00:03,291 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+2025-01-08 19:00:03,352 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2025-01-08 19:00:03,927 [    INFO] fMRIPrep workflow graph with 989 nodes built successfully.
+2025-01-08 19:00:07,140 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+2025-01-08 19:00:07,201 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2025-01-08 19:00:15,010 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-08 19:00:15,119 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+2025-01-08 19:00:15,179 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2025-01-08 19:00:18,423 [ WARNING] WARNING: sentry_sdk.configure_scope is deprecated and will be removed in the next major version. Please consult our migration guide to learn how to migrate to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x#scope-configuring
+2025-01-08 19:00:18,787 [IMPORTANT] fMRIPrep started!
+2025-01-08 19:00:19,681 [    INFO] Workflow fmriprep_24_1_wf settings: ['check', 'execution', 'logging', 'monitoring']
+2025-01-08 19:00:20,059 [    INFO] Running in parallel.
+2025-01-08 19:00:20,076 [    INFO] [MultiProc] Running 0 tasks, and 33 jobs ready. Free memory (GB): 453.21/453.21, Free processors: 32/32.
+2025-01-08 19:00:20,298 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.fsdir_run_20250108_185708_6619b333_3819_4904_8f17_4ed9914fb762" in "/tmp/fmriprep_24_1_wf/fsdir_run_20250108_185708_6619b333_3819_4904_8f17_4ed9914fb762".
+2025-01-08 19:00:20,301 [    INFO] [Node] Executing "fsdir_run_20250108_185708_6619b333_3819_4904_8f17_4ed9914fb762" <niworkflows.interfaces.bids.BIDSFreeSurferDir>
+2025-01-08 19:00:20,307 [    INFO] [Node] Finished "fsdir_run_20250108_185708_6619b333_3819_4904_8f17_4ed9914fb762", elapsed time 0.002107s.
+2025-01-08 19:00:20,309 [    INFO] [Job 0] Completed (fmriprep_24_1_wf.fsdir_run_20250108_185708_6619b333_3819_4904_8f17_4ed9914fb762).
+2025-01-08 19:00:20,504 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.about" in "/tmp/fmriprep_24_1_wf/sub_32_wf/about".
+2025-01-08 19:00:20,507 [    INFO] [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+2025-01-08 19:00:20,507 [    INFO] [Node] Finished "about", elapsed time 0.000187s.
+2025-01-08 19:00:20,508 [    INFO] [Job 2] Completed (fmriprep_24_1_wf.sub_32_wf.about).
+2025-01-08 19:00:20,724 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.about" in "/tmp/fmriprep_24_1_wf/sub_37_wf/about".
+2025-01-08 19:00:20,725 [    INFO] [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+2025-01-08 19:00:20,726 [    INFO] [Node] Finished "about", elapsed time 0.000172s.
+2025-01-08 19:00:20,727 [    INFO] [Job 7] Completed (fmriprep_24_1_wf.sub_37_wf.about).
+2025-01-08 19:00:20,947 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.about" in "/tmp/fmriprep_24_1_wf/sub_43_wf/about".
+2025-01-08 19:00:20,948 [    INFO] [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+2025-01-08 19:00:20,948 [    INFO] [Node] Finished "about", elapsed time 0.000179s.
+2025-01-08 19:00:20,949 [    INFO] [Job 12] Completed (fmriprep_24_1_wf.sub_43_wf.about).
+2025-01-08 19:00:21,343 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.about" in "/tmp/fmriprep_24_1_wf/sub_52_wf/about".
+2025-01-08 19:00:21,344 [    INFO] [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+2025-01-08 19:00:21,345 [    INFO] [Node] Finished "about", elapsed time 0.000182s.
+2025-01-08 19:00:21,346 [    INFO] [Job 17] Completed (fmriprep_24_1_wf.sub_52_wf.about).
+2025-01-08 19:00:21,915 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+2025-01-08 19:00:21,920 [    INFO] [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+2025-01-08 19:00:21,920 [    INFO] [Node] Finished "split_desc", elapsed time 9.6e-05s.
+2025-01-08 19:00:21,921 [    INFO] [Job 21] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.split_desc).
+2025-01-08 19:00:22,827 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+2025-01-08 19:00:22,860 [    INFO] [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+2025-01-08 19:00:22,861 [    INFO] [Node] Finished "split_desc", elapsed time 9.5e-05s.
+2025-01-08 19:00:22,862 [    INFO] [Job 22] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.split_desc).
+2025-01-08 19:00:23,773 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+2025-01-08 19:00:23,775 [    INFO] [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+2025-01-08 19:00:23,791 [    INFO] [Node] Finished "split_desc", elapsed time 0.000122s.
+2025-01-08 19:00:23,792 [    INFO] [Job 23] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.split_desc).
+2025-01-08 19:00:24,755 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+2025-01-08 19:00:24,756 [    INFO] [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+2025-01-08 19:00:24,757 [    INFO] [Node] Finished "split_desc", elapsed time 9.2e-05s.
+2025-01-08 19:00:24,757 [    INFO] [Job 24] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.split_desc).
+2025-01-08 19:00:25,561 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:25,572 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:25,573 [    INFO] [Node] Finished "spacesource", elapsed time 0.000114s.
+2025-01-08 19:00:25,574 [    INFO] [Job 25] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:26,385 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:26,387 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:26,387 [    INFO] [Node] Finished "spacesource", elapsed time 0.00011s.
+2025-01-08 19:00:26,388 [    INFO] [Job 26] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:27,599 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:27,600 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:27,600 [    INFO] [Node] Finished "spacesource", elapsed time 0.000112s.
+2025-01-08 19:00:27,601 [    INFO] [Job 27] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:28,915 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:28,917 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:28,917 [    INFO] [Node] Finished "spacesource", elapsed time 0.000109s.
+2025-01-08 19:00:28,918 [    INFO] [Job 28] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:29,367 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:29,368 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:29,369 [    INFO] [Node] Finished "spacesource", elapsed time 0.000107s.
+2025-01-08 19:00:29,370 [    INFO] [Job 29] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:29,761 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:29,763 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:29,763 [    INFO] [Node] Finished "spacesource", elapsed time 0.000109s.
+2025-01-08 19:00:29,764 [    INFO] [Job 30] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:30,158 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:30,160 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:30,184 [    INFO] [Node] Finished "spacesource", elapsed time 0.000132s.
+2025-01-08 19:00:30,185 [    INFO] [Job 31] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:30,781 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+2025-01-08 19:00:30,782 [    INFO] [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+2025-01-08 19:00:30,782 [    INFO] [Node] Finished "spacesource", elapsed time 0.000114s.
+2025-01-08 19:00:30,783 [    INFO] [Job 32] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+2025-01-08 19:00:31,385 [    INFO] [MultiProc] Running 16 tasks, and 24 jobs ready. Free memory (GB): 450.01/453.21, Free processors: 16/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_52_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.bidssrc
+2025-01-08 19:00:31,975 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+2025-01-08 19:00:32,024 [    INFO] [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+2025-01-08 19:00:32,693 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+2025-01-08 19:00:32,708 [    INFO] [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:33,013 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+2025-01-08 19:00:33,015 [    INFO] [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:33,364 [    INFO] [Node] Finished "tf_select", elapsed time 0.318229s.
+2025-01-08 19:00:33,365 [    INFO] [Job 49] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.tf_select).
+2025-01-08 19:00:33,526 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+2025-01-08 19:00:33,545 [    INFO] [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+2025-01-08 19:00:34,001 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+2025-01-08 19:00:34,002 [    INFO] [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:34,054 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:34,054 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:34,203 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+2025-01-08 19:00:34,205 [    INFO] [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+2025-01-08 19:00:34,344 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+2025-01-08 19:00:34,346 [    INFO] [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+2025-01-08 19:00:34,358 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+2025-01-08 19:00:34,369 [    INFO] [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:34,370 [    INFO] [Node] Finished "fmt_cohort", elapsed time 0.000333s.
+2025-01-08 19:00:34,371 [    INFO] [Job 50] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+2025-01-08 19:00:34,418 [    INFO] [Node] Finished "full_wm", elapsed time 1.6843460000000001s.
+2025-01-08 19:00:34,453 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+2025-01-08 19:00:34,455 [    INFO] [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:34,531 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_32_wf/bidssrc".
+2025-01-08 19:00:34,541 [    INFO] [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+2025-01-08 19:00:34,557 [    INFO] No "bold" images found for sub-32
+2025-01-08 19:00:34,557 [    INFO] No "t2w" images found for sub-32
+2025-01-08 19:00:34,557 [    INFO] No "flair" images found for sub-32
+2025-01-08 19:00:34,557 [    INFO] No "fmap" images found for sub-32
+2025-01-08 19:00:34,557 [    INFO] No "sbref" images found for sub-32
+2025-01-08 19:00:34,558 [    INFO] No "roi" images found for sub-32
+2025-01-08 19:00:34,558 [    INFO] No "pet" images found for sub-32
+2025-01-08 19:00:34,558 [    INFO] No "asl" images found for sub-32
+2025-01-08 19:00:34,558 [    INFO] [Node] Finished "bidssrc", elapsed time 0.000711s.
+2025-01-08 19:00:34,561 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_52_wf/bidssrc".
+2025-01-08 19:00:34,566 [    INFO] [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+2025-01-08 19:00:34,567 [    INFO] No "bold" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "t2w" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "flair" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "fmap" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "sbref" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "roi" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "pet" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] No "asl" images found for sub-52
+2025-01-08 19:00:34,567 [    INFO] [Node] Finished "bidssrc", elapsed time 0.000495s.
+2025-01-08 19:00:34,569 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:34,569 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:34,572 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+2025-01-08 19:00:34,573 [    INFO] [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+2025-01-08 19:00:34,575 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+2025-01-08 19:00:34,576 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+2025-01-08 19:00:34,577 [    INFO] [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:34,577 [    INFO] [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+2025-01-08 19:00:34,727 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+2025-01-08 19:00:34,729 [    INFO] [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+2025-01-08 19:00:34,786 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+2025-01-08 19:00:34,788 [    INFO] [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:34,893 [    INFO] [Node] Finished "tf_select", elapsed time 0.104517s.
+2025-01-08 19:00:34,894 [    INFO] [Job 51] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.tf_select).
+2025-01-08 19:00:35,199 [    INFO] [Node] Finished "full_wm", elapsed time 1.167941s.
+2025-01-08 19:00:35,328 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+2025-01-08 19:00:35,329 [    INFO] [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+2025-01-08 19:00:35,365 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+2025-01-08 19:00:35,367 [    INFO] [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:35,368 [    INFO] [Node] Finished "fmt_cohort", elapsed time 0.000323s.
+2025-01-08 19:00:35,368 [    INFO] [Job 52] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+2025-01-08 19:00:35,461 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:35,461 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:35,652 [    INFO] [Node] Finished "full_wm", elapsed time 1.19647s.
+2025-01-08 19:00:35,822 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:35,822 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:35,928 [    INFO] [Node] Finished "res_tmpl", elapsed time 3.876557s.
+2025-01-08 19:00:35,974 [    INFO] [Node] Finished "full_wm", elapsed time 1.347403s.
+2025-01-08 19:00:36,072 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+2025-01-08 19:00:36,073 [    INFO] [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:36,280 [    INFO] [Node] Finished "tf_select", elapsed time 0.206355s.
+2025-01-08 19:00:36,281 [    INFO] [Job 53] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.tf_select).
+2025-01-08 19:00:36,834 [    INFO] [Node] Finished "res_tmpl", elapsed time 2.25975s.
+2025-01-08 19:00:36,926 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+2025-01-08 19:00:36,928 [    INFO] [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:36,928 [    INFO] [Node] Finished "fmt_cohort", elapsed time 0.000313s.
+2025-01-08 19:00:36,929 [    INFO] [Job 54] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+2025-01-08 19:00:37,351 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+2025-01-08 19:00:37,353 [    INFO] [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:37,505 [    INFO] [Node] Finished "tf_select", elapsed time 0.151414s.
+2025-01-08 19:00:37,506 [    INFO] [Job 55] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.tf_select).
+2025-01-08 19:00:37,867 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_43_wf/bidssrc".
+2025-01-08 19:00:37,893 [    INFO] [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+2025-01-08 19:00:37,917 [    INFO] No "bold" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "t2w" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "flair" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "fmap" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "sbref" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "roi" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "pet" images found for sub-43
+2025-01-08 19:00:37,917 [    INFO] No "asl" images found for sub-43
+2025-01-08 19:00:37,918 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+2025-01-08 19:00:37,918 [    INFO] [Node] Finished "bidssrc", elapsed time 0.000756s.
+2025-01-08 19:00:37,919 [    INFO] [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:37,921 [    INFO] [Node] Finished "fmt_cohort", elapsed time 0.000324s.
+2025-01-08 19:00:37,922 [    INFO] [Job 56] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+2025-01-08 19:00:38,061 [    INFO] [Node] Finished "res_tmpl", elapsed time 3.460286s.
+2025-01-08 19:00:38,091 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_37_wf/bidssrc".
+2025-01-08 19:00:38,096 [    INFO] [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+2025-01-08 19:00:38,099 [    INFO] No "bold" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "t2w" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "flair" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "fmap" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "sbref" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "roi" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "pet" images found for sub-37
+2025-01-08 19:00:38,099 [    INFO] No "asl" images found for sub-37
+2025-01-08 19:00:38,100 [    INFO] [Node] Finished "bidssrc", elapsed time 0.000611s.
+2025-01-08 19:00:38,193 [    INFO] [Node] Finished "res_tmpl", elapsed time 3.8127240000000002s.
+2025-01-08 19:00:38,285 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:38,287 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:38,288 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000265s.
+2025-01-08 19:00:38,288 [    INFO] [Job 57] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:38,482 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:38,484 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:38,590 [    INFO] [Node] Finished "select_tpl", elapsed time 0.106319s.
+2025-01-08 19:00:38,592 [    INFO] [Job 58] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:38,789 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:38,791 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:38,792 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000273s.
+2025-01-08 19:00:38,793 [    INFO] [Job 59] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:38,993 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:38,995 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:39,064 [    INFO] [Node] Finished "select_tpl", elapsed time 0.068268s.
+2025-01-08 19:00:39,065 [    INFO] [Job 60] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:39,261 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:39,262 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:39,263 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000286s.
+2025-01-08 19:00:39,264 [    INFO] [Job 61] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:39,464 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:39,466 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:39,538 [    INFO] [Node] Finished "select_tpl", elapsed time 0.07123s.
+2025-01-08 19:00:39,540 [    INFO] [Job 62] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:39,741 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:39,743 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:39,744 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000273s.
+2025-01-08 19:00:39,744 [    INFO] [Job 63] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:39,937 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:39,938 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:40,007 [    INFO] [Node] Finished "select_tpl", elapsed time 0.068332s.
+2025-01-08 19:00:40,008 [    INFO] [Job 64] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:40,204 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:40,206 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:40,206 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000265s.
+2025-01-08 19:00:40,207 [    INFO] [Job 65] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:40,401 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:40,403 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:40,474 [    INFO] [Node] Finished "select_tpl", elapsed time 0.070278s.
+2025-01-08 19:00:40,475 [    INFO] [Job 66] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:40,685 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:40,687 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:40,688 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000273s.
+2025-01-08 19:00:40,688 [    INFO] [Job 67] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:40,885 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:40,887 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:40,956 [    INFO] [Node] Finished "select_tpl", elapsed time 0.068255s.
+2025-01-08 19:00:40,957 [    INFO] [Job 68] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:41,155 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:41,157 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:41,158 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000269s.
+2025-01-08 19:00:41,158 [    INFO] [Job 69] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:41,356 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:41,358 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:41,426 [    INFO] [Node] Finished "select_tpl", elapsed time 0.068109s.
+2025-01-08 19:00:41,428 [    INFO] [Job 70] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:41,629 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+2025-01-08 19:00:41,630 [    INFO] [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:41,631 [    INFO] [Node] Finished "gen_tplid", elapsed time 0.000277s.
+2025-01-08 19:00:41,632 [    INFO] [Job 71] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+2025-01-08 19:00:41,824 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+2025-01-08 19:00:41,826 [    INFO] [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+2025-01-08 19:00:41,893 [    INFO] [Node] Finished "select_tpl", elapsed time 0.067027s.
+2025-01-08 19:00:41,894 [    INFO] [Job 72] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+2025-01-08 19:00:42,113 [    INFO] [Job 1] Completed (fmriprep_24_1_wf.sub_32_wf.bidssrc).
+2025-01-08 19:00:42,114 [    INFO] [Job 3] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+2025-01-08 19:00:42,114 [    INFO] [Job 4] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+2025-01-08 19:00:42,115 [    INFO] [Job 6] Completed (fmriprep_24_1_wf.sub_37_wf.bidssrc).
+2025-01-08 19:00:42,115 [    INFO] [Job 8] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+2025-01-08 19:00:42,116 [    INFO] [Job 9] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+2025-01-08 19:00:42,117 [    INFO] [Job 11] Completed (fmriprep_24_1_wf.sub_43_wf.bidssrc).
+2025-01-08 19:00:42,117 [    INFO] [Job 13] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+2025-01-08 19:00:42,118 [    INFO] [Job 14] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+2025-01-08 19:00:42,118 [    INFO] [Job 16] Completed (fmriprep_24_1_wf.sub_52_wf.bidssrc).
+2025-01-08 19:00:42,119 [    INFO] [Job 18] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+2025-01-08 19:00:42,120 [    INFO] [Job 19] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+2025-01-08 19:00:42,121 [    INFO] [MultiProc] Running 4 tasks, and 12 jobs ready. Free memory (GB): 452.41/453.21, Free processors: 28/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+2025-01-08 19:00:42,473 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.ds_report_about" in "/tmp/fmriprep_24_1_wf/sub_32_wf/ds_report_about".
+2025-01-08 19:00:42,489 [    INFO] [Node] Executing "ds_report_about" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:42,516 [    INFO] [Node] Finished "ds_report_about", elapsed time 0.027181s.
+2025-01-08 19:00:42,518 [    INFO] [Job 35] Completed (fmriprep_24_1_wf.sub_32_wf.ds_report_about).
+2025-01-08 19:00:42,663 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_template_wf/anat_ref_dimensions".
+2025-01-08 19:00:42,975 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_template_wf/anat_ref_dimensions".
+2025-01-08 19:00:42,999 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.ds_report_about" in "/tmp/fmriprep_24_1_wf/sub_37_wf/ds_report_about".
+2025-01-08 19:00:43,003 [    INFO] [Node] Executing "ds_report_about" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:43,040 [    INFO] [Node] Finished "ds_report_about", elapsed time 0.036468s.
+2025-01-08 19:00:43,041 [    INFO] [Job 39] Completed (fmriprep_24_1_wf.sub_37_wf.ds_report_about).
+2025-01-08 19:00:43,716 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.ds_report_about" in "/tmp/fmriprep_24_1_wf/sub_43_wf/ds_report_about".
+2025-01-08 19:00:43,733 [    INFO] [Node] Executing "ds_report_about" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:43,758 [    INFO] [Node] Finished "ds_report_about", elapsed time 0.024033s.
+2025-01-08 19:00:43,759 [    INFO] [Job 43] Completed (fmriprep_24_1_wf.sub_43_wf.ds_report_about).
+2025-01-08 19:00:43,863 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_template_wf/anat_ref_dimensions".
+2025-01-08 19:00:44,453 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.ds_report_about" in "/tmp/fmriprep_24_1_wf/sub_52_wf/ds_report_about".
+2025-01-08 19:00:44,453 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.bids_info" in "/tmp/fmriprep_24_1_wf/sub_52_wf/bids_info".
+2025-01-08 19:00:44,456 [    INFO] [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+2025-01-08 19:00:44,461 [    INFO] [Node] Finished "bids_info", elapsed time 0.004763s.
+2025-01-08 19:00:44,473 [    INFO] [Node] Executing "ds_report_about" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:44,508 [    INFO] [Node] Finished "ds_report_about", elapsed time 0.033716s.
+2025-01-08 19:00:44,509 [    INFO] [Job 47] Completed (fmriprep_24_1_wf.sub_52_wf.ds_report_about).
+2025-01-08 19:00:44,630 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_template_wf/anat_ref_dimensions".
+2025-01-08 19:00:45,372 [    INFO] [Node] Executing "anat_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+2025-01-08 19:00:45,504 [    INFO] [Job 45] Completed (fmriprep_24_1_wf.sub_52_wf.bids_info).
+2025-01-08 19:00:45,507 [    INFO] [MultiProc] Running 11 tasks, and 2 jobs ready. Free memory (GB): 451.01/453.21, Free processors: 21/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions
+                       * fmriprep_24_1_wf.sub_43_wf.bids_info
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions
+                       * fmriprep_24_1_wf.sub_37_wf.bids_info
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions
+                       * fmriprep_24_1_wf.sub_32_wf.bids_info
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+2025-01-08 19:00:45,794 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.bids_info" in "/tmp/fmriprep_24_1_wf/sub_37_wf/bids_info".
+2025-01-08 19:00:45,796 [    INFO] [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+2025-01-08 19:00:45,818 [    INFO] [Node] Finished "bids_info", elapsed time 0.021232s.
+2025-01-08 19:00:45,925 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.bids_info" in "/tmp/fmriprep_24_1_wf/sub_32_wf/bids_info".
+2025-01-08 19:00:45,927 [    INFO] [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+2025-01-08 19:00:45,937 [    INFO] [Node] Finished "anat_ref_dimensions", elapsed time 0.544077s.
+2025-01-08 19:00:45,964 [    INFO] [Node] Finished "bids_info", elapsed time 0.037002s.
+2025-01-08 19:00:46,257 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:46,257 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:46,312 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.summary" in "/tmp/fmriprep_24_1_wf/sub_52_wf/summary".
+2025-01-08 19:00:46,325 [    INFO] [Node] Executing "summary" <fmriprep.interfaces.reports.SubjectSummary>
+2025-01-08 19:00:46,336 [    INFO] [Node] Finished "summary", elapsed time 0.010511s.
+2025-01-08 19:00:46,336 [    INFO] [Job 91] Completed (fmriprep_24_1_wf.sub_52_wf.summary).
+2025-01-08 19:00:46,617 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.bids_info" in "/tmp/fmriprep_24_1_wf/sub_43_wf/bids_info".
+2025-01-08 19:00:46,619 [    INFO] [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+2025-01-08 19:00:46,640 [    INFO] [Node] Finished "bids_info", elapsed time 0.020903s.
+2025-01-08 19:00:46,782 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.fs_isrunning" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/fs_isrunning".
+2025-01-08 19:00:46,784 [    INFO] [Node] Executing "fs_isrunning" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:46,785 [    INFO] [Node] Finished "fs_isrunning", elapsed time 0.000442s.
+2025-01-08 19:00:46,808 [    INFO] [Node] Executing "anat_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+2025-01-08 19:00:46,937 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:46,937 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:46,945 [    INFO] [Node] Executing "anat_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+2025-01-08 19:00:47,185 [    INFO] [Node] Finished "anat_ref_dimensions", elapsed time 0.355353s.
+2025-01-08 19:00:47,369 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:47,369 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:47,442 [    INFO] [Node] Finished "anat_ref_dimensions", elapsed time 0.49646s.
+2025-01-08 19:00:47,483 [    INFO] [Node] Executing "anat_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+2025-01-08 19:00:47,505 [    INFO] [Job 33] Completed (fmriprep_24_1_wf.sub_32_wf.bids_info).
+2025-01-08 19:00:47,505 [    INFO] [Job 34] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions).
+2025-01-08 19:00:47,506 [    INFO] [Job 37] Completed (fmriprep_24_1_wf.sub_37_wf.bids_info).
+2025-01-08 19:00:47,507 [    INFO] [Job 38] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions).
+2025-01-08 19:00:47,507 [    INFO] [Job 41] Completed (fmriprep_24_1_wf.sub_43_wf.bids_info).
+2025-01-08 19:00:47,508 [    INFO] [Job 46] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions).
+2025-01-08 19:00:47,509 [    INFO] [Job 92] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.fs_isrunning).
+2025-01-08 19:00:47,511 [    INFO] [MultiProc] Running 5 tasks, and 19 jobs ready. Free memory (GB): 452.21/453.21, Free processors: 27/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+2025-01-08 19:00:47,826 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:47,826 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:47,949 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.summary" in "/tmp/fmriprep_24_1_wf/sub_32_wf/summary".
+2025-01-08 19:00:47,972 [    INFO] [Node] Executing "summary" <fmriprep.interfaces.reports.SubjectSummary>
+2025-01-08 19:00:47,974 [    INFO] [Node] Finished "summary", elapsed time 0.001436s.
+2025-01-08 19:00:47,975 [    INFO] [Job 73] Completed (fmriprep_24_1_wf.sub_32_wf.summary).
+2025-01-08 19:00:47,995 [    INFO] [Node] Finished "anat_ref_dimensions", elapsed time 0.479989s.
+2025-01-08 19:00:48,185 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.fs_isrunning" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/fs_isrunning".
+2025-01-08 19:00:48,207 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/ds_t1w_mask_wf/raw_sources".
+2025-01-08 19:00:48,207 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/t1w_conform_check".
+2025-01-08 19:00:48,209 [    INFO] [Node] Executing "t1w_conform_check" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,209 [    INFO] [Node] Finished "t1w_conform_check", elapsed time 0.000266s.
+2025-01-08 19:00:48,210 [    INFO] [Job 78] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check).
+2025-01-08 19:00:48,212 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,213 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000391s.
+2025-01-08 19:00:48,214 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/ds_ribbon_mask_wf/raw_sources".
+2025-01-08 19:00:48,216 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,217 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000314s.
+2025-01-08 19:00:48,303 [    INFO] [Node] Finished "lap_tmpl", elapsed time 13.985289999999999s.
+2025-01-08 19:00:48,408 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.summary" in "/tmp/fmriprep_24_1_wf/sub_37_wf/summary".
+2025-01-08 19:00:48,411 [    INFO] [Node] Executing "summary" <fmriprep.interfaces.reports.SubjectSummary>
+2025-01-08 19:00:48,413 [    INFO] [Node] Finished "summary", elapsed time 0.001486s.
+2025-01-08 19:00:48,414 [    INFO] [Job 79] Completed (fmriprep_24_1_wf.sub_37_wf.summary).
+2025-01-08 19:00:48,609 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.fs_isrunning" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/fs_isrunning".
+2025-01-08 19:00:48,611 [    INFO] [Node] Executing "fs_isrunning" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,612 [    INFO] [Node] Finished "fs_isrunning", elapsed time 0.000454s.
+2025-01-08 19:00:48,621 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/ds_t1w_mask_wf/raw_sources".
+2025-01-08 19:00:48,626 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,627 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000466s.
+2025-01-08 19:00:48,629 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/ds_ribbon_mask_wf/raw_sources".
+2025-01-08 19:00:48,631 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,632 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000374s.
+2025-01-08 19:00:48,633 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/t1w_conform_check".
+2025-01-08 19:00:48,635 [    INFO] [Node] Executing "t1w_conform_check" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:48,635 [    INFO] [Node] Finished "t1w_conform_check", elapsed time 0.000281s.
+2025-01-08 19:00:48,636 [    INFO] [Job 84] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check).
+2025-01-08 19:00:48,862 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.summary" in "/tmp/fmriprep_24_1_wf/sub_43_wf/summary".
+2025-01-08 19:00:48,865 [    INFO] [Node] Executing "summary" <fmriprep.interfaces.reports.SubjectSummary>
+2025-01-08 19:00:48,879 [    INFO] [Node] Finished "summary", elapsed time 0.013932s.
+2025-01-08 19:00:48,880 [    INFO] [Job 85] Completed (fmriprep_24_1_wf.sub_43_wf.summary).
+2025-01-08 19:00:48,964 [    INFO] [Node] Finished "lap_tmpl", elapsed time 14.261315s.
+2025-01-08 19:00:49,125 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.fs_isrunning" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/fs_isrunning".
+2025-01-08 19:00:49,127 [    INFO] [Node] Executing "fs_isrunning" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,128 [    INFO] [Node] Finished "fs_isrunning", elapsed time 0.000453s.
+2025-01-08 19:00:49,138 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/ds_t1w_mask_wf/raw_sources".
+2025-01-08 19:00:49,138 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/t1w_conform_check".
+2025-01-08 19:00:49,138 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/ds_ribbon_mask_wf/raw_sources".
+2025-01-08 19:00:49,139 [    INFO] [Node] Executing "t1w_conform_check" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,140 [    INFO] [Node] Finished "t1w_conform_check", elapsed time 0.000274s.
+2025-01-08 19:00:49,141 [    INFO] [Job 96] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check).
+2025-01-08 19:00:49,143 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,144 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,144 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000503s.
+2025-01-08 19:00:49,144 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000405s.
+2025-01-08 19:00:49,284 [    INFO] [Node] Finished "lap_tmpl", elapsed time 13.349659s.
+2025-01-08 19:00:49,336 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.ds_report_summary" in "/tmp/fmriprep_24_1_wf/sub_52_wf/ds_report_summary".
+2025-01-08 19:00:49,341 [    INFO] [Node] Executing "ds_report_summary" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:49,351 [    INFO] [Node] Finished "ds_report_summary", elapsed time 0.009346s.
+2025-01-08 19:00:49,352 [    INFO] [Job 106] Completed (fmriprep_24_1_wf.sub_52_wf.ds_report_summary).
+2025-01-08 19:00:49,380 [    INFO] [Node] Executing "fs_isrunning" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,381 [    INFO] [Node] Finished "fs_isrunning", elapsed time 0.000423s.
+2025-01-08 19:00:49,544 [    INFO] [Job 5] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+2025-01-08 19:00:49,545 [    INFO] [Job 10] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+2025-01-08 19:00:49,546 [    INFO] [Job 20] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+2025-01-08 19:00:49,546 [    INFO] [Job 42] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions).
+2025-01-08 19:00:49,547 [    INFO] [Job 74] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.fs_isrunning).
+2025-01-08 19:00:49,547 [    INFO] [Job 76] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources).
+2025-01-08 19:00:49,548 [    INFO] [Job 77] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources).
+2025-01-08 19:00:49,549 [    INFO] [Job 80] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.fs_isrunning).
+2025-01-08 19:00:49,549 [    INFO] [Job 82] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources).
+2025-01-08 19:00:49,550 [    INFO] [Job 83] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources).
+2025-01-08 19:00:49,551 [    INFO] [Job 86] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.fs_isrunning).
+2025-01-08 19:00:49,551 [    INFO] [Job 94] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources).
+2025-01-08 19:00:49,552 [    INFO] [Job 95] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources).
+2025-01-08 19:00:49,554 [    INFO] [MultiProc] Running 1 tasks, and 27 jobs ready. Free memory (GB): 453.01/453.21, Free processors: 31/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+2025-01-08 19:00:49,627 [    INFO] [Node] Finished "lap_tmpl", elapsed time 13.980383s.
+2025-01-08 19:00:49,745 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+2025-01-08 19:00:49,745 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+2025-01-08 19:00:49,745 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+2025-01-08 19:00:49,768 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/t1w_conform_check".
+2025-01-08 19:00:49,768 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/ds_t1w_mask_wf/raw_sources".
+2025-01-08 19:00:49,770 [    INFO] [Node] Executing "t1w_conform_check" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,771 [    INFO] [Node] Finished "t1w_conform_check", elapsed time 0.000316s.
+2025-01-08 19:00:49,772 [    INFO] [Job 90] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.t1w_conform_check).
+2025-01-08 19:00:49,773 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,774 [    INFO] [Node] Finished "raw_sources", elapsed time 0.000363s.
+2025-01-08 19:00:49,777 [    INFO] [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+2025-01-08 19:00:49,777 [    INFO] [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+2025-01-08 19:00:49,778 [    INFO] [Node] Finished "mrg_tmpl", elapsed time 0.000136s.
+2025-01-08 19:00:49,778 [    INFO] [Node] Finished "mrg_tmpl", elapsed time 0.000214s.
+2025-01-08 19:00:49,785 [    INFO] [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+2025-01-08 19:00:49,786 [    INFO] [Node] Finished "mrg_tmpl", elapsed time 0.000283s.
+2025-01-08 19:00:49,987 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/ds_ribbon_mask_wf/raw_sources".
+2025-01-08 19:00:49,986 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.ds_report_summary" in "/tmp/fmriprep_24_1_wf/sub_32_wf/ds_report_summary".
+2025-01-08 19:00:49,991 [    INFO] [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+2025-01-08 19:00:49,991 [    INFO] [Node] Executing "ds_report_summary" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:49,993 [    INFO] [Node] Finished "raw_sources", elapsed time 0.00082s.
+2025-01-08 19:00:50,002 [    INFO] [Node] Finished "ds_report_summary", elapsed time 0.009982s.
+2025-01-08 19:00:50,003 [    INFO] [Job 97] Completed (fmriprep_24_1_wf.sub_32_wf.ds_report_summary).
+2025-01-08 19:00:50,217 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/ds_t1w_conform_report".
+2025-01-08 19:00:50,221 [    INFO] [Node] Executing "ds_t1w_conform_report" <smriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:50,235 [    INFO] [Node] Finished "ds_t1w_conform_report", elapsed time 0.012927s.
+2025-01-08 19:00:50,236 [    INFO] [Job 99] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report).
+2025-01-08 19:00:50,455 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.ds_report_summary" in "/tmp/fmriprep_24_1_wf/sub_37_wf/ds_report_summary".
+2025-01-08 19:00:50,458 [    INFO] [Node] Executing "ds_report_summary" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:50,468 [    INFO] [Node] Finished "ds_report_summary", elapsed time 0.008863s.
+2025-01-08 19:00:50,469 [    INFO] [Job 100] Completed (fmriprep_24_1_wf.sub_37_wf.ds_report_summary).
+2025-01-08 19:00:50,689 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/ds_t1w_conform_report".
+2025-01-08 19:00:50,693 [    INFO] [Node] Executing "ds_t1w_conform_report" <smriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:50,706 [    INFO] [Node] Finished "ds_t1w_conform_report", elapsed time 0.012426s.
+2025-01-08 19:00:50,707 [    INFO] [Job 102] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report).
+2025-01-08 19:00:50,926 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.ds_report_summary" in "/tmp/fmriprep_24_1_wf/sub_43_wf/ds_report_summary".
+2025-01-08 19:00:50,930 [    INFO] [Node] Executing "ds_report_summary" <fmriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:50,940 [    INFO] [Node] Finished "ds_report_summary", elapsed time 0.009742s.
+2025-01-08 19:00:50,941 [    INFO] [Job 103] Completed (fmriprep_24_1_wf.sub_43_wf.ds_report_summary).
+2025-01-08 19:00:51,158 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/ds_t1w_conform_report".
+2025-01-08 19:00:51,161 [    INFO] [Node] Executing "ds_t1w_conform_report" <smriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:51,178 [    INFO] [Node] Finished "ds_t1w_conform_report", elapsed time 0.016029s.
+2025-01-08 19:00:51,179 [    INFO] [Job 108] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report).
+2025-01-08 19:00:51,395 [    INFO] [Node] Setting-up "_denoise0" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+2025-01-08 19:00:51,400 [    INFO] [Node] Executing "_denoise0" <nipype.interfaces.ants.segmentation.DenoiseImage>
+2025-01-08 19:00:51,425 [    INFO] [Node] Setting-up "_denoise2" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise2".
+2025-01-08 19:00:51,427 [    INFO] [Node] Executing "_denoise2" <nipype.interfaces.ants.segmentation.DenoiseImage>
+2025-01-08 19:00:51,431 [    INFO] [Node] Setting-up "_denoise1" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+2025-01-08 19:00:51,434 [    INFO] [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
+2025-01-08 19:00:51,498 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:51,499 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:51,499 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:51,499 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2025-01-08 19:00:51,544 [    INFO] [Job 15] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+2025-01-08 19:00:51,545 [    INFO] [Job 36] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+2025-01-08 19:00:51,546 [    INFO] [Job 40] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+2025-01-08 19:00:51,546 [    INFO] [Job 48] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+2025-01-08 19:00:51,547 [    INFO] [Job 88] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources).
+2025-01-08 19:00:51,548 [    INFO] [Job 89] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.ds_ribbon_mask_wf.raw_sources).
+2025-01-08 19:00:51,550 [    INFO] [MultiProc] Running 3 tasks, and 17 jobs ready. Free memory (GB): 452.61/453.21, Free processors: 8/32.
+                     Currently running:
+                       * _denoise2
+                       * _denoise1
+                       * _denoise0
+2025-01-08 19:00:51,845 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+2025-01-08 19:00:51,855 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/ds_t1w_conform_report".
+2025-01-08 19:00:51,858 [    INFO] [Node] Executing "ds_t1w_conform_report" <smriprep.interfaces.DerivativesDataSink>
+2025-01-08 19:00:51,881 [    INFO] [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+2025-01-08 19:00:51,882 [    INFO] [Node] Finished "mrg_tmpl", elapsed time 0.000137s.
+2025-01-08 19:00:51,903 [    INFO] [Node] Finished "ds_t1w_conform_report", elapsed time 0.043956s.
+2025-01-08 19:00:51,904 [    INFO] [Job 105] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.ds_t1w_conform_report).
+2025-01-08 19:00:53,544 [    INFO] [Job 44] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+2025-01-08 19:00:53,546 [    INFO] [MultiProc] Running 3 tasks, and 15 jobs ready. Free memory (GB): 452.61/453.21, Free processors: 8/32.
+                     Currently running:
+                       * _denoise2
+                       * _denoise1
+                       * _denoise0
+2025-01-08 19:00:54,880 [    INFO] [Node] Setting-up "_denoise3" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise3".
+2025-01-08 19:00:54,882 [    INFO] [Node] Executing "_denoise3" <nipype.interfaces.ants.segmentation.DenoiseImage>
+2025-01-08 19:00:55,546 [    INFO] [MultiProc] Running 4 tasks, and 14 jobs ready. Free memory (GB): 452.41/453.21, Free processors: 0/32.
+                     Currently running:
+                       * _denoise3
+                       * _denoise2
+                       * _denoise1
+                       * _denoise0

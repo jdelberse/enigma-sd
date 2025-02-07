@@ -1,0 +1,815 @@
+bids-validator@1.14.10
+	[33m1: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered based on the presence of only one author field. Please ignore if all contributors are already properly listed. (code: 102 - TOO_FEW_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=TOO_FEW_AUTHORS for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Name field of dataset_description.json is present but empty of visible characters. (code: 115 - EMPTY_DATASET_NAME)[39m
+
+[36m	Please visit https://neurostars.org/search?q=EMPTY_DATASET_NAME for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                  [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[39m[24m 
+        40 Files, 199.67MB                                MRI                   
+        4 - Subjects                                                            
+        2 - Sessions                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+250110-20:57:54,523 nipype.workflow IMPORTANT:
+	 Running fMRIPrep version 24.1.1
+
+         License NOTICE ##################################################
+         fMRIPrep 24.1.1
+         Copyright The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+250110-20:58:06,669 nipype.workflow IMPORTANT:
+	 Building fMRIPrep's workflow:
+           * BIDS dataset path: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids.
+           * Participant list: ['32', '37', '43', '52'].
+           * Run identifier: 20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8.
+           * Output spaces: MNI152NLin2009cAsym:res-native.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sourcedata/freesurfer.
+250110-20:58:08,535 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+250110-20:58:09,499 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+250110-20:58:09,577 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+250110-20:58:09,582 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+250110-20:58:09,591 nipype.workflow INFO:
+	 ANAT Stage 5: Preparing surface reconstruction workflow
+250110-20:58:09,609 nipype.workflow INFO:
+	 ANAT Stage 6: Preparing mask refinement workflow
+250110-20:58:09,611 nipype.workflow INFO:
+	 ANAT No T2w images provided - skipping Stage 7
+250110-20:58:09,611 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+250110-20:58:09,627 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+250110-20:58:09,634 nipype.workflow INFO:
+	 ANAT Stage 8a: Creating cortical ribbon mask
+250110-20:58:09,637 nipype.workflow INFO:
+	 ANAT Stage 9: Creating fsLR registration sphere
+250110-20:58:09,640 nipype.workflow INFO:
+	 ANAT Stage 10: Creating MSM-Sulc registration sphere
+250110-20:58:10,265 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+250110-20:58:10,271 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+250110-20:58:10,330 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+250110-20:58:10,334 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+250110-20:58:10,341 nipype.workflow INFO:
+	 ANAT Stage 5: Preparing surface reconstruction workflow
+250110-20:58:10,359 nipype.workflow INFO:
+	 ANAT Stage 6: Preparing mask refinement workflow
+250110-20:58:10,361 nipype.workflow INFO:
+	 ANAT No T2w images provided - skipping Stage 7
+250110-20:58:10,361 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+250110-20:58:10,377 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+250110-20:58:10,383 nipype.workflow INFO:
+	 ANAT Stage 8a: Creating cortical ribbon mask
+250110-20:58:10,386 nipype.workflow INFO:
+	 ANAT Stage 9: Creating fsLR registration sphere
+250110-20:58:10,390 nipype.workflow INFO:
+	 ANAT Stage 10: Creating MSM-Sulc registration sphere
+250110-20:58:10,945 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+250110-20:58:10,951 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+250110-20:58:11,10 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+250110-20:58:11,13 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+250110-20:58:11,22 nipype.workflow INFO:
+	 ANAT Stage 5: Preparing surface reconstruction workflow
+250110-20:58:11,39 nipype.workflow INFO:
+	 ANAT Stage 6: Preparing mask refinement workflow
+250110-20:58:11,41 nipype.workflow INFO:
+	 ANAT No T2w images provided - skipping Stage 7
+250110-20:58:11,41 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+250110-20:58:11,57 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+250110-20:58:11,64 nipype.workflow INFO:
+	 ANAT Stage 8a: Creating cortical ribbon mask
+250110-20:58:11,67 nipype.workflow INFO:
+	 ANAT Stage 9: Creating fsLR registration sphere
+250110-20:58:11,70 nipype.workflow INFO:
+	 ANAT Stage 10: Creating MSM-Sulc registration sphere
+250110-20:58:11,625 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+250110-20:58:11,631 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+250110-20:58:11,875 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+250110-20:58:11,879 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin2009cAsym']
+250110-20:58:11,887 nipype.workflow INFO:
+	 ANAT Stage 5: Preparing surface reconstruction workflow
+250110-20:58:11,903 nipype.workflow INFO:
+	 ANAT Stage 6: Preparing mask refinement workflow
+250110-20:58:11,905 nipype.workflow INFO:
+	 ANAT No T2w images provided - skipping Stage 7
+250110-20:58:11,906 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI surfaces for ['white', 'pial', 'midthickness', 'sphere_reg', 'sphere']
+250110-20:58:11,922 nipype.workflow INFO:
+	 ANAT Stage 8: Creating GIFTI metrics for ['thickness', 'sulc']
+250110-20:58:11,929 nipype.workflow INFO:
+	 ANAT Stage 8a: Creating cortical ribbon mask
+250110-20:58:11,932 nipype.workflow INFO:
+	 ANAT Stage 9: Creating fsLR registration sphere
+250110-20:58:11,935 nipype.workflow INFO:
+	 ANAT Stage 10: Creating MSM-Sulc registration sphere
+250110-20:58:15,245 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 985 nodes built successfully.
+250110-20:58:29,685 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+250110-20:58:30,506 nipype.workflow INFO:
+	 Workflow fmriprep_24_1_wf settings: ['check', 'execution', 'logging', 'monitoring']
+250110-20:58:30,872 nipype.workflow INFO:
+	 Running in parallel.
+250110-20:58:30,885 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 33 jobs ready. Free memory (GB): 453.21/453.21, Free processors: 32/32.
+250110-20:58:31,88 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.fsdir_run_20250110_205439_b6d425f8_e8b7_431e_834f_03d30819bdc8" in "/tmp/fmriprep_24_1_wf/fsdir_run_20250110_205439_b6d425f8_e8b7_431e_834f_03d30819bdc8".
+250110-20:58:31,91 nipype.workflow INFO:
+	 [Node] Executing "fsdir_run_20250110_205439_b6d425f8_e8b7_431e_834f_03d30819bdc8" <niworkflows.interfaces.bids.BIDSFreeSurferDir>
+250110-20:58:34,917 nipype.workflow INFO:
+	 [Node] Finished "fsdir_run_20250110_205439_b6d425f8_e8b7_431e_834f_03d30819bdc8", elapsed time 3.821646s.
+250110-20:58:34,918 nipype.workflow INFO:
+	 [Job 0] Completed (fmriprep_24_1_wf.fsdir_run_20250110_205439_b6d425f8_e8b7_431e_834f_03d30819bdc8).
+250110-20:58:35,132 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.about" in "/tmp/fmriprep_24_1_wf/sub_32_wf/about".
+250110-20:58:35,134 nipype.workflow INFO:
+	 [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+250110-20:58:35,134 nipype.workflow INFO:
+	 [Node] Finished "about", elapsed time 0.000187s.
+250110-20:58:35,135 nipype.workflow INFO:
+	 [Job 2] Completed (fmriprep_24_1_wf.sub_32_wf.about).
+250110-20:58:35,350 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.about" in "/tmp/fmriprep_24_1_wf/sub_37_wf/about".
+250110-20:58:35,351 nipype.workflow INFO:
+	 [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+250110-20:58:35,352 nipype.workflow INFO:
+	 [Node] Finished "about", elapsed time 0.000167s.
+250110-20:58:35,353 nipype.workflow INFO:
+	 [Job 7] Completed (fmriprep_24_1_wf.sub_37_wf.about).
+250110-20:58:35,577 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.about" in "/tmp/fmriprep_24_1_wf/sub_43_wf/about".
+250110-20:58:35,578 nipype.workflow INFO:
+	 [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+250110-20:58:35,579 nipype.workflow INFO:
+	 [Node] Finished "about", elapsed time 0.00018s.
+250110-20:58:35,579 nipype.workflow INFO:
+	 [Job 12] Completed (fmriprep_24_1_wf.sub_43_wf.about).
+250110-20:58:36,85 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.about" in "/tmp/fmriprep_24_1_wf/sub_52_wf/about".
+250110-20:58:36,86 nipype.workflow INFO:
+	 [Node] Executing "about" <fmriprep.interfaces.reports.AboutSummary>
+250110-20:58:36,86 nipype.workflow INFO:
+	 [Node] Finished "about", elapsed time 0.000178s.
+250110-20:58:36,87 nipype.workflow INFO:
+	 [Job 17] Completed (fmriprep_24_1_wf.sub_52_wf.about).
+250110-20:58:36,706 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+250110-20:58:36,707 nipype.workflow INFO:
+	 [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+250110-20:58:36,707 nipype.workflow INFO:
+	 [Node] Finished "split_desc", elapsed time 9.2e-05s.
+250110-20:58:36,708 nipype.workflow INFO:
+	 [Job 21] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.split_desc).
+250110-20:58:37,546 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+250110-20:58:37,548 nipype.workflow INFO:
+	 [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+250110-20:58:37,548 nipype.workflow INFO:
+	 [Node] Finished "split_desc", elapsed time 9.3e-05s.
+250110-20:58:37,549 nipype.workflow INFO:
+	 [Job 22] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.split_desc).
+250110-20:58:38,357 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+250110-20:58:38,358 nipype.workflow INFO:
+	 [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+250110-20:58:38,383 nipype.workflow INFO:
+	 [Node] Finished "split_desc", elapsed time 0.000123s.
+250110-20:58:38,384 nipype.workflow INFO:
+	 [Job 23] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.split_desc).
+250110-20:58:39,204 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.split_desc" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/split_desc".
+250110-20:58:39,205 nipype.workflow INFO:
+	 [Node] Executing "split_desc" <smriprep.interfaces.templateflow.TemplateDesc>
+250110-20:58:39,206 nipype.workflow INFO:
+	 [Node] Finished "split_desc", elapsed time 9.6e-05s.
+250110-20:58:39,207 nipype.workflow INFO:
+	 [Job 24] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.split_desc).
+250110-20:58:40,279 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:40,281 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:40,281 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.00011s.
+250110-20:58:40,314 nipype.workflow INFO:
+	 [Job 25] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.spacesource).
+250110-20:58:41,355 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:41,356 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:41,357 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.000111s.
+250110-20:58:41,358 nipype.workflow INFO:
+	 [Job 26] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+250110-20:58:42,399 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:42,400 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:42,401 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.000107s.
+250110-20:58:42,402 nipype.workflow INFO:
+	 [Job 27] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.spacesource).
+250110-20:58:43,211 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:43,213 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:43,213 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.00011s.
+250110-20:58:43,214 nipype.workflow INFO:
+	 [Job 28] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+250110-20:58:43,616 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:43,617 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:43,618 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.000108s.
+250110-20:58:43,619 nipype.workflow INFO:
+	 [Job 29] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.spacesource).
+250110-20:58:44,94 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:44,120 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:44,120 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.00011s.
+250110-20:58:44,121 nipype.workflow INFO:
+	 [Job 30] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+250110-20:58:45,129 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:45,158 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:45,159 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.000114s.
+250110-20:58:45,160 nipype.workflow INFO:
+	 [Job 31] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.spacesource).
+250110-20:58:46,212 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/spacesource".
+250110-20:58:46,214 nipype.workflow INFO:
+	 [Node] Executing "spacesource" <niworkflows.interfaces.space.SpaceDataSource>
+250110-20:58:46,246 nipype.workflow INFO:
+	 [Node] Finished "spacesource", elapsed time 0.000112s.
+250110-20:58:46,248 nipype.workflow INFO:
+	 [Job 32] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.spacesource).
+250110-20:58:47,308 nipype.workflow INFO:
+	 [MultiProc] Running 16 tasks, and 24 jobs ready. Free memory (GB): 450.01/453.21, Free processors: 16/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_52_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.bidssrc
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.bidssrc
+250110-20:58:47,418 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+250110-20:58:47,420 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:47,588 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+250110-20:58:47,589 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+250110-20:58:47,648 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+250110-20:58:47,649 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+250110-20:58:48,196 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+250110-20:58:48,198 nipype.workflow INFO:
+	 [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:48,275 nipype.workflow INFO:
+	 [Node] Finished "tf_select", elapsed time 0.076187s.
+250110-20:58:48,276 nipype.workflow INFO:
+	 [Job 49] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.tf_select).
+250110-20:58:48,917 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+250110-20:58:48,918 nipype.workflow INFO:
+	 [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:48,919 nipype.workflow INFO:
+	 [Node] Finished "fmt_cohort", elapsed time 0.000317s.
+250110-20:58:48,920 nipype.workflow INFO:
+	 [Job 50] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+250110-20:58:49,4 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 1.5618379999999998s.
+250110-20:58:49,26 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+250110-20:58:49,32 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:49,80 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_32_wf/bidssrc".
+250110-20:58:49,82 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+250110-20:58:49,108 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 7.1e-05s.
+250110-20:58:49,108 nipype.workflow WARNING:
+	 Storing result file without outputs
+250110-20:58:49,108 nipype.workflow WARNING:
+	 [Node] Error on "fmriprep_24_1_wf.sub_32_wf.bidssrc" (/tmp/fmriprep_24_1_wf/sub_32_wf/bidssrc)
+250110-20:58:49,153 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+250110-20:58:49,166 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+250110-20:58:49,280 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+250110-20:58:49,281 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+250110-20:58:49,282 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+250110-20:58:49,284 nipype.workflow INFO:
+	 [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:49,560 nipype.workflow INFO:
+	 [Node] Finished "tf_select", elapsed time 0.276161s.
+250110-20:58:49,562 nipype.workflow INFO:
+	 [Job 51] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.tf_select).
+250110-20:58:49,830 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+250110-20:58:49,832 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:49,900 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+250110-20:58:49,901 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+250110-20:58:50,237 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+250110-20:58:50,238 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+250110-20:58:50,450 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 1.416896s.
+250110-20:58:50,458 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+250110-20:58:50,460 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:50,602 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 2.977512s.
+250110-20:58:50,678 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+250110-20:58:50,680 nipype.workflow INFO:
+	 [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:50,681 nipype.workflow INFO:
+	 [Node] Finished "fmt_cohort", elapsed time 0.000341s.
+250110-20:58:50,682 nipype.workflow INFO:
+	 [Job 52] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+250110-20:58:50,763 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+250110-20:58:50,765 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+250110-20:58:50,788 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+250110-20:58:50,789 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+250110-20:58:50,950 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 1.078469s.
+250110-20:58:51,97 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+250110-20:58:51,99 nipype.workflow INFO:
+	 [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:51,319 nipype.workflow INFO:
+	 [Node] Finished "tf_select", elapsed time 0.219293s.
+250110-20:58:51,320 nipype.workflow INFO:
+	 [Job 53] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.tf_select).
+250110-20:58:51,821 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 1.3602159999999999s.
+250110-20:58:52,1 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+250110-20:58:52,3 nipype.workflow INFO:
+	 [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:52,4 nipype.workflow INFO:
+	 [Node] Finished "fmt_cohort", elapsed time 0.000346s.
+250110-20:58:52,5 nipype.workflow INFO:
+	 [Job 54] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+250110-20:58:52,636 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.tf_select" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/tf_select".
+250110-20:58:52,638 nipype.workflow INFO:
+	 [Node] Executing "tf_select" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:52,851 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_37_wf/bidssrc".
+250110-20:58:52,852 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+250110-20:58:52,876 nipype.workflow INFO:
+	 [Node] Finished "tf_select", elapsed time 0.23755s.
+250110-20:58:52,877 nipype.workflow INFO:
+	 [Job 55] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.tf_select).
+250110-20:58:52,886 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 7.4e-05s.
+250110-20:58:52,886 nipype.workflow WARNING:
+	 Storing result file without outputs
+250110-20:58:52,886 nipype.workflow WARNING:
+	 [Node] Error on "fmriprep_24_1_wf.sub_37_wf.bidssrc" (/tmp/fmriprep_24_1_wf/sub_37_wf/bidssrc)
+250110-20:58:53,105 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 3.801974s.
+250110-20:58:53,351 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 3.422049s.
+250110-20:58:53,410 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_43_wf/bidssrc".
+250110-20:58:53,412 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+250110-20:58:53,429 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 6.9e-05s.
+250110-20:58:53,429 nipype.workflow WARNING:
+	 Storing result file without outputs
+250110-20:58:53,430 nipype.workflow WARNING:
+	 [Node] Error on "fmriprep_24_1_wf.sub_43_wf.bidssrc" (/tmp/fmriprep_24_1_wf/sub_43_wf/bidssrc)
+250110-20:58:53,459 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.fmt_cohort" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/fmt_cohort".
+250110-20:58:53,460 nipype.workflow INFO:
+	 [Node] Executing "fmt_cohort" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:53,461 nipype.workflow INFO:
+	 [Node] Finished "fmt_cohort", elapsed time 0.000324s.
+250110-20:58:53,462 nipype.workflow INFO:
+	 [Job 56] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.register_template_wf.fmt_cohort).
+250110-20:58:53,614 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 2.774839s.
+250110-20:58:53,686 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:53,687 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:53,688 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000263s.
+250110-20:58:53,689 nipype.workflow INFO:
+	 [Job 57] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.gen_tplid).
+250110-20:58:53,758 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.bidssrc" in "/tmp/fmriprep_24_1_wf/sub_52_wf/bidssrc".
+250110-20:58:53,759 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+250110-20:58:53,778 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 6.7e-05s.
+250110-20:58:53,778 nipype.workflow WARNING:
+	 Storing result file without outputs
+250110-20:58:53,778 nipype.workflow WARNING:
+	 [Node] Error on "fmriprep_24_1_wf.sub_52_wf.bidssrc" (/tmp/fmriprep_24_1_wf/sub_52_wf/bidssrc)
+250110-20:58:53,884 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:53,886 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:53,978 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.090836s.
+250110-20:58:53,979 nipype.workflow INFO:
+	 [Job 58] Completed (fmriprep_24_1_wf.sub_52_wf.template_iterator_wf.select_tpl).
+250110-20:58:54,310 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:54,312 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:54,312 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000272s.
+250110-20:58:54,313 nipype.workflow INFO:
+	 [Job 59] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+250110-20:58:54,517 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:54,519 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:54,595 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.075684s.
+250110-20:58:54,597 nipype.workflow INFO:
+	 [Job 60] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+250110-20:58:55,20 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:55,21 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:55,22 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000268s.
+250110-20:58:55,23 nipype.workflow INFO:
+	 [Job 61] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.gen_tplid).
+250110-20:58:55,426 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:55,428 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:55,578 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.150436s.
+250110-20:58:55,580 nipype.workflow INFO:
+	 [Job 62] Completed (fmriprep_24_1_wf.sub_43_wf.template_iterator_wf.select_tpl).
+250110-20:58:56,9 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:56,11 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:56,12 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000262s.
+250110-20:58:56,13 nipype.workflow INFO:
+	 [Job 63] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+250110-20:58:56,412 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:56,414 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:56,558 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.14372s.
+250110-20:58:56,560 nipype.workflow INFO:
+	 [Job 64] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+250110-20:58:56,987 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:56,989 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:56,989 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000268s.
+250110-20:58:56,990 nipype.workflow INFO:
+	 [Job 65] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.gen_tplid).
+250110-20:58:57,234 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:57,236 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:57,307 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.070833s.
+250110-20:58:57,309 nipype.workflow INFO:
+	 [Job 66] Completed (fmriprep_24_1_wf.sub_37_wf.template_iterator_wf.select_tpl).
+250110-20:58:57,518 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:57,520 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:57,521 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.00027s.
+250110-20:58:57,522 nipype.workflow INFO:
+	 [Job 67] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+250110-20:58:57,719 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:57,721 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:57,788 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.066551s.
+250110-20:58:57,789 nipype.workflow INFO:
+	 [Job 68] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+250110-20:58:58,4 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:58,6 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:58,6 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000276s.
+250110-20:58:58,7 nipype.workflow INFO:
+	 [Job 69] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.gen_tplid).
+250110-20:58:58,205 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:58,207 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:58,273 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.06644s.
+250110-20:58:58,275 nipype.workflow INFO:
+	 [Job 70] Completed (fmriprep_24_1_wf.sub_32_wf.template_iterator_wf.select_tpl).
+250110-20:58:58,473 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_tplid".
+250110-20:58:58,475 nipype.workflow INFO:
+	 [Node] Executing "gen_tplid" <nipype.interfaces.utility.wrappers.Function>
+250110-20:58:58,476 nipype.workflow INFO:
+	 [Node] Finished "gen_tplid", elapsed time 0.000275s.
+250110-20:58:58,477 nipype.workflow INFO:
+	 [Job 71] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.gen_tplid).
+250110-20:58:58,677 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/anat_reports_wf/template_iterator_wf/_in_tuple_MNI152NLin2009cAsym.resnative/select_tpl".
+250110-20:58:58,679 nipype.workflow INFO:
+	 [Node] Executing "select_tpl" <smriprep.interfaces.templateflow.TemplateFlowSelect>
+250110-20:58:58,746 nipype.workflow INFO:
+	 [Node] Finished "select_tpl", elapsed time 0.066079s.
+250110-20:58:58,747 nipype.workflow INFO:
+	 [Job 72] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.anat_reports_wf.template_iterator_wf.select_tpl).
+250110-20:58:58,976 nipype.workflow ERROR:
+	 Node bidssrc failed to run on host cpu30.
+250110-20:58:58,980 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-32/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205858-jd.elberse-bidssrc-e1f310ef-5040-402b-9ce8-2dbe50b2d6bb.txt
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node bidssrc.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/niworkflows/interfaces/bids.py", line 282, in _run_interface
+	    raise FileNotFoundError(
+	FileNotFoundError: No T1w images found for subject sub-32
+
+
+250110-20:58:58,985 nipype.workflow INFO:
+	 [Job 3] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+250110-20:58:58,986 nipype.workflow INFO:
+	 [Job 4] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+250110-20:58:58,987 nipype.workflow ERROR:
+	 Node bidssrc failed to run on host cpu30.
+250110-20:58:59,2 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-37/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205858-jd.elberse-bidssrc-98801278-ee2d-4ded-beaa-c92e250799c8.txt
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node bidssrc.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/niworkflows/interfaces/bids.py", line 282, in _run_interface
+	    raise FileNotFoundError(
+	FileNotFoundError: No T1w images found for subject sub-37
+
+
+250110-20:58:59,8 nipype.workflow INFO:
+	 [Job 8] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+250110-20:58:59,8 nipype.workflow INFO:
+	 [Job 9] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+250110-20:58:59,9 nipype.workflow ERROR:
+	 Node bidssrc failed to run on host cpu30.
+250110-20:58:59,12 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-43/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205859-jd.elberse-bidssrc-ad790c78-b895-4b7c-ab5f-857f2c36abf2.txt
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node bidssrc.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/niworkflows/interfaces/bids.py", line 282, in _run_interface
+	    raise FileNotFoundError(
+	FileNotFoundError: No T1w images found for subject sub-43
+
+
+250110-20:58:59,28 nipype.workflow INFO:
+	 [Job 13] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+250110-20:58:59,29 nipype.workflow INFO:
+	 [Job 14] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+250110-20:58:59,29 nipype.workflow ERROR:
+	 Node bidssrc failed to run on host cpu30.
+250110-20:58:59,33 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-52/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205859-jd.elberse-bidssrc-cbf0d84a-59db-47f7-863e-641366fe78e3.txt
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node bidssrc.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/niworkflows/interfaces/bids.py", line 282, in _run_interface
+	    raise FileNotFoundError(
+	FileNotFoundError: No T1w images found for subject sub-52
+
+
+250110-20:58:59,38 nipype.workflow INFO:
+	 [Job 18] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.res_tmpl).
+250110-20:58:59,39 nipype.workflow INFO:
+	 [Job 19] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.full_wm).
+250110-20:58:59,40 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 0 jobs ready. Free memory (GB): 452.41/453.21, Free processors: 28/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+250110-20:58:59,815 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 9.529202s.
+250110-20:59:00,977 nipype.workflow INFO:
+	 [Job 10] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+250110-20:59:00,980 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 1 jobs ready. Free memory (GB): 452.61/453.21, Free processors: 29/32.
+                     Currently running:
+                       * fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+                       * fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl
+250110-20:59:01,192 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_37_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+250110-20:59:01,236 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+250110-20:59:01,239 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.000143s.
+250110-20:59:01,543 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 13.661446s.
+250110-20:59:02,40 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 10.943791000000001s.
+250110-20:59:02,227 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 10.947833s.
+250110-20:59:02,976 nipype.workflow INFO:
+	 [Job 5] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+250110-20:59:02,977 nipype.workflow INFO:
+	 [Job 15] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+250110-20:59:02,978 nipype.workflow INFO:
+	 [Job 20] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl).
+250110-20:59:02,979 nipype.workflow INFO:
+	 [Job 40] Completed (fmriprep_24_1_wf.sub_37_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+250110-20:59:02,980 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 3 jobs ready. Free memory (GB): 453.21/453.21, Free processors: 32/32.
+250110-20:59:03,174 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_32_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+250110-20:59:03,174 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_43_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+250110-20:59:03,174 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/tmp/fmriprep_24_1_wf/sub_52_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+250110-20:59:03,262 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+250110-20:59:03,262 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+250110-20:59:03,264 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+250110-20:59:03,265 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.000139s.
+250110-20:59:03,265 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.000147s.
+250110-20:59:03,266 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.00023s.
+250110-20:59:04,977 nipype.workflow INFO:
+	 [Job 36] Completed (fmriprep_24_1_wf.sub_32_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+250110-20:59:04,977 nipype.workflow INFO:
+	 [Job 44] Completed (fmriprep_24_1_wf.sub_43_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+250110-20:59:04,978 nipype.workflow INFO:
+	 [Job 48] Completed (fmriprep_24_1_wf.sub_52_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl).
+250110-20:59:04,980 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 453.21/453.21, Free processors: 32/32.
+250110-20:59:06,975 nipype.workflow INFO:
+	 ***********************************
+250110-20:59:06,975 nipype.workflow ERROR:
+	 could not run node: fmriprep_24_1_wf.sub_32_wf.bidssrc
+250110-20:59:06,978 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-32/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205858-jd.elberse-bidssrc-e1f310ef-5040-402b-9ce8-2dbe50b2d6bb.txt
+250110-20:59:06,979 nipype.workflow ERROR:
+	 could not run node: fmriprep_24_1_wf.sub_37_wf.bidssrc
+250110-20:59:06,981 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-37/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205858-jd.elberse-bidssrc-98801278-ee2d-4ded-beaa-c92e250799c8.txt
+250110-20:59:06,982 nipype.workflow ERROR:
+	 could not run node: fmriprep_24_1_wf.sub_43_wf.bidssrc
+250110-20:59:06,985 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-43/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205859-jd.elberse-bidssrc-ad790c78-b895-4b7c-ab5f-857f2c36abf2.txt
+250110-20:59:06,985 nipype.workflow ERROR:
+	 could not run node: fmriprep_24_1_wf.sub_52_wf.bidssrc
+250110-20:59:06,988 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids/derivatives/sub-52/log/20250110-205439_b6d425f8-e8b7-431e-834f-03d30819bdc8/crash-20250110-205859-jd.elberse-bidssrc-cbf0d84a-59db-47f7-863e-641366fe78e3.txt
+250110-20:59:06,988 nipype.workflow INFO:
+	 ***********************************
+250110-20:59:07,77 nipype.workflow CRITICAL:
+	 fMRIPrep failed: 4 raised. Re-raising first.

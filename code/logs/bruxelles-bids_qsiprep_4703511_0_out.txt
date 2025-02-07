@@ -1,0 +1,46 @@
+241227-15:42:53,275 cli INFO:
+	 Telemetry system to collect crashes and errors is enabled - thanks for your feedback! Use option ``--notrack`` to opt out.
+241227-15:42:56,597 cli INFO:
+	 Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+bids-validator@1.8.4
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        1276 Files, 24.94GB                                MRI                   
+        31 - Subjects                                                            
+        4 - Sessions                                                             
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+241227-15:43:14,390 nipype.workflow IMPORTANT:
+	 Running QSIPrep version 0.23.1.dev0+g634483f.d20240830
+
+         License NOTICE ##################################################
+         QSIPrep 0.23.1.dev0+g634483f.d20240830
+         Copyright The PennLINC Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+241227-15:43:16,349 nipype.workflow IMPORTANT:
+	 Building QSIPrep's workflow:
+           * BIDS dataset path: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids.
+           * Participant list: ['001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '070'].
+           * Run identifier: 20241227-154253_cc21f537-2759-4369-9201-785d80c0614f.

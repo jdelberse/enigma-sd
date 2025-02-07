@@ -1,0 +1,21 @@
+241227-15:42:10,278 cli INFO:
+	 Telemetry system to collect crashes and errors is enabled - thanks for your feedback! Use option ``--notrack`` to opt out.
+241227-15:42:13,767 cli INFO:
+	 Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+bids-validator@1.8.4
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        1276 Files, 24.94GB                                MRI                   
+        31 - Subjects                                                            
+        4 - Sessions                                                             
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m

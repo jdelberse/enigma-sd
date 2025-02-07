@@ -1,0 +1,23 @@
+2025-01-16 13:18:03,698 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-01-16 13:18:04,043 [ WARNING] Matplotlib created a temporary cache directory at /tmp/matplotlib-2jggczbn because the default path (/home/fmriprep/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+You are using fMRIPrep-24.1.0, and a newer version of fMRIPrep is available: 24.1.1.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+2025-01-16 13:18:05,205 [    INFO] Telemetry system to collect crashes and errors is enabled - thanks for your feedback!. Use option ``--notrack`` to opt out.
+2025-01-16 13:19:31,711 [    INFO] Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+(node:3159380) Warning: Closing directory handle on garbage collection
+(Use `node --trace-warnings ...` to show where the warning was created)
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/run.py", line 40, in main
+    parse_args()
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/parser.py", line 903, in parse_args
+    validate_input_dir(
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/utils/bids.py", line 245, in validate_input_dir
+    subprocess.check_call(['bids-validator', str(bids_dir), '-c', temp.name])  # noqa: S607
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', '/data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-effo2-bids', '-c', '/tmp/tmpudum8uax.json']' returned non-zero exit status 1.
