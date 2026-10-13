@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/loadsave.py", line 101, in load
+    stat_result = os.stat(filename)
+                  ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids/derivatives/qsiprep/sub-204/ses-sd/dwi/sub-204_ses-sd_space-ACPC_desc-preproc_dwi.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py", line 23, in <module>
+    img = nib.load(f"{dwi}_desc-preproc_dwi.nii.gz")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/loadsave.py", line 103, in load
+    raise FileNotFoundError(f"No such file or no access: '{filename}'")
+FileNotFoundError: No such file or no access: '/data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids/derivatives/qsiprep/sub-204/ses-sd/dwi/sub-204_ses-sd_space-ACPC_desc-preproc_dwi.nii.gz'
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/fwdti/fit_fwdti_model.py sub-204 ses-sd /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids` failed. (See above for error)

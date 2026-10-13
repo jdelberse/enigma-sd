@@ -1,0 +1,106 @@
+
+SHiVAi segmentation pipeline
+
+Licences:
+- The SHiVAi segmentation pipeline (source code and Apptainer image) is distributed underthe GNU General Public License - version 3 (GPLv3):
+https://www.gnu.org/licenses/gpl-3.0.fr.html#license-text 
+- The SHiVAi trained AI models are distributed under and protected by the CC BY-NC-SA 4.0 license:
+https://creativecommons.org/licenses/by-nc-sa/4.0/ 
+
+The segmentation models have been registered at the french 'Association de Protection des Programmes' under the numbers:
+- For PVS: IDDN.FR.001.240015.000.S.P.2022.000.31230
+- For WMH: IDDN.FR.001.240030.000.S.P.2022.000.31230
+- For CMB: IDDN.FR.001.420007.000.S.P.2023.000.31230
+
+
+Working directory set to: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results
+250428-12:31:42,332 nipype.workflow INFO:
+	 Generated workflow graph: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/main_workflow/graph.svg (graph2use=colored, simple_form=True).
+250428-12:31:42,372 nipype.workflow INFO:
+	 Workflow main_workflow settings: ['check', 'execution', 'logging', 'monitoring']
+250428-12:31:42,419 nipype.workflow INFO:
+	 Running serially.
+250428-12:31:42,420 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_results/datagrabber".
+250428-12:31:42,434 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+250428-12:31:42,439 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.000489s.
+250428-12:31:42,439 nipype.workflow WARNING:
+	 Storing result file without outputs
+250428-12:31:42,442 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_results/datagrabber)
+250428-12:31:42,448 nipype.workflow ERROR:
+	 Node datagrabber.a0 failed to run on host gpu1.
+250428-12:31:42,449 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250428-123142-jd.elberse-datagrabber.a0-6cbe4d37-ed74-49c5-89a8-62435eeeeb24.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node datagrabber.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 400, in run
+	    outputs = self.aggregate_outputs(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 429, in aggregate_outputs
+	    predicted_outputs = self._list_outputs()  # Predictions from _list_outputs
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/io.py", line 1292, in _list_outputs
+	    raise IOError(msg)
+	OSError: Output key: img1 Template: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/t1/*.nii* returned no files
+
+
+250428-12:31:42,453 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-6006_ses-b9/datagrabber".
+250428-12:31:42,467 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+250428-12:31:42,470 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.002274s.
+250428-12:31:42,470 nipype.workflow WARNING:
+	 Storing result file without outputs
+250428-12:31:42,473 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/results/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-6006_ses-b9/datagrabber)
+250428-12:31:42,475 nipype.workflow ERROR:
+	 Node datagrabber.a1 failed to run on host gpu1.
+250428-12:31:42,476 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250428-123142-jd.elberse-datagrabber.a1-f4d193e4-2440-4f3b-9024-7768a5a028e6.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node datagrabber.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 400, in run
+	    outputs = self.aggregate_outputs(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 429, in aggregate_outputs
+	    predicted_outputs = self._list_outputs()  # Predictions from _list_outputs
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/io.py", line 1292, in _list_outputs
+	    raise IOError(msg)
+	OSError: Output key: seg Template: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai/sub-6006_ses-b9/seg/*.nii* returned no files
+
+
+250428-12:31:42,479 nipype.workflow INFO:
+	 ***********************************
+250428-12:31:42,479 nipype.workflow ERROR:
+	 could not run node: main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber.a0
+250428-12:31:42,479 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250428-123142-jd.elberse-datagrabber.a0-6cbe4d37-ed74-49c5-89a8-62435eeeeb24.pklz
+250428-12:31:42,479 nipype.workflow ERROR:
+	 could not run node: main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber.a1
+250428-12:31:42,479 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250428-123142-jd.elberse-datagrabber.a1-f4d193e4-2440-4f3b-9024-7768a5a028e6.pklz
+250428-12:31:42,479 nipype.workflow INFO:
+	 ***********************************

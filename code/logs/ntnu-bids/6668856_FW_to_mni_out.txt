@@ -1,0 +1,4 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6021/ses-b9/dwi/sub-6021_ses-b9_dir-AP_space-ACPC_FW.nii.gz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/fmriprep/sub-6021/ses-b9/sub-6021/ses-b9/anat/sub-6021_ses-b9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+Can't read initial transform derivatives/qsiprep/sub-6021/anat/sub-6021_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5

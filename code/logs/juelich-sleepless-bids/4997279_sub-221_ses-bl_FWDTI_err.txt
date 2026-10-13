@@ -1,0 +1,16 @@
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py:27: UserWarning: Pass ['bvecs'] as keyword args. From version 2.0.0 passing these as positional arguments will result in an error. 
+  gtab = gradient_table(f"{dwi}_desc-preproc_dwi.bval", f"{dwi}_desc-preproc_dwi.bvec")
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:701: RuntimeWarning: Number of calls to function has reached maxfev = 1800.
+  this_tensor, status = opt.leastsq(
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:501: RuntimeWarning: overflow encountered in exp
+  y = (1 - f) * np.exp(np.dot(design_matrix, tensor[:7])) + f * np.exp(
+Traceback (most recent call last):
+  File "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py", line 41, in <module>
+    TS = fwdtifit.fw_tensor # Free water-corrected tensor
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/multi_voxel.py", line 188, in __getattr__
+    result[ijk] = getattr(self.fit_array[ijk], attr)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'FreeWaterTensorFit' object has no attribute 'fw_tensor'
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/fwdti/fit_fwdti_model.py sub-221 ses-bl /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids` failed. (See above for error)

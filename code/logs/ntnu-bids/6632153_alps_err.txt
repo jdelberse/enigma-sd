@@ -1,0 +1,123 @@
+Error: cant open file ntnu-bids/derivatives/alps/b0.nii.gz
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/b0
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/b0
+Error : No image files match: ntnu-bids/derivatives/alps/b0
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/b0
+Error : No image files match: ntnu-bids/derivatives/alps/b0
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 517: 346975 Aborted                 bet2 "${outdir}/b0" "${outdir}/b0_brain" -m
+Image Exception : #63 :: No image files match: b0_brain_mask
+Image Exception : #22 :: Failed to read volume b0_brain_mask.nii.gz
+Error : No image files match: b0_brain_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume b0_brain_mask.nii.gz
+Error : No image files match: b0_brain_mask
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 517: 346983 Aborted                 dtifit --data="${dwi1_processed}" --out=dti --mask=b0_brain_mask.nii.gz --bvecs=bvec1 --bvals=bval1 --save_tensor
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_tensor.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_tensor
+Failed to read volume ntnu-bids/derivatives/alps/dti_tensor.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_tensor
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dyy_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dyy_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dzz_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dzz_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dyy_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dyy_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dzz_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dzz_in_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_JHU-FA
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_JHU-FA
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_JHU-FA
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error

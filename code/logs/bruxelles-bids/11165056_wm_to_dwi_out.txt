@@ -1,0 +1,9 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/qsiprep/sub-012/ses-T1BL/dwi/sub-012_ses-T1BL_space-ACPC_label-WM_dseg.nii.gz
+Could not create ImageIO for the input file, assuming dimension = 3 and scalar pixel type
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/qsiprep/sub-012/ses-T1BL/dwi/sub-012_ses-T1BL_space-ACPC_dwiref.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+=============================================================================
+WARNING: No transforms found, using identify transform
+Default pixel value: 0

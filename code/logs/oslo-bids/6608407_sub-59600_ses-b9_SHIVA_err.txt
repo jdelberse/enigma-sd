@@ -1,0 +1,15 @@
+2025-05-06 12:17:04.124134: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-06 12:17:06.143920: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-05-06 12:17:06.144534: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-05-06 12:17:06.144588: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/home/jd.elberse/.local/lib/python3.7/site-packages/numpy/core/fromnumeric.py:3441: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/home/jd.elberse/.local/lib/python3.7/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Traceback (most recent call last):
+  File "code/shiva/predict_one_file.py", line 142, in <module>
+    nifti = nibabel.Nifti1Image(predictions[0], affine=affine)
+IndexError: invalid index to scalar variable.
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/shiva/predict_one_file.py --verbose --gpu 0 -m code/shiva/models/T1-PVS -i /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59600/ses-b9/anat/sub-59600_ses-b9_space-SHIVA_desc-preproc_T1w.nii.gz -o /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59600/ses-b9/anat/sub-59600_ses-b9_space-SHIVA_label-PVS_probseg.nii.gz` failed. (See above for error)

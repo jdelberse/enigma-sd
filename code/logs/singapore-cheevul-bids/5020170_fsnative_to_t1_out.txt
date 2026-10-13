@@ -1,0 +1,10 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-cheevul-bids/derivatives/freesurfer/ses-b9/sub-16/mri/aparc+aseg.mgz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-cheevul-bids/derivatives/fmriprep/sub-16/ses-b9/anat/sub-16_ses-b9_desc-preproc_T1w.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+  1. /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-cheevul-bids/derivatives/fmriprep/sub-16/ses-b9/anat/sub-16_ses-b9_from-fsnative_to-T1w_mode-image_xfm.txt (type = AffineTransform)
+=============================================================================
+Default pixel value: 0
+Interpolation type: NearestNeighborInterpolateImageFunction
+Output warped image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/singapore-cheevul-bids/derivatives/fmriprep/sub-16/ses-b9/anat/sub-16_ses-b9_aparc+aseg.nii.gz

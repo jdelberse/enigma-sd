@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/shiva", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/dist-packages/shivai/scripts/shiva.py", line 26, in main
+    args = set_args_and_check(parser)
+  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/parsing.py", line 503, in set_args_and_check
+    subject_list = os.listdir(args.in_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/tmp/shivai'

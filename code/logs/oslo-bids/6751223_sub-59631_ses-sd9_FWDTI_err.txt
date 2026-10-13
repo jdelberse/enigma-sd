@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py", line 41, in <module>
+    fwdtifit = fwdtimodel.fit(data, mask=mask)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/multi_voxel.py", line 62, in new_fit
+    raise ValueError("mask and data shape do not match")
+ValueError: mask and data shape do not match
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/fwdti/fit_fwdti_model.py sub-59631 ses-sd9 /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids` failed. (See above for error)

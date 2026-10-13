@@ -1,0 +1,2 @@
+WARNING: skipping mount of /tmp/stockholm: stat /tmp/stockholm: no such file or directory
+FATAL:   container creation failed: mount /tmp/stockholm->/tmp/stockholm error: while mounting /tmp/stockholm: mount source /tmp/stockholm doesn't exist

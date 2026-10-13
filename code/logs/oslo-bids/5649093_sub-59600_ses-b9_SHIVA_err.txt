@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node datagrabber.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 400, in run
+	    outputs = self.aggregate_outputs(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 429, in aggregate_outputs
+	    predicted_outputs = self._list_outputs()  # Predictions from _list_outputs
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/io.py", line 1292, in _list_outputs
+	    raise IOError(msg)
+	OSError: Output key: img1 Template: /mnt/data/input/main_workflow/t1/*.nii* returned no files
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/shiva", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/dist-packages/shivai/scripts/shiva.py", line 27, in main
+    shiva(**vars(args))
+  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/shiva_runner.py", line 172, in shiva
+    main_wf.run(plugin=run_plugin, plugin_args=run_plugin_args)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/workflows.py", line 638, in run
+    runner.run(execgraph, updatehash=updatehash, config=self.config)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 82, in run
+    raise error from cause
+RuntimeError: 4 raised. Re-raising first.
+

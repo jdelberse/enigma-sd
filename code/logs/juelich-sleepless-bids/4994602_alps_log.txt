@@ -1,0 +1,45 @@
+000 (4994602.000.000) 2025-03-11 10:07:17 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (4994602.000.000) 2025-03-11 10:07:18 Job executing on host: <10.0.9.29:9618?addrs=10.0.9.29-9618&alias=cpu29.htc.inm7.de&noUDP&sock=startd_3130_7f85>
+...
+006 (4994602.000.000) 2025-03-11 10:07:26 Image size of job updated: 2295000
+	37  -  MemoryUsage of job (MB)
+	37432  -  ResidentSetSize of job (KB)
+...
+006 (4994602.000.000) 2025-03-11 10:12:26 Image size of job updated: 4597748
+	511  -  MemoryUsage of job (MB)
+	522348  -  ResidentSetSize of job (KB)
+...
+006 (4994602.000.000) 2025-03-11 10:17:26 Image size of job updated: 4597748
+	611  -  MemoryUsage of job (MB)
+	625240  -  ResidentSetSize of job (KB)
+...
+006 (4994602.000.000) 2025-03-11 10:22:27 Image size of job updated: 4597748
+	2180  -  MemoryUsage of job (MB)
+	2231344  -  ResidentSetSize of job (KB)
+...
+006 (4994602.000.000) 2025-03-11 10:32:27 Image size of job updated: 4765056
+	2902  -  MemoryUsage of job (MB)
+	2971004  -  ResidentSetSize of job (KB)
+...
+006 (4994602.000.000) 2025-03-11 10:52:30 Image size of job updated: 4791288
+	2902  -  MemoryUsage of job (MB)
+	2971004  -  ResidentSetSize of job (KB)
+...
+005 (4994602.000.000) 2025-03-11 11:00:38 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:52:10, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:52:10, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        4         4 
+	   Disk (KB)            : 40000    94371840  96727725 
+	   Memory (MB)          :  2902       32768     32768 
+
+	Job terminated of its own accord at 2025-03-11T10:00:38Z with exit-code 0.
+...

@@ -1,0 +1,31 @@
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd
+Trying to run inference on GPU 0
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_2_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 3s 3s/step
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_5_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_3_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_4_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_0_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+INFO : Predicting fold : 20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_1_model
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+Inference time : 0.3695155104001363 sec.
+
+INFO : Done with predictions -> /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-014/ses-sd9/sub-014/ses-sd9/anat/sub-014_ses-sd9_space-SHIVA_label-PVS_probseg.nii.gz
+
+

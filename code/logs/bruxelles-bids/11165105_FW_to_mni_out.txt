@@ -1,0 +1,11 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/qsiprep/sub-004/ses-T2SD/dwi/sub-004_ses-T2SD_space-ACPC_FW.nii.gz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-004/ses-T2SD/sub-004/ses-T2SD/anat/sub-004_ses-T2SD_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+  1. bruxelles-bids/derivatives/qsiprep/sub-004/anat/sub-004_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5[0] (type = AffineTransform)
+  2. bruxelles-bids/derivatives/qsiprep/sub-004/anat/sub-004_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5[1] (type = DisplacementFieldTransform)
+=============================================================================
+Default pixel value: 0
+Interpolation type: NearestNeighborInterpolateImageFunction
+Output warped image: bruxelles-bids/derivatives/qsiprep/sub-004/ses-T2SD/dwi/sub-004_ses-T2SD_space-MNI152NLin2009cAsym_FW.nii.gz

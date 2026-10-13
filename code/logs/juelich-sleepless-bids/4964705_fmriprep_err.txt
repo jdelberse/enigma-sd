@@ -1,0 +1,26 @@
+2025-02-26 09:24:34,637 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2025-02-26 09:24:34,841 [ WARNING] Matplotlib created a temporary cache directory at /tmp/matplotlib-8dam2x08 because the default path (/home/fmriprep/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2025-02-26 09:24:36,011 [    INFO] Telemetry system to collect crashes and errors is enabled - thanks for your feedback!. Use option ``--notrack`` to opt out.
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/run.py", line 40, in main
+    parse_args()
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/cli/parser.py", line 878, in parse_args
+    config.from_dict({})
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/config.py", line 729, in from_dict
+    execution.load(settings, init=initialize('execution'), ignore=ignore)
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/config.py", line 240, in load
+    cls.init()
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/fmriprep/config.py", line 503, in init
+    cls._layout = BIDSLayout(
+                  ^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/bids/layout/layout.py", line 135, in __init__
+    root, description = validate_root(root, validate)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/fmriprep/lib/python3.11/site-packages/bids/layout/validation.py", line 74, in validate_root
+    raise BIDSValidationError(
+bids.exceptions.BIDSValidationError: 'dataset_description.json' is missing from project root. Every valid BIDS dataset must have this file.
+Example contents of 'dataset_description.json': 
+{"Name": "Example dataset", "BIDSVersion": "1.0.2"}

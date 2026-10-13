@@ -1,0 +1,72 @@
+250424-11:59:35,4 cli INFO:
+	 Telemetry system to collect crashes and errors is enabled - thanks for your feedback! Use option ``--notrack`` to opt out.
+250424-11:59:41,869 cli INFO:
+	 Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+bids-validator@1.8.4
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered based on the presence of only one author field. Please ignore if all contributors are already properly listed. (code: 102 - TOO_FEW_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=TOO_FEW_AUTHORS for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        2173 Files, 41.84GB                                MRI                   
+        48 - Subjects                                                            
+        4 - Sessions                                                             
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+250424-11:59:47,457 nipype.workflow INFO:
+	 
+Group	Subject	Sessions
+0	59633	b9, sd9
+1	59603	b9, sd9
+2	59621	b9, sd9
+3	59650	b9, sd9
+4	59601	b9, sd9
+5	59604	b9, sd9
+6	59617	b9, sd9
+7	59600	b9, sd9
+8	59640	b9, sd9
+9	59637	b9, sd9
+10	59642	b9, sd9
+11	59619	b9, sd9
+12	59634	b9, sd9
+13	59618	b9, sd9
+14	59635	b9, sd9
+15	59655	b9, sd9
+16	59628	b9, sd9
+17	59629	b9, sd9
+18	59647	b9, sd9
+19	59654	b9, sd9
+20	59643	b9, sd9
+21	59602	b9, sd9
+22	59627	b9, sd9
+23	59653	b9, sd9
+24	59626	b9, sd9
+25	59612	b9, sd9
+26	59607	b9, sd9
+27	59641	b9, sd9
+28	59648	b9, sd9
+29	59644	b9, sd9
+30	59614	b9, sd9
+31	59639	b9, sd9
+32	59657	b9, sd9
+33	59606	b9, sd9
+34	59636	b9, sd9
+35	59631	b9, sd9
+36	59625	b9, sd9
+37	59658	b9, sd9
+38	59616	b9, sd9
+39	59656	b9, sd9
+40	59623	b9, sd9
+41	59632	b9, sd9
+42	59624	b9, sd9
+43	59638	b9, sd9
+44	59645	b9, sd9
+45	59651	b9, sd9
+46	59608	b9, sd9
+47	59646	b9, sd9

@@ -1,0 +1,80 @@
+000 (6785315.000.000) 2025-07-01 12:44:08 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (6785315.000.000) 2025-07-01 12:44:20 Job executing on host: <10.0.9.12:9618?addrs=10.0.9.12-9618&alias=cpu12.htc.inm7.de&noUDP&sock=startd_122979_f18a>
+...
+006 (6785315.000.000) 2025-07-01 12:44:26 Image size of job updated: 3145728
+	331  -  MemoryUsage of job (MB)
+	338632  -  ResidentSetSize of job (KB)
+...
+007 (6785315.000.000) 2025-07-01 12:44:26 Shadow exception!
+	Error from slot1_8@cpu12.htc.inm7.de: Worker node is out of memory
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (6785315.000.000) 2025-07-01 12:44:26 Job executing on host: <10.0.9.12:9618?addrs=10.0.9.12-9618&alias=cpu12.htc.inm7.de&noUDP&sock=startd_122979_f18a>
+...
+006 (6785315.000.000) 2025-07-01 12:44:32 Image size of job updated: 3145728
+	331  -  MemoryUsage of job (MB)
+	338388  -  ResidentSetSize of job (KB)
+...
+007 (6785315.000.000) 2025-07-01 12:44:32 Shadow exception!
+	Error from slot1_8@cpu12.htc.inm7.de: Worker node is out of memory
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (6785315.000.000) 2025-07-01 12:44:32 Job executing on host: <10.0.9.12:9618?addrs=10.0.9.12-9618&alias=cpu12.htc.inm7.de&noUDP&sock=startd_122979_f18a>
+...
+006 (6785315.000.000) 2025-07-01 12:44:38 Image size of job updated: 3145728
+	331  -  MemoryUsage of job (MB)
+	338172  -  ResidentSetSize of job (KB)
+...
+007 (6785315.000.000) 2025-07-01 12:44:38 Shadow exception!
+	Error from slot1_8@cpu12.htc.inm7.de: Worker node is out of memory
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (6785315.000.000) 2025-07-01 12:44:38 Job executing on host: <10.0.9.12:9618?addrs=10.0.9.12-9618&alias=cpu12.htc.inm7.de&noUDP&sock=startd_122979_f18a>
+...
+006 (6785315.000.000) 2025-07-01 12:44:44 Image size of job updated: 3145728
+	331  -  MemoryUsage of job (MB)
+	338400  -  ResidentSetSize of job (KB)
+...
+007 (6785315.000.000) 2025-07-01 12:44:44 Shadow exception!
+	Error from slot1_8@cpu12.htc.inm7.de: Worker node is out of memory
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (6785315.000.000) 2025-07-01 12:44:44 Job executing on host: <10.0.9.12:9618?addrs=10.0.9.12-9618&alias=cpu12.htc.inm7.de&noUDP&sock=startd_122979_f18a>
+...
+006 (6785315.000.000) 2025-07-01 12:44:50 Image size of job updated: 3145728
+	331  -  MemoryUsage of job (MB)
+	338564  -  ResidentSetSize of job (KB)
+...
+007 (6785315.000.000) 2025-07-01 12:44:50 Shadow exception!
+	Error from slot1_8@cpu12.htc.inm7.de: Worker node is out of memory
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (6785315.000.000) 2025-07-01 12:45:12 Job executing on host: <10.0.9.37:9618?addrs=10.0.9.37-9618&alias=cpu37.htc.inm7.de&noUDP&sock=startd_3286_804b>
+...
+006 (6785315.000.000) 2025-07-01 12:45:17 Image size of job updated: 40000
+	6  -  MemoryUsage of job (MB)
+	5556  -  ResidentSetSize of job (KB)
+...
+005 (6785315.000.000) 2025-07-01 12:45:17 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 8         8 
+	   Disk (KB)            :    40000 94371840  96727092 
+	   Memory (MB)          :        6    32768     32768 
+
+	Job terminated of its own accord at 2025-07-01T10:45:17Z with exit-code 0.
+...

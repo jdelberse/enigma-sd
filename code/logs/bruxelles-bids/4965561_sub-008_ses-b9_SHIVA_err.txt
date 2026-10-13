@@ -1,0 +1,1135 @@
+2025-02-26 11:26:31.319386: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:26:32.367415: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:26:32.367606: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:26:32.367630: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+Your GPU may run slowly with dtype policy mixed_float16 because it does not have compute capability of at least 7.0. Your GPU:
+  NVIDIA GeForce GTX 1080 Ti, compute capability 6.1
+See https://developer.nvidia.com/cuda-gpus for a list of GPUs and their compute capabilities.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-02-26 11:26:34.408703: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:26:34.550120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 137 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1
+2025-02-26 11:26:44.878738: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:26:44.878905: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:26:44.878973: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:26:44.879023: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:26:44.879071: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 11, Chunks in use: 11. 15.5KiB allocated for chunks. 15.5KiB in use in bin. 13.3KiB client-requested in use in bin.
+2025-02-26 11:26:44.879120: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879164: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.5KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879210: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:26:44.879257: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 1, Chunks in use: 1. 19.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:26:44.879305: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 3, Chunks in use: 2. 155.8KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:26:44.879353: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 2, Chunks in use: 1. 176.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:26:44.879400: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 3, Chunks in use: 1. 607.5KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:26:44.879447: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 1, Chunks in use: 1. 355.0KiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:26:44.879494: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 3, Chunks in use: 1. 1.94MiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:26:44.879538: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 1, Chunks in use: 1. 1.11MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:26:44.879583: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 4, Chunks in use: 2. 9.84MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:26:44.879629: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 3, Chunks in use: 1. 20.19MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:26:44.879675: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 1, Chunks in use: 1. 11.70MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:26:44.879720: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 1, Chunks in use: 0. 23.39MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879763: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879809: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 67.62MiB allocated for chunks. 67.62MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:26:44.879851: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879893: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:44.879938: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:26:44.879980: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:26:44.880025: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:26:44.880070: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:26:44.880112: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:26:44.880152: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:26:44.880193: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:26:44.880232: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:26:44.880272: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 7
+2025-02-26 11:26:44.880312: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 10
+2025-02-26 11:26:44.880351: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:26:44.880392: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:26:44.880432: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:26:44.880472: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 16
+2025-02-26 11:26:44.880511: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 14
+2025-02-26 11:26:44.880551: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 15
+2025-02-26 11:26:44.880591: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:26:44.880630: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:26:44.880671: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 1280 next 9
+2025-02-26 11:26:44.880711: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:26:44.880752: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 768 next 93
+2025-02-26 11:26:44.880792: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001d00 of size 768 next 94
+2025-02-26 11:26:44.880832: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:26:44.880872: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:26:44.880913: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 1536 next 100
+2025-02-26 11:26:44.880954: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 1536 next 101
+2025-02-26 11:26:44.880994: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 1536 next 104
+2025-02-26 11:26:44.881034: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003400 of size 1536 next 105
+2025-02-26 11:26:44.881074: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:26:44.881114: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:26:44.881153: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 110
+2025-02-26 11:26:44.881193: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 108
+2025-02-26 11:26:44.881233: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 109
+2025-02-26 11:26:44.881273: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:26:44.881313: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:26:44.881355: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:26:44.881394: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005600 of size 256 next 116
+2025-02-26 11:26:44.881434: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005700 of size 256 next 117
+2025-02-26 11:26:44.881473: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005800 of size 256 next 118
+2025-02-26 11:26:44.881512: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005900 of size 5632 next 18
+2025-02-26 11:26:44.881568: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a006f00 of size 11008 next 17
+2025-02-26 11:26:44.881608: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009a00 of size 256 next 22
+2025-02-26 11:26:44.881648: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009b00 of size 256 next 21
+2025-02-26 11:26:44.881687: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009c00 of size 256 next 23
+2025-02-26 11:26:44.881727: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009d00 of size 256 next 26
+2025-02-26 11:26:44.881766: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:26:44.881806: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:26:44.881847: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 31
+2025-02-26 11:26:44.881887: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 29
+2025-02-26 11:26:44.881927: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 30
+2025-02-26 11:26:44.881966: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:26:44.882006: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:26:44.882045: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:26:44.882085: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 37
+2025-02-26 11:26:44.882125: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 38
+2025-02-26 11:26:44.882164: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 41
+2025-02-26 11:26:44.882203: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:26:44.882244: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:26:44.882284: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:26:44.882324: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 47
+2025-02-26 11:26:44.882363: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 45
+2025-02-26 11:26:44.882403: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 46
+2025-02-26 11:26:44.882442: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:26:44.882482: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:26:44.882522: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:26:44.882561: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 53
+2025-02-26 11:26:44.882601: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 54
+2025-02-26 11:26:44.882641: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 57
+2025-02-26 11:26:44.882696: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:26:44.882737: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:26:44.882777: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:26:44.882817: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 63
+2025-02-26 11:26:44.882856: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 61
+2025-02-26 11:26:44.882896: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 62
+2025-02-26 11:26:44.882936: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:26:44.882976: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:26:44.883015: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:26:44.883056: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 512 next 69
+2025-02-26 11:26:44.883096: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c000 of size 512 next 70
+2025-02-26 11:26:44.883136: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c200 of size 512 next 73
+2025-02-26 11:26:44.883176: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c400 of size 512 next 74
+2025-02-26 11:26:44.883215: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:26:44.883255: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:26:44.883295: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 79
+2025-02-26 11:26:44.883335: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 77
+2025-02-26 11:26:44.883374: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 78
+2025-02-26 11:26:44.883414: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:26:44.883454: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:26:44.883493: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:26:44.883533: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 768 next 85
+2025-02-26 11:26:44.883573: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d500 of size 768 next 86
+2025-02-26 11:26:44.883620: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d800 of size 768 next 89
+2025-02-26 11:26:44.883661: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00db00 of size 768 next 90
+2025-02-26 11:26:44.883701: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:26:44.883741: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:26:44.883781: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 768 next 95
+2025-02-26 11:26:44.883822: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e300 of size 1024 next 24
+2025-02-26 11:26:44.883864: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e700 of size 19456 next 25
+2025-02-26 11:26:44.883905: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013300 of size 70144 next 33
+2025-02-26 11:26:44.883946: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a024500 of size 35072 next 32
+2025-02-26 11:26:44.883986: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a02ce00 of size 62208 next 40
+2025-02-26 11:26:44.884026: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a03c100 of size 62208 next 39
+2025-02-26 11:26:44.884067: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a04b400 of size 221184 next 49
+2025-02-26 11:26:44.884108: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a081400 of size 110592 next 48
+2025-02-26 11:26:44.884148: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a09c400 of size 200448 next 56
+2025-02-26 11:26:44.884188: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0cd300 of size 200448 next 55
+2025-02-26 11:26:44.884228: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a0fe200 of size 727040 next 65
+2025-02-26 11:26:44.884268: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a1afa00 of size 363520 next 64
+2025-02-26 11:26:44.884308: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a208600 of size 651520 next 72
+2025-02-26 11:26:44.884348: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a2a7700 of size 651520 next 71
+2025-02-26 11:26:44.884388: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a346800 of size 2336256 next 81
+2025-02-26 11:26:44.884428: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a580e00 of size 1168128 next 80
+2025-02-26 11:26:44.884468: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a69e100 of size 2100480 next 88
+2025-02-26 11:26:44.884508: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a89ee00 of size 2100480 next 87
+2025-02-26 11:26:44.884557: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3aa9fb00 of size 7553536 next 97
+2025-02-26 11:26:44.884598: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3b1d3d00 of size 3776768 next 96
+2025-02-26 11:26:44.884637: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b56de00 of size 6806272 next 103
+2025-02-26 11:26:44.884678: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3bbeb900 of size 6806272 next 102
+2025-02-26 11:26:44.884718: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c269400 of size 24530944 next 112
+2025-02-26 11:26:44.884758: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d9ce400 of size 12265472 next 111
+2025-02-26 11:26:44.884800: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3e580c00 of size 70906880 next 18446744073709551615
+2025-02-26 11:26:44.884840: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:26:44.884884: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:26:44.884926: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:26:44.884968: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:26:44.885009: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:26:44.885050: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 2 Chunks of size 1280 totalling 2.5KiB
+2025-02-26 11:26:44.885091: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 1536 totalling 12.0KiB
+2025-02-26 11:26:44.885133: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:26:44.885175: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:26:44.885217: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:26:44.885259: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:26:44.885301: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:26:44.885343: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:26:44.885387: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:26:44.885429: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:26:44.885470: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:26:44.885512: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:26:44.885570: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:26:44.885612: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:26:44.885655: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:26:44.885697: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 70906880 totalling 67.62MiB
+2025-02-26 11:26:44.885740: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 93.96MiB
+2025-02-26 11:26:44.885781: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:26:44.885829: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                        98520320
+MaxInUse:                     98520320
+NumAllocs:                         177
+MaxAllocSize:                 70906880
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:26:44.885889: W tensorflow/tsl/framework/bfc_allocator.cc:492] ***_*_**_____***____******________________*******************************************xxxxxxxxxxxxxxx
+2025-02-26 11:26:44.885968: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-26 11:26:55.443650: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:26:55.443825: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:26:55.443887: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:26:55.443937: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:26:55.443984: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 9, Chunks in use: 9. 12.8KiB allocated for chunks. 12.8KiB in use in bin. 10.9KiB client-requested in use in bin.
+2025-02-26 11:26:55.444029: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 2, Chunks in use: 2. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 2.4KiB client-requested in use in bin.
+2025-02-26 11:26:55.444073: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:55.444119: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:26:55.444179: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 2, Chunks in use: 1. 37.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:26:55.444228: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 4, Chunks in use: 2. 167.2KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:26:55.444274: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 3, Chunks in use: 1. 337.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:26:55.444321: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 1, Chunks in use: 1. 195.8KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:26:55.444367: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 3, Chunks in use: 1. 1.08MiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:26:55.444414: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 636.2KiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:26:55.444459: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 3, Chunks in use: 1. 3.47MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:26:55.444504: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 3, Chunks in use: 2. 9.21MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:26:55.444549: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 2, Chunks in use: 1. 10.50MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:26:55.444596: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 3, Chunks in use: 1. 36.38MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:26:55.444639: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:55.444681: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:55.444727: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 75.10MiB allocated for chunks. 75.10MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:26:55.444771: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:55.444813: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:55.444857: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:26:55.444909: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:26:55.444956: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:26:55.444998: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:26:55.445038: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:26:55.445078: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:26:55.445118: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:26:55.445158: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:26:55.445198: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 89
+2025-02-26 11:26:55.445238: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 86
+2025-02-26 11:26:55.445278: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:26:55.445318: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:26:55.445358: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:26:55.445398: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 85
+2025-02-26 11:26:55.445437: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 78
+2025-02-26 11:26:55.445477: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 109
+2025-02-26 11:26:55.445534: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:26:55.445575: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:26:55.445615: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 256 next 63
+2025-02-26 11:26:55.445655: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001500 of size 256 next 65
+2025-02-26 11:26:55.445695: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001600 of size 256 next 54
+2025-02-26 11:26:55.445737: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001700 of size 256 next 53
+2025-02-26 11:26:55.445777: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001800 of size 256 next 9
+2025-02-26 11:26:55.445817: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:26:55.445865: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 512 next 55
+2025-02-26 11:26:55.445908: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001c00 of size 512 next 56
+2025-02-26 11:26:55.445948: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001e00 of size 512 next 94
+2025-02-26 11:26:55.445988: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:26:55.446028: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:26:55.446068: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 768 next 31
+2025-02-26 11:26:55.446108: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002500 of size 768 next 33
+2025-02-26 11:26:55.446148: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 768 next 21
+2025-02-26 11:26:55.446188: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002b00 of size 768 next 22
+2025-02-26 11:26:55.446228: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 768 next 17
+2025-02-26 11:26:55.446269: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003100 of size 2304 next 105
+2025-02-26 11:26:55.446309: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:26:55.446349: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:26:55.446389: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 15
+2025-02-26 11:26:55.446430: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 25
+2025-02-26 11:26:55.446470: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 18
+2025-02-26 11:26:55.446510: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:26:55.446550: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:26:55.446590: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:26:55.446630: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005600 of size 18432 next 26
+2025-02-26 11:26:55.446670: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:26:55.446709: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:26:55.446749: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 112
+2025-02-26 11:26:55.446790: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 108
+2025-02-26 11:26:55.446836: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 110
+2025-02-26 11:26:55.446876: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:26:55.446916: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:26:55.446956: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:26:55.446998: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 101
+2025-02-26 11:26:55.447038: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 100
+2025-02-26 11:26:55.447078: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 93
+2025-02-26 11:26:55.447119: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:26:55.447159: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:26:55.447199: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:26:55.447240: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 97
+2025-02-26 11:26:55.447281: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 95
+2025-02-26 11:26:55.447320: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 24
+2025-02-26 11:26:55.447360: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:26:55.447399: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:26:55.447439: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:26:55.447479: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 87
+2025-02-26 11:26:55.447518: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 81
+2025-02-26 11:26:55.447558: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 70
+2025-02-26 11:26:55.447598: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:26:55.447637: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:26:55.447677: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:26:55.447717: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 71
+2025-02-26 11:26:55.447764: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 69
+2025-02-26 11:26:55.447804: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 72
+2025-02-26 11:26:55.447843: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:26:55.447883: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:26:55.447923: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:26:55.447963: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 2048 next 74
+2025-02-26 11:26:55.448003: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:26:55.448042: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:26:55.448082: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 47
+2025-02-26 11:26:55.448122: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 49
+2025-02-26 11:26:55.448162: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 38
+2025-02-26 11:26:55.448201: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:26:55.448241: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:26:55.448281: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:26:55.448321: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 512 next 37
+2025-02-26 11:26:55.448360: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d400 of size 768 next 39
+2025-02-26 11:26:55.448400: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d700 of size 768 next 40
+2025-02-26 11:26:55.448440: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00da00 of size 1024 next 90
+2025-02-26 11:26:55.448480: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:26:55.448519: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:26:55.448559: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 1536 next 10
+2025-02-26 11:26:55.448599: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e600 of size 1536 next 117
+2025-02-26 11:26:55.448639: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ec00 of size 1536 next 118
+2025-02-26 11:26:55.448686: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f200 of size 256 next 119
+2025-02-26 11:26:55.448726: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f300 of size 256 next 120
+2025-02-26 11:26:55.448766: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a00f400 of size 5888 next 79
+2025-02-26 11:26:55.448806: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a010b00 of size 11008 next 77
+2025-02-26 11:26:55.448846: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013600 of size 38912 next 104
+2025-02-26 11:26:55.448888: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a01ce00 of size 19456 next 111
+2025-02-26 11:26:55.448928: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a021a00 of size 35072 next 102
+2025-02-26 11:26:55.448969: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a02a300 of size 35072 next 103
+2025-02-26 11:26:55.449009: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a032c00 of size 124416 next 88
+2025-02-26 11:26:55.449049: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a051200 of size 62208 next 96
+2025-02-26 11:26:55.449089: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a060500 of size 110592 next 73
+2025-02-26 11:26:55.449129: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a07b500 of size 110592 next 80
+2025-02-26 11:26:55.449169: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a096500 of size 400896 next 61
+2025-02-26 11:26:55.449209: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0f8300 of size 200448 next 62
+2025-02-26 11:26:55.449249: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a129200 of size 363520 next 57
+2025-02-26 11:26:55.449290: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a181e00 of size 363520 next 64
+2025-02-26 11:26:55.449330: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a1daa00 of size 1303040 next 45
+2025-02-26 11:26:55.449370: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a318c00 of size 651520 next 46
+2025-02-26 11:26:55.449410: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a3b7d00 of size 1168128 next 41
+2025-02-26 11:26:55.449449: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a4d5000 of size 1168128 next 48
+2025-02-26 11:26:55.449489: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a5f2300 of size 4200960 next 29
+2025-02-26 11:26:55.449548: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a9f3d00 of size 2100480 next 30
+2025-02-26 11:26:55.449589: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3abf4a00 of size 3776768 next 23
+2025-02-26 11:26:55.449638: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3af8eb00 of size 3776768 next 32
+2025-02-26 11:26:55.449679: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b328c00 of size 13612544 next 16
+2025-02-26 11:26:55.449719: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3c024200 of size 6806272 next 14
+2025-02-26 11:26:55.449759: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c6a1d00 of size 12265472 next 116
+2025-02-26 11:26:55.449799: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d254500 of size 12265472 next 7
+2025-02-26 11:26:55.449840: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3de06d00 of size 78746368 next 18446744073709551615
+2025-02-26 11:26:55.449879: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:26:55.449924: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:26:55.449966: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:26:55.450008: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:26:55.450049: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:26:55.450090: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-26 11:26:55.450132: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 1536 totalling 10.5KiB
+2025-02-26 11:26:55.450174: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2048 totalling 2.0KiB
+2025-02-26 11:26:55.450215: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:26:55.450256: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:26:55.450299: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:26:55.450341: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:26:55.450383: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:26:55.450425: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:26:55.450468: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:26:55.450510: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:26:55.450552: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:26:55.450594: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:26:55.450635: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:26:55.450683: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:26:55.450725: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:26:55.450767: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:26:55.450809: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 78746368 totalling 75.10MiB
+2025-02-26 11:26:55.450852: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 101.43MiB
+2025-02-26 11:26:55.450892: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:26:55.450939: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                       106361344
+MaxInUse:                    106361344
+NumAllocs:                         321
+MaxAllocSize:                 78746368
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:26:55.450999: W tensorflow/tsl/framework/bfc_allocator.cc:492] *****__**__***_________******_______********************************************xxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:26:55.451049: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-26 11:27:05.956401: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:27:05.956562: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:27:05.956604: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:27:05.956634: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:27:05.956663: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 9, Chunks in use: 9. 12.8KiB allocated for chunks. 12.8KiB in use in bin. 10.9KiB client-requested in use in bin.
+2025-02-26 11:27:05.956689: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 2, Chunks in use: 2. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 2.4KiB client-requested in use in bin.
+2025-02-26 11:27:05.956717: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:05.956744: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:27:05.956789: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 2, Chunks in use: 1. 37.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:27:05.956819: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 4, Chunks in use: 2. 167.2KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:27:05.956846: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 3, Chunks in use: 1. 337.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:27:05.956874: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 1, Chunks in use: 1. 195.8KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:27:05.956902: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 3, Chunks in use: 1. 1.08MiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:27:05.956930: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 636.2KiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:27:05.956957: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 3, Chunks in use: 1. 3.47MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:27:05.956983: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 3, Chunks in use: 2. 9.21MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:27:05.957010: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 2, Chunks in use: 1. 10.50MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:27:05.957038: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 3, Chunks in use: 1. 36.38MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:27:05.957064: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:05.957089: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:05.957116: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 75.10MiB allocated for chunks. 75.10MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:27:05.957142: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:05.957169: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:05.957202: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:27:05.957227: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:27:05.957256: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:27:05.957283: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:27:05.957307: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:27:05.957331: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:27:05.957354: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:27:05.957378: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:27:05.957401: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 25
+2025-02-26 11:27:05.957424: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 18
+2025-02-26 11:27:05.957448: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:27:05.957471: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:27:05.957495: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:27:05.957530: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 15
+2025-02-26 11:27:05.957554: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 17
+2025-02-26 11:27:05.957578: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 33
+2025-02-26 11:27:05.957601: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:27:05.957625: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:27:05.957648: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 256 next 53
+2025-02-26 11:27:05.957672: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001500 of size 256 next 65
+2025-02-26 11:27:05.957695: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001600 of size 256 next 64
+2025-02-26 11:27:05.957718: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001700 of size 256 next 72
+2025-02-26 11:27:05.957742: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001800 of size 256 next 9
+2025-02-26 11:27:05.957765: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:27:05.957795: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 512 next 71
+2025-02-26 11:27:05.957819: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001c00 of size 512 next 69
+2025-02-26 11:27:05.957842: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001e00 of size 512 next 94
+2025-02-26 11:27:05.957867: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:27:05.957891: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:27:05.957915: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 768 next 93
+2025-02-26 11:27:05.957939: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002500 of size 768 next 100
+2025-02-26 11:27:05.957963: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 768 next 103
+2025-02-26 11:27:05.957986: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002b00 of size 768 next 110
+2025-02-26 11:27:05.958009: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 768 next 108
+2025-02-26 11:27:05.958033: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003100 of size 2304 next 105
+2025-02-26 11:27:05.958057: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:27:05.958080: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:27:05.958104: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 104
+2025-02-26 11:27:05.958127: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 112
+2025-02-26 11:27:05.958151: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 78
+2025-02-26 11:27:05.958174: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:27:05.958198: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:27:05.958221: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:27:05.958244: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005600 of size 18432 next 26
+2025-02-26 11:27:05.958268: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:27:05.958291: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:27:05.958315: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 118
+2025-02-26 11:27:05.958343: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 31
+2025-02-26 11:27:05.958367: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 117
+2025-02-26 11:27:05.958390: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:27:05.958414: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:27:05.958437: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:27:05.958461: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 7
+2025-02-26 11:27:05.958484: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 16
+2025-02-26 11:27:05.958508: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 32
+2025-02-26 11:27:05.958531: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:27:05.958554: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:27:05.958578: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:27:05.958601: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 37
+2025-02-26 11:27:05.958624: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 40
+2025-02-26 11:27:05.958648: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 39
+2025-02-26 11:27:05.958671: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:27:05.958694: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:27:05.958718: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:27:05.958741: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 38
+2025-02-26 11:27:05.958764: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 49
+2025-02-26 11:27:05.958788: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 48
+2025-02-26 11:27:05.958811: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:27:05.958835: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:27:05.958858: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:27:05.958886: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 45
+2025-02-26 11:27:05.958910: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 56
+2025-02-26 11:27:05.958934: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 55
+2025-02-26 11:27:05.958957: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:27:05.958980: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:27:05.959004: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:27:05.959028: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 2048 next 74
+2025-02-26 11:27:05.959051: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:27:05.959075: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:27:05.959098: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 70
+2025-02-26 11:27:05.959122: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 81
+2025-02-26 11:27:05.959145: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 80
+2025-02-26 11:27:05.959168: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:27:05.959192: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:27:05.959216: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:27:05.959239: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 512 next 24
+2025-02-26 11:27:05.959263: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d400 of size 768 next 97
+2025-02-26 11:27:05.959286: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d700 of size 768 next 95
+2025-02-26 11:27:05.959310: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00da00 of size 1024 next 90
+2025-02-26 11:27:05.959333: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:27:05.959357: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:27:05.959380: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 1536 next 85
+2025-02-26 11:27:05.959404: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e600 of size 1536 next 86
+2025-02-26 11:27:05.959428: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ec00 of size 1536 next 89
+2025-02-26 11:27:05.959456: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f200 of size 256 next 119
+2025-02-26 11:27:05.959480: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f300 of size 256 next 120
+2025-02-26 11:27:05.959504: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a00f400 of size 5888 next 21
+2025-02-26 11:27:05.959529: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a010b00 of size 11008 next 22
+2025-02-26 11:27:05.959553: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013600 of size 38912 next 116
+2025-02-26 11:27:05.959589: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a01ce00 of size 19456 next 10
+2025-02-26 11:27:05.959628: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a021a00 of size 35072 next 23
+2025-02-26 11:27:05.959653: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a02a300 of size 35072 next 14
+2025-02-26 11:27:05.959678: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a032c00 of size 124416 next 30
+2025-02-26 11:27:05.959703: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a051200 of size 62208 next 29
+2025-02-26 11:27:05.959728: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a060500 of size 110592 next 41
+2025-02-26 11:27:05.959752: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a07b500 of size 110592 next 47
+2025-02-26 11:27:05.959775: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a096500 of size 400896 next 54
+2025-02-26 11:27:05.959799: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0f8300 of size 200448 next 46
+2025-02-26 11:27:05.959823: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a129200 of size 363520 next 57
+2025-02-26 11:27:05.959846: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a181e00 of size 363520 next 63
+2025-02-26 11:27:05.959891: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a1daa00 of size 1303040 next 62
+2025-02-26 11:27:05.959925: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a318c00 of size 651520 next 61
+2025-02-26 11:27:05.959959: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a3b7d00 of size 1168128 next 73
+2025-02-26 11:27:05.959992: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a4d5000 of size 1168128 next 87
+2025-02-26 11:27:05.960026: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a5f2300 of size 4200960 next 96
+2025-02-26 11:27:05.960060: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a9f3d00 of size 2100480 next 88
+2025-02-26 11:27:05.960093: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3abf4a00 of size 3776768 next 102
+2025-02-26 11:27:05.960127: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3af8eb00 of size 3776768 next 101
+2025-02-26 11:27:05.960161: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b328c00 of size 13612544 next 109
+2025-02-26 11:27:05.960194: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3c024200 of size 6806272 next 111
+2025-02-26 11:27:05.960228: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c6a1d00 of size 12265472 next 77
+2025-02-26 11:27:05.960261: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d254500 of size 12265472 next 79
+2025-02-26 11:27:05.960295: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3de06d00 of size 78746368 next 18446744073709551615
+2025-02-26 11:27:05.960328: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:27:05.960367: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:27:05.960402: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:27:05.960437: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:27:05.960471: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:27:05.960505: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-26 11:27:05.960540: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 1536 totalling 10.5KiB
+2025-02-26 11:27:05.960575: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2048 totalling 2.0KiB
+2025-02-26 11:27:05.960609: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:27:05.960644: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:27:05.960683: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:27:05.960718: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:27:05.960754: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:27:05.960790: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:27:05.960826: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:27:05.960861: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:27:05.960896: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:27:05.960931: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:27:05.960973: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:27:05.961008: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:27:05.961042: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:27:05.961077: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:27:05.961112: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 78746368 totalling 75.10MiB
+2025-02-26 11:27:05.961148: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 101.43MiB
+2025-02-26 11:27:05.961182: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:27:05.961223: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                       106361344
+MaxInUse:                    106361344
+NumAllocs:                         465
+MaxAllocSize:                 78746368
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:27:05.961273: W tensorflow/tsl/framework/bfc_allocator.cc:492] *****__**__***_________******_______********************************************xxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:27:05.961318: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-26 11:27:16.432818: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:27:16.432979: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:27:16.433043: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:27:16.433092: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:27:16.433140: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 9, Chunks in use: 9. 12.8KiB allocated for chunks. 12.8KiB in use in bin. 10.9KiB client-requested in use in bin.
+2025-02-26 11:27:16.433184: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 2, Chunks in use: 2. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 2.4KiB client-requested in use in bin.
+2025-02-26 11:27:16.433228: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:16.433274: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:27:16.433341: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 2, Chunks in use: 1. 37.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:27:16.433390: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 4, Chunks in use: 2. 167.2KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:27:16.433439: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 3, Chunks in use: 1. 337.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:27:16.433486: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 1, Chunks in use: 1. 195.8KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:27:16.433548: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 3, Chunks in use: 1. 1.08MiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:27:16.433596: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 636.2KiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:27:16.433642: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 3, Chunks in use: 1. 3.47MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:27:16.433687: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 3, Chunks in use: 2. 9.21MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:27:16.433732: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 2, Chunks in use: 1. 10.50MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:27:16.433779: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 3, Chunks in use: 1. 36.38MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:27:16.433822: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:16.433865: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:16.433911: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 75.10MiB allocated for chunks. 75.10MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:27:16.433954: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:16.433996: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:16.434049: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:27:16.434091: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:27:16.434136: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:27:16.434181: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:27:16.434223: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:27:16.434264: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:27:16.434304: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:27:16.434345: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:27:16.434385: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 112
+2025-02-26 11:27:16.434426: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 78
+2025-02-26 11:27:16.434466: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:27:16.434506: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:27:16.434546: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:27:16.434586: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 104
+2025-02-26 11:27:16.434626: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 108
+2025-02-26 11:27:16.434666: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 100
+2025-02-26 11:27:16.434707: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:27:16.434747: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:27:16.434787: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 256 next 72
+2025-02-26 11:27:16.434827: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001500 of size 256 next 65
+2025-02-26 11:27:16.434867: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001600 of size 256 next 63
+2025-02-26 11:27:16.434907: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001700 of size 256 next 55
+2025-02-26 11:27:16.434948: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001800 of size 256 next 9
+2025-02-26 11:27:16.434995: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:27:16.435037: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 512 next 45
+2025-02-26 11:27:16.435078: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001c00 of size 512 next 56
+2025-02-26 11:27:16.435118: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001e00 of size 512 next 94
+2025-02-26 11:27:16.435158: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:27:16.435198: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:27:16.435239: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 768 next 32
+2025-02-26 11:27:16.435281: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002500 of size 768 next 16
+2025-02-26 11:27:16.435322: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 768 next 14
+2025-02-26 11:27:16.435362: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002b00 of size 768 next 117
+2025-02-26 11:27:16.435402: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 768 next 31
+2025-02-26 11:27:16.435443: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003100 of size 2304 next 105
+2025-02-26 11:27:16.435484: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:27:16.435524: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:27:16.435564: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 116
+2025-02-26 11:27:16.435605: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 118
+2025-02-26 11:27:16.435645: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 17
+2025-02-26 11:27:16.435685: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:27:16.435726: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:27:16.435766: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:27:16.435806: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005600 of size 18432 next 26
+2025-02-26 11:27:16.435847: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:27:16.435888: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:27:16.435936: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 89
+2025-02-26 11:27:16.435977: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 93
+2025-02-26 11:27:16.436017: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 86
+2025-02-26 11:27:16.436058: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:27:16.436098: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:27:16.436138: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:27:16.436178: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 79
+2025-02-26 11:27:16.436219: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 109
+2025-02-26 11:27:16.436259: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 101
+2025-02-26 11:27:16.436299: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:27:16.436339: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:27:16.436379: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:27:16.436419: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 24
+2025-02-26 11:27:16.436459: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 95
+2025-02-26 11:27:16.436499: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 97
+2025-02-26 11:27:16.436539: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:27:16.436580: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:27:16.436620: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:27:16.436660: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 80
+2025-02-26 11:27:16.436700: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 81
+2025-02-26 11:27:16.436740: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 87
+2025-02-26 11:27:16.436780: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:27:16.436819: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:27:16.436859: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:27:16.436906: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 62
+2025-02-26 11:27:16.436947: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 69
+2025-02-26 11:27:16.436987: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 71
+2025-02-26 11:27:16.437027: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:27:16.437067: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:27:16.437107: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:27:16.437148: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 2048 next 74
+2025-02-26 11:27:16.437189: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:27:16.437230: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:27:16.437270: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 48
+2025-02-26 11:27:16.437311: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 49
+2025-02-26 11:27:16.437351: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 47
+2025-02-26 11:27:16.437392: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:27:16.437432: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:27:16.437472: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:27:16.437512: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 512 next 39
+2025-02-26 11:27:16.437560: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d400 of size 768 next 37
+2025-02-26 11:27:16.437600: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d700 of size 768 next 40
+2025-02-26 11:27:16.437641: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00da00 of size 1024 next 90
+2025-02-26 11:27:16.437681: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:27:16.437722: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:27:16.437762: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 1536 next 15
+2025-02-26 11:27:16.437802: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e600 of size 1536 next 18
+2025-02-26 11:27:16.437858: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ec00 of size 1536 next 25
+2025-02-26 11:27:16.437899: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f200 of size 256 next 119
+2025-02-26 11:27:16.437939: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f300 of size 256 next 120
+2025-02-26 11:27:16.437980: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a00f400 of size 5888 next 103
+2025-02-26 11:27:16.438021: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a010b00 of size 11008 next 110
+2025-02-26 11:27:16.438061: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013600 of size 38912 next 77
+2025-02-26 11:27:16.438102: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a01ce00 of size 19456 next 85
+2025-02-26 11:27:16.438142: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a021a00 of size 35072 next 102
+2025-02-26 11:27:16.438183: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a02a300 of size 35072 next 111
+2025-02-26 11:27:16.438224: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a032c00 of size 124416 next 88
+2025-02-26 11:27:16.438264: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a051200 of size 62208 next 96
+2025-02-26 11:27:16.438306: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a060500 of size 110592 next 73
+2025-02-26 11:27:16.438346: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a07b500 of size 110592 next 70
+2025-02-26 11:27:16.438387: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a096500 of size 400896 next 64
+2025-02-26 11:27:16.438428: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0f8300 of size 200448 next 61
+2025-02-26 11:27:16.438470: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a129200 of size 363520 next 57
+2025-02-26 11:27:16.438510: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a181e00 of size 363520 next 53
+2025-02-26 11:27:16.438551: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a1daa00 of size 1303040 next 46
+2025-02-26 11:27:16.438592: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a318c00 of size 651520 next 54
+2025-02-26 11:27:16.438632: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a3b7d00 of size 1168128 next 41
+2025-02-26 11:27:16.438673: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a4d5000 of size 1168128 next 38
+2025-02-26 11:27:16.438714: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a5f2300 of size 4200960 next 29
+2025-02-26 11:27:16.438754: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a9f3d00 of size 2100480 next 30
+2025-02-26 11:27:16.438802: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3abf4a00 of size 3776768 next 23
+2025-02-26 11:27:16.438844: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3af8eb00 of size 3776768 next 7
+2025-02-26 11:27:16.438885: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b328c00 of size 13612544 next 33
+2025-02-26 11:27:16.438925: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3c024200 of size 6806272 next 10
+2025-02-26 11:27:16.438966: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c6a1d00 of size 12265472 next 22
+2025-02-26 11:27:16.439007: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d254500 of size 12265472 next 21
+2025-02-26 11:27:16.439048: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3de06d00 of size 78746368 next 18446744073709551615
+2025-02-26 11:27:16.439088: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:27:16.439132: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:27:16.439174: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:27:16.439215: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:27:16.439256: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:27:16.439297: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-26 11:27:16.439339: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 1536 totalling 10.5KiB
+2025-02-26 11:27:16.439380: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2048 totalling 2.0KiB
+2025-02-26 11:27:16.439421: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:27:16.439463: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:27:16.439505: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:27:16.439546: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:27:16.439588: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:27:16.439630: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:27:16.439672: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:27:16.439714: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:27:16.439758: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:27:16.439800: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:27:16.439848: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:27:16.439889: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:27:16.439930: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:27:16.439973: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:27:16.440015: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 78746368 totalling 75.10MiB
+2025-02-26 11:27:16.440057: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 101.43MiB
+2025-02-26 11:27:16.440098: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:27:16.440145: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                       106361344
+MaxInUse:                    106361344
+NumAllocs:                         609
+MaxAllocSize:                 78746368
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:27:16.440206: W tensorflow/tsl/framework/bfc_allocator.cc:492] *****__**__***_________******_______********************************************xxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:27:16.440257: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-26 11:27:26.929356: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:27:26.929512: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:27:26.929594: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:27:26.929645: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:27:26.929693: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 9, Chunks in use: 9. 12.8KiB allocated for chunks. 12.8KiB in use in bin. 10.9KiB client-requested in use in bin.
+2025-02-26 11:27:26.929738: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 2, Chunks in use: 2. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 2.4KiB client-requested in use in bin.
+2025-02-26 11:27:26.929782: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:26.929848: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:27:26.929896: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 2, Chunks in use: 1. 37.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:27:26.929943: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 4, Chunks in use: 2. 167.2KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:27:26.929989: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 3, Chunks in use: 1. 337.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:27:26.930035: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 1, Chunks in use: 1. 195.8KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:27:26.930081: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 3, Chunks in use: 1. 1.08MiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:27:26.930128: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 636.2KiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:27:26.930172: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 3, Chunks in use: 1. 3.47MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:27:26.930217: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 3, Chunks in use: 2. 9.21MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:27:26.930261: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 2, Chunks in use: 1. 10.50MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:27:26.930308: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 3, Chunks in use: 1. 36.38MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:27:26.930351: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:26.930393: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:26.930440: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 75.10MiB allocated for chunks. 75.10MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:27:26.930482: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:26.930532: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:26.930578: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:27:26.930618: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:27:26.930665: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:27:26.930709: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:27:26.930749: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:27:26.930790: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:27:26.930830: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:27:26.930870: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:27:26.930910: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 118
+2025-02-26 11:27:26.930950: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 17
+2025-02-26 11:27:26.930989: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:27:26.931029: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:27:26.931069: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:27:26.931109: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 116
+2025-02-26 11:27:26.931149: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 31
+2025-02-26 11:27:26.931188: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 16
+2025-02-26 11:27:26.931228: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:27:26.931267: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:27:26.931307: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 256 next 55
+2025-02-26 11:27:26.931347: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001500 of size 256 next 65
+2025-02-26 11:27:26.931386: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001600 of size 256 next 53
+2025-02-26 11:27:26.931426: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001700 of size 256 next 71
+2025-02-26 11:27:26.931474: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001800 of size 256 next 9
+2025-02-26 11:27:26.931514: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:27:26.931555: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 512 next 62
+2025-02-26 11:27:26.931595: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001c00 of size 512 next 69
+2025-02-26 11:27:26.931635: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001e00 of size 512 next 94
+2025-02-26 11:27:26.931675: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:27:26.931714: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:27:26.931755: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 768 next 101
+2025-02-26 11:27:26.931796: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002500 of size 768 next 109
+2025-02-26 11:27:26.931836: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 768 next 111
+2025-02-26 11:27:26.931876: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002b00 of size 768 next 86
+2025-02-26 11:27:26.931916: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 768 next 93
+2025-02-26 11:27:26.931956: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003100 of size 2304 next 105
+2025-02-26 11:27:26.931996: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:27:26.932035: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:27:26.932076: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 77
+2025-02-26 11:27:26.932116: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 89
+2025-02-26 11:27:26.932157: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 108
+2025-02-26 11:27:26.932197: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:27:26.932237: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:27:26.932277: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:27:26.932317: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005600 of size 18432 next 26
+2025-02-26 11:27:26.932356: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:27:26.932396: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:27:26.932443: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 25
+2025-02-26 11:27:26.932483: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 32
+2025-02-26 11:27:26.932523: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 18
+2025-02-26 11:27:26.932563: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:27:26.932602: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:27:26.932642: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:27:26.932684: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 21
+2025-02-26 11:27:26.932723: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 33
+2025-02-26 11:27:26.932763: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 7
+2025-02-26 11:27:26.932803: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:27:26.932842: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:27:26.932882: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:27:26.932922: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 39
+2025-02-26 11:27:26.932961: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 40
+2025-02-26 11:27:26.933001: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 37
+2025-02-26 11:27:26.933040: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:27:26.933080: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:27:26.933119: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:27:26.933159: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 47
+2025-02-26 11:27:26.933198: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 49
+2025-02-26 11:27:26.933238: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 38
+2025-02-26 11:27:26.933277: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:27:26.933317: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:27:26.933357: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:27:26.933397: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 46
+2025-02-26 11:27:26.933436: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 56
+2025-02-26 11:27:26.933476: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 45
+2025-02-26 11:27:26.933525: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:27:26.933567: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:27:26.933606: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:27:26.933647: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 2048 next 74
+2025-02-26 11:27:26.933687: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:27:26.933727: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:27:26.933767: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 87
+2025-02-26 11:27:26.933807: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 81
+2025-02-26 11:27:26.933846: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 70
+2025-02-26 11:27:26.933886: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:27:26.933926: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:27:26.933965: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:27:26.934005: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 512 next 97
+2025-02-26 11:27:26.934045: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d400 of size 768 next 24
+2025-02-26 11:27:26.934084: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d700 of size 768 next 95
+2025-02-26 11:27:26.934125: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00da00 of size 1024 next 90
+2025-02-26 11:27:26.934164: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:27:26.934204: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:27:26.934244: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 1536 next 104
+2025-02-26 11:27:26.934284: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e600 of size 1536 next 78
+2025-02-26 11:27:26.934324: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ec00 of size 1536 next 112
+2025-02-26 11:27:26.934363: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f200 of size 256 next 119
+2025-02-26 11:27:26.934403: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f300 of size 256 next 120
+2025-02-26 11:27:26.934443: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a00f400 of size 5888 next 14
+2025-02-26 11:27:26.934483: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a010b00 of size 11008 next 117
+2025-02-26 11:27:26.934523: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013600 of size 38912 next 22
+2025-02-26 11:27:26.934563: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a01ce00 of size 19456 next 15
+2025-02-26 11:27:26.934603: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a021a00 of size 35072 next 23
+2025-02-26 11:27:26.934643: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a02a300 of size 35072 next 10
+2025-02-26 11:27:26.934684: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a032c00 of size 124416 next 30
+2025-02-26 11:27:26.934724: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a051200 of size 62208 next 29
+2025-02-26 11:27:26.934765: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a060500 of size 110592 next 41
+2025-02-26 11:27:26.934805: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a07b500 of size 110592 next 48
+2025-02-26 11:27:26.934845: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a096500 of size 400896 next 63
+2025-02-26 11:27:26.934885: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0f8300 of size 200448 next 54
+2025-02-26 11:27:26.934925: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a129200 of size 363520 next 57
+2025-02-26 11:27:26.934966: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a181e00 of size 363520 next 72
+2025-02-26 11:27:26.935006: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a1daa00 of size 1303040 next 61
+2025-02-26 11:27:26.935046: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a318c00 of size 651520 next 64
+2025-02-26 11:27:26.935087: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a3b7d00 of size 1168128 next 73
+2025-02-26 11:27:26.935127: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a4d5000 of size 1168128 next 80
+2025-02-26 11:27:26.935167: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a5f2300 of size 4200960 next 96
+2025-02-26 11:27:26.935207: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a9f3d00 of size 2100480 next 88
+2025-02-26 11:27:26.935247: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3abf4a00 of size 3776768 next 102
+2025-02-26 11:27:26.935288: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3af8eb00 of size 3776768 next 79
+2025-02-26 11:27:26.935328: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b328c00 of size 13612544 next 100
+2025-02-26 11:27:26.935368: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3c024200 of size 6806272 next 85
+2025-02-26 11:27:26.935408: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c6a1d00 of size 12265472 next 110
+2025-02-26 11:27:26.935449: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d254500 of size 12265472 next 103
+2025-02-26 11:27:26.935490: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3de06d00 of size 78746368 next 18446744073709551615
+2025-02-26 11:27:26.935529: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:27:26.935574: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:27:26.935616: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:27:26.935657: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:27:26.935698: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:27:26.935739: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-26 11:27:26.935781: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 1536 totalling 10.5KiB
+2025-02-26 11:27:26.935824: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2048 totalling 2.0KiB
+2025-02-26 11:27:26.935865: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:27:26.935907: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:27:26.935949: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:27:26.935991: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:27:26.936033: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:27:26.936074: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:27:26.936116: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:27:26.936158: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:27:26.936201: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:27:26.936242: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:27:26.936283: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:27:26.936324: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:27:26.936364: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:27:26.936406: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:27:26.936448: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 78746368 totalling 75.10MiB
+2025-02-26 11:27:26.936491: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 101.43MiB
+2025-02-26 11:27:26.936531: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:27:26.936579: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                       106361344
+MaxInUse:                    106361344
+NumAllocs:                         753
+MaxAllocSize:                 78746368
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:27:26.936638: W tensorflow/tsl/framework/bfc_allocator.cc:492] *****__**__***_________******_______********************************************xxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:27:26.936689: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-26 11:27:37.451683: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 46.79MiB (rounded to 49061888)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:27:37.451844: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:27:37.451908: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 67, Chunks in use: 67. 16.8KiB allocated for chunks. 16.8KiB in use in bin. 3.8KiB client-requested in use in bin.
+2025-02-26 11:27:37.451957: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 15, Chunks in use: 15. 9.2KiB allocated for chunks. 9.2KiB in use in bin. 8.4KiB client-requested in use in bin.
+2025-02-26 11:27:37.452006: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 9, Chunks in use: 9. 12.8KiB allocated for chunks. 12.8KiB in use in bin. 10.9KiB client-requested in use in bin.
+2025-02-26 11:27:37.452051: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 2, Chunks in use: 2. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 2.4KiB client-requested in use in bin.
+2025-02-26 11:27:37.452096: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 1, Chunks in use: 0. 5.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:37.452142: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 1, Chunks in use: 1. 10.8KiB allocated for chunks. 10.8KiB in use in bin. 10.5KiB client-requested in use in bin.
+2025-02-26 11:27:37.452189: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 2, Chunks in use: 1. 37.0KiB allocated for chunks. 19.0KiB in use in bin. 19.0KiB client-requested in use in bin.
+2025-02-26 11:27:37.452236: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 4, Chunks in use: 2. 167.2KiB allocated for chunks. 95.0KiB in use in bin. 94.9KiB client-requested in use in bin.
+2025-02-26 11:27:37.452283: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 3, Chunks in use: 1. 337.5KiB allocated for chunks. 108.0KiB in use in bin. 108.0KiB client-requested in use in bin.
+2025-02-26 11:27:37.452330: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 1, Chunks in use: 1. 195.8KiB allocated for chunks. 195.8KiB in use in bin. 195.8KiB client-requested in use in bin.
+2025-02-26 11:27:37.452377: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 3, Chunks in use: 1. 1.08MiB allocated for chunks. 355.0KiB in use in bin. 354.8KiB client-requested in use in bin.
+2025-02-26 11:27:37.452424: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 636.2KiB allocated for chunks. 636.2KiB in use in bin. 636.2KiB client-requested in use in bin.
+2025-02-26 11:27:37.452471: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 3, Chunks in use: 1. 3.47MiB allocated for chunks. 1.11MiB in use in bin. 1.11MiB client-requested in use in bin.
+2025-02-26 11:27:37.452517: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 3, Chunks in use: 2. 9.21MiB allocated for chunks. 5.60MiB in use in bin. 5.60MiB client-requested in use in bin.
+2025-02-26 11:27:37.452563: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 2, Chunks in use: 1. 10.50MiB allocated for chunks. 6.49MiB in use in bin. 6.49MiB client-requested in use in bin.
+2025-02-26 11:27:37.452610: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 3, Chunks in use: 1. 36.38MiB allocated for chunks. 11.70MiB in use in bin. 11.70MiB client-requested in use in bin.
+2025-02-26 11:27:37.452653: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:37.452695: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:37.452741: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 75.10MiB allocated for chunks. 75.10MiB in use in bin. 46.79MiB client-requested in use in bin.
+2025-02-26 11:27:37.452783: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:37.452826: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:27:37.452870: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 46.79MiB was 32.00MiB, Chunk State: 
+2025-02-26 11:27:37.452911: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 143785984
+2025-02-26 11:27:37.452958: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000000 of size 1280 next 1
+2025-02-26 11:27:37.453002: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000500 of size 256 next 2
+2025-02-26 11:27:37.453043: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000600 of size 256 next 3
+2025-02-26 11:27:37.453084: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000700 of size 256 next 5
+2025-02-26 11:27:37.453124: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000800 of size 256 next 6
+2025-02-26 11:27:37.453163: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000900 of size 256 next 4
+2025-02-26 11:27:37.453204: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000a00 of size 256 next 89
+2025-02-26 11:27:37.453244: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000b00 of size 256 next 108
+2025-02-26 11:27:37.453284: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000c00 of size 256 next 11
+2025-02-26 11:27:37.453324: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000d00 of size 256 next 12
+2025-02-26 11:27:37.453363: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000e00 of size 256 next 13
+2025-02-26 11:27:37.453403: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a000f00 of size 256 next 77
+2025-02-26 11:27:37.453443: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001000 of size 256 next 93
+2025-02-26 11:27:37.453483: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001100 of size 256 next 109
+2025-02-26 11:27:37.453550: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001200 of size 256 next 19
+2025-02-26 11:27:37.453614: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001300 of size 256 next 8
+2025-02-26 11:27:37.453656: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001400 of size 256 next 71
+2025-02-26 11:27:37.453716: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001500 of size 256 next 65
+2025-02-26 11:27:37.453756: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001600 of size 256 next 72
+2025-02-26 11:27:37.453796: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001700 of size 256 next 45
+2025-02-26 11:27:37.453837: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001800 of size 256 next 9
+2025-02-26 11:27:37.453876: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001900 of size 256 next 20
+2025-02-26 11:27:37.453917: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001a00 of size 512 next 46
+2025-02-26 11:27:37.453957: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001c00 of size 512 next 56
+2025-02-26 11:27:37.453997: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a001e00 of size 512 next 94
+2025-02-26 11:27:37.454038: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002000 of size 256 next 98
+2025-02-26 11:27:37.454077: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002100 of size 256 next 99
+2025-02-26 11:27:37.454118: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002200 of size 768 next 7
+2025-02-26 11:27:37.454159: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002500 of size 768 next 33
+2025-02-26 11:27:37.454199: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002800 of size 768 next 10
+2025-02-26 11:27:37.454239: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002b00 of size 768 next 18
+2025-02-26 11:27:37.454279: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a002e00 of size 768 next 32
+2025-02-26 11:27:37.454320: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003100 of size 2304 next 105
+2025-02-26 11:27:37.454360: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003a00 of size 256 next 106
+2025-02-26 11:27:37.454400: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003b00 of size 256 next 107
+2025-02-26 11:27:37.454440: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a003c00 of size 1536 next 22
+2025-02-26 11:27:37.454480: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004200 of size 1536 next 25
+2025-02-26 11:27:37.454520: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004800 of size 1536 next 31
+2025-02-26 11:27:37.454560: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a004e00 of size 1536 next 113
+2025-02-26 11:27:37.454600: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005400 of size 256 next 114
+2025-02-26 11:27:37.454640: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a005500 of size 256 next 115
+2025-02-26 11:27:37.454680: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a005600 of size 18432 next 26
+2025-02-26 11:27:37.454720: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009e00 of size 256 next 27
+2025-02-26 11:27:37.454760: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a009f00 of size 256 next 28
+2025-02-26 11:27:37.454800: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a000 of size 256 next 112
+2025-02-26 11:27:37.454839: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a100 of size 256 next 101
+2025-02-26 11:27:37.454879: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a200 of size 256 next 78
+2025-02-26 11:27:37.454919: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a300 of size 256 next 34
+2025-02-26 11:27:37.454959: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a400 of size 256 next 35
+2025-02-26 11:27:37.454999: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a500 of size 256 next 36
+2025-02-26 11:27:37.455039: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a600 of size 256 next 103
+2025-02-26 11:27:37.455078: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a700 of size 256 next 100
+2025-02-26 11:27:37.455118: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a800 of size 256 next 79
+2025-02-26 11:27:37.455158: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00a900 of size 256 next 42
+2025-02-26 11:27:37.455198: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00aa00 of size 256 next 43
+2025-02-26 11:27:37.455238: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ab00 of size 256 next 44
+2025-02-26 11:27:37.455278: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ac00 of size 256 next 97
+2025-02-26 11:27:37.455318: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ad00 of size 256 next 95
+2025-02-26 11:27:37.455358: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ae00 of size 256 next 24
+2025-02-26 11:27:37.455398: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00af00 of size 256 next 50
+2025-02-26 11:27:37.455438: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b000 of size 256 next 51
+2025-02-26 11:27:37.455478: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b100 of size 256 next 52
+2025-02-26 11:27:37.455518: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b200 of size 256 next 70
+2025-02-26 11:27:37.455557: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b300 of size 256 next 81
+2025-02-26 11:27:37.455597: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b400 of size 256 next 80
+2025-02-26 11:27:37.455639: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b500 of size 256 next 58
+2025-02-26 11:27:37.455679: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b600 of size 256 next 59
+2025-02-26 11:27:37.455719: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b700 of size 256 next 60
+2025-02-26 11:27:37.455759: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b800 of size 256 next 61
+2025-02-26 11:27:37.455799: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00b900 of size 256 next 69
+2025-02-26 11:27:37.455839: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ba00 of size 256 next 62
+2025-02-26 11:27:37.455878: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bb00 of size 256 next 66
+2025-02-26 11:27:37.455918: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bc00 of size 256 next 67
+2025-02-26 11:27:37.455958: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00bd00 of size 256 next 68
+2025-02-26 11:27:37.455998: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00be00 of size 2048 next 74
+2025-02-26 11:27:37.456040: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c600 of size 256 next 75
+2025-02-26 11:27:37.456080: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c700 of size 256 next 76
+2025-02-26 11:27:37.456120: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00c800 of size 512 next 38
+2025-02-26 11:27:37.456160: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ca00 of size 512 next 49
+2025-02-26 11:27:37.456200: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00cc00 of size 512 next 48
+2025-02-26 11:27:37.456239: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ce00 of size 512 next 82
+2025-02-26 11:27:37.456282: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d000 of size 256 next 83
+2025-02-26 11:27:37.456322: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d100 of size 256 next 84
+2025-02-26 11:27:37.456362: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d200 of size 512 next 37
+2025-02-26 11:27:37.456402: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d400 of size 768 next 39
+2025-02-26 11:27:37.456442: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00d700 of size 768 next 40
+2025-02-26 11:27:37.456482: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00da00 of size 1024 next 90
+2025-02-26 11:27:37.456522: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00de00 of size 256 next 91
+2025-02-26 11:27:37.456562: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00df00 of size 256 next 92
+2025-02-26 11:27:37.456602: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e000 of size 1536 next 116
+2025-02-26 11:27:37.456642: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00e600 of size 1536 next 17
+2025-02-26 11:27:37.456682: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00ec00 of size 1536 next 118
+2025-02-26 11:27:37.456721: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f200 of size 256 next 119
+2025-02-26 11:27:37.456761: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a00f300 of size 256 next 120
+2025-02-26 11:27:37.456801: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a00f400 of size 5888 next 111
+2025-02-26 11:27:37.456842: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a010b00 of size 11008 next 86
+2025-02-26 11:27:37.456882: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a013600 of size 38912 next 110
+2025-02-26 11:27:37.456922: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a01ce00 of size 19456 next 104
+2025-02-26 11:27:37.456963: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a021a00 of size 35072 next 102
+2025-02-26 11:27:37.457003: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a02a300 of size 35072 next 85
+2025-02-26 11:27:37.457043: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a032c00 of size 124416 next 88
+2025-02-26 11:27:37.457084: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a051200 of size 62208 next 96
+2025-02-26 11:27:37.457124: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a060500 of size 110592 next 73
+2025-02-26 11:27:37.457165: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a07b500 of size 110592 next 87
+2025-02-26 11:27:37.457206: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a096500 of size 400896 next 53
+2025-02-26 11:27:37.457246: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a0f8300 of size 200448 next 64
+2025-02-26 11:27:37.457286: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a129200 of size 363520 next 57
+2025-02-26 11:27:37.457326: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a181e00 of size 363520 next 55
+2025-02-26 11:27:37.457367: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a1daa00 of size 1303040 next 54
+2025-02-26 11:27:37.457408: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a318c00 of size 651520 next 63
+2025-02-26 11:27:37.457448: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a3b7d00 of size 1168128 next 41
+2025-02-26 11:27:37.457488: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a4d5000 of size 1168128 next 47
+2025-02-26 11:27:37.457562: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3a5f2300 of size 4200960 next 29
+2025-02-26 11:27:37.457614: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3a9f3d00 of size 2100480 next 30
+2025-02-26 11:27:37.457655: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3abf4a00 of size 3776768 next 23
+2025-02-26 11:27:37.457696: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3af8eb00 of size 3776768 next 21
+2025-02-26 11:27:37.457737: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3b328c00 of size 13612544 next 16
+2025-02-26 11:27:37.457777: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3c024200 of size 6806272 next 15
+2025-02-26 11:27:37.457818: I tensorflow/tsl/framework/bfc_allocator.cc:1090] Free  at 14ec3c6a1d00 of size 12265472 next 117
+2025-02-26 11:27:37.457859: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3d254500 of size 12265472 next 14
+2025-02-26 11:27:37.457903: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 14ec3de06d00 of size 78746368 next 18446744073709551615
+2025-02-26 11:27:37.457943: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:27:37.457989: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 67 Chunks of size 256 totalling 16.8KiB
+2025-02-26 11:27:37.458033: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 8 Chunks of size 512 totalling 4.0KiB
+2025-02-26 11:27:37.458075: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 768 totalling 5.2KiB
+2025-02-26 11:27:37.458116: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1024 totalling 1.0KiB
+2025-02-26 11:27:37.458157: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-26 11:27:37.458200: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 7 Chunks of size 1536 totalling 10.5KiB
+2025-02-26 11:27:37.458241: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2048 totalling 2.0KiB
+2025-02-26 11:27:37.458282: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:27:37.458324: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 11008 totalling 10.8KiB
+2025-02-26 11:27:37.458368: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 19456 totalling 19.0KiB
+2025-02-26 11:27:37.458410: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 35072 totalling 34.2KiB
+2025-02-26 11:27:37.458452: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 62208 totalling 60.8KiB
+2025-02-26 11:27:37.458495: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 110592 totalling 108.0KiB
+2025-02-26 11:27:37.458537: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 200448 totalling 195.8KiB
+2025-02-26 11:27:37.458579: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 363520 totalling 355.0KiB
+2025-02-26 11:27:37.458622: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 651520 totalling 636.2KiB
+2025-02-26 11:27:37.458663: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 1168128 totalling 1.11MiB
+2025-02-26 11:27:37.458706: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2100480 totalling 2.00MiB
+2025-02-26 11:27:37.458747: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 3776768 totalling 3.60MiB
+2025-02-26 11:27:37.458790: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 6806272 totalling 6.49MiB
+2025-02-26 11:27:37.458832: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 12265472 totalling 11.70MiB
+2025-02-26 11:27:37.458875: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 78746368 totalling 75.10MiB
+2025-02-26 11:27:37.458917: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 101.43MiB
+2025-02-26 11:27:37.458958: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 143785984 memory_limit_: 143785984 available bytes: 0 curr_region_allocation_bytes_: 287571968
+2025-02-26 11:27:37.459006: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                       143785984
+InUse:                       106361344
+MaxInUse:                    106361344
+NumAllocs:                         897
+MaxAllocSize:                 78746368
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:27:37.459066: W tensorflow/tsl/framework/bfc_allocator.cc:492] *****__**__***_________******_______********************************************xxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:27:37.459118: W tensorflow/core/framework/op_kernel.cc:1818] RESOURCE_EXHAUSTED: failed to allocate memory
+/home/jd.elberse/.local/lib/python3.7/site-packages/numpy/core/fromnumeric.py:3441: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/home/jd.elberse/.local/lib/python3.7/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Traceback (most recent call last):
+  File "code/shiva/predict_one_file.py", line 142, in <module>
+    nifti = nibabel.Nifti1Image(predictions[0], affine=affine)
+IndexError: invalid index to scalar variable.
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/shiva/predict_one_file.py --verbose --gpu 0 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_2_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_5_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_3_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_4_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_0_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_1_model.h5 -i /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-008/ses-b9/sub-008/ses-b9/anat/sub-008_ses-b9_space-SHIVA_desc-preproc_T1w.nii.gz -o /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-008/ses-b9/sub-008/ses-b9/anat/sub-008_ses-b9_space-SHIVA_label-PVS_probseg.nii.gz` failed. (See above for error)

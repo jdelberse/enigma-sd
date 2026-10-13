@@ -1,0 +1,73 @@
+2025-02-26 11:27:40.458315: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:27:41.371646: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:27:41.371835: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:27:41.371860: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+Your GPU may run slowly with dtype policy mixed_float16 because it does not have compute capability of at least 7.0. Your GPU:
+  NVIDIA GeForce GTX 1080 Ti, compute capability 6.1
+See https://developer.nvidia.com/cuda-gpus for a list of GPUs and their compute capabilities.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-02-26 11:27:43.016938: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:27:43.156904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 505 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1
+2025-02-26 11:27:45.493214: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:352] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+2025-02-26 11:27:45.493385: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:352] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+2025-02-26 11:27:46.345425: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 130.94MiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2025-02-26 11:27:46.345513: W tensorflow/core/kernels/gpu_utils.cc:50] Failed to allocate memory for convolution redzone checking; skipping this check. This is benign and only means that we won't check cudnn for out-of-bounds reads and writes. This message will only be printed once.
+2025-02-26 11:27:46.373764: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:433] Could not create cudnn handle: CUDNN_STATUS_NOT_INITIALIZED
+2025-02-26 11:27:46.373893: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:442] Possibly insufficient driver version: 535.183.1
+2025-02-26 11:27:46.373930: W tensorflow/core/framework/op_kernel.cc:1830] OP_REQUIRES failed at conv_ops_3d.cc:510 : UNIMPLEMENTED: DNN library is not found.
+Traceback (most recent call last):
+  File "code/shiva/predict_one_file.py", line 128, in <module>
+    batch_size=1
+  File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.UnimplementedError: Graph execution error:
+
+Detected at node 'model/Enc_Block_D7_C0_Conv/Conv3D' defined at (most recent call last):
+    File "code/shiva/predict_one_file.py", line 128, in <module>
+      batch_size=1
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 2350, in predict
+      tmp_batch_outputs = self.predict_function(iterator)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 2137, in predict_function
+      return step_function(self, iterator)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 2123, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 2111, in run_step
+      outputs = model.predict_step(data)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 2079, in predict_step
+      return self(x, training=False)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/training.py", line 561, in __call__
+      return super().__call__(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/base_layer.py", line 1132, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/functional.py", line 511, in call
+      return self._run_internal_graph(inputs, training=training, mask=mask)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/functional.py", line 668, in _run_internal_graph
+      outputs = node.layer(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/engine/base_layer.py", line 1132, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/layers/convolutional/base_conv.py", line 283, in call
+      outputs = self.convolution_op(inputs, self.kernel)
+    File "/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/keras/layers/convolutional/base_conv.py", line 262, in convolution_op
+      name=self.__class__.__name__,
+Node: 'model/Enc_Block_D7_C0_Conv/Conv3D'
+DNN library is not found.
+	 [[{{node model/Enc_Block_D7_C0_Conv/Conv3D}}]] [Op:__inference_predict_function_4442]
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/shiva/predict_one_file.py --verbose --gpu 0 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_2_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_5_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_3_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_4_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_0_model.h5 -m code/shiva/models/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_1_model.h5 -i /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-015/ses-b9/sub-015/ses-b9/anat/sub-015_ses-b9_space-SHIVA_desc-preproc_T1w.nii.gz -o /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-015/ses-b9/sub-015/ses-b9/anat/sub-015_ses-b9_space-SHIVA_label-PVS_probseg.nii.gz` failed. (See above for error)

@@ -1,0 +1,48 @@
+ROI analysis with default ROIs
+The structural MRI /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/fmriprep/sub-6006/ses-b9/sub-6006/ses-b9/anat/sub-6006_ses-b9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz is a T1-weighted image, therefore the default template that will be used is: MNI152_T1_1mm
+Running ALPS with the following parameters: 
+
+-a /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.nii.gz 
+
+-b /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.bval 
+
+-c /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.bvec 
+
+-m  
+
+-i  
+
+-j  
+
+-k  
+
+-n  
+
+-d 0 
+
+-e 0 
+
+-r /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/L_SCR.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/R_SCR.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/L_SLF.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/R_SLF.nii.gz 
+
+-t /opt/fsl-6.0.7.14/data/standard/MNI152_T1_1mm_brain.nii.gz 
+
+-v /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/fmriprep/sub-6006/ses-b9/sub-6006/ses-b9/anat/sub-6006_ses-b9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz 
+
+-h 1 
+
+-w 0 
+
+-f 1 
+
+-s 0 
+
+-o ntnu-bids/derivatives/alps
+create output directory: ntnu-bids/derivatives/alps
+Denoising and unringing skipped by the user (-d 0 option)
+starting DTI FITTING on preprocessed diffusion data (denoised and/or unringed, NO TOPUP, NO eddy correction)
+DTI FITTING completed!
+starting ROI analysis with projection fibers L_SCR.nii.gz (LEFT) and R_SCR.nii.gz (RIGHT), and association fibers L_SLF.nii.gz (LEFT) and R_SLF.nii.gz (RIGHT)
+Linear (flirt) + Non-Linear (fnirt) registration to template via structural scan
+Transformation of the tensor to the template with applywarp
+Finito! Please cite this repository (https://github.com/gbarisano/alps/) and the paper:
+Liu, X, Barisano, G, et al., Cross-Vendor Test-Retest Validation of Diffusion Tensor Image Analysis along the Perivascular Space (DTI-ALPS) for Evaluating Glymphatic System Function, Aging and Disease (2023)

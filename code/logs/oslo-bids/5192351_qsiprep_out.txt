@@ -1,0 +1,279 @@
+250424-12:12:39,722 cli INFO:
+	 Telemetry system to collect crashes and errors is enabled - thanks for your feedback! Use option ``--notrack`` to opt out.
+250424-12:12:46,486 cli INFO:
+	 Making sure the input data is BIDS compliant (warnings can be ignored in most cases).
+bids-validator@1.8.4
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered based on the presence of only one author field. Please ignore if all contributors are already properly listed. (code: 102 - TOO_FEW_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=TOO_FEW_AUTHORS for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        2173 Files, 41.84GB                                MRI                   
+        48 - Subjects                                                            
+        4 - Sessions                                                             
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+250424-12:12:52,97 nipype.workflow INFO:
+	 
+Group	Subject	Sessions
+0	59640	b9, sd9
+1	59639	b9, sd9
+2	59643	b9, sd9
+3	59656	b9, sd9
+4	59650	b9, sd9
+5	59617	b9, sd9
+6	59623	b9, sd9
+7	59627	b9, sd9
+8	59645	b9, sd9
+9	59608	b9, sd9
+10	59638	b9, sd9
+11	59642	b9, sd9
+12	59629	b9, sd9
+13	59601	b9, sd9
+14	59647	b9, sd9
+15	59628	b9, sd9
+16	59648	b9, sd9
+17	59646	b9, sd9
+18	59621	b9, sd9
+19	59619	b9, sd9
+20	59616	b9, sd9
+21	59604	b9, sd9
+22	59637	b9, sd9
+23	59607	b9, sd9
+24	59641	b9, sd9
+25	59624	b9, sd9
+26	59655	b9, sd9
+27	59625	b9, sd9
+28	59612	b9, sd9
+29	59631	b9, sd9
+30	59600	b9, sd9
+31	59632	b9, sd9
+32	59654	b9, sd9
+33	59606	b9, sd9
+34	59644	b9, sd9
+35	59657	b9, sd9
+36	59614	b9, sd9
+37	59651	b9, sd9
+38	59634	b9, sd9
+39	59603	b9, sd9
+40	59626	b9, sd9
+41	59653	b9, sd9
+42	59618	b9, sd9
+43	59602	b9, sd9
+44	59633	b9, sd9
+45	59658	b9, sd9
+46	59636	b9, sd9
+47	59635	b9, sd9
+250424-12:13:07,408 nipype.workflow IMPORTANT:
+	 Running QSIPrep version 0.24.1.dev0+gc6ac851.d20241114
+
+         License NOTICE ##################################################
+         QSIPrep 0.24.1.dev0+gc6ac851.d20241114
+         Copyright The PennLINC Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+250424-12:13:10,404 nipype.workflow IMPORTANT:
+	 Building QSIPrep's workflow:
+           * BIDS dataset path: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids.
+           * Participant list: ['59600', '59601', '59602', '59603', '59604', '59606', '59607', '59608', '59612', '59614', '59616', '59617', '59618', '59619', '59621', '59623', '59624', '59625', '59626', '59627', '59628', '59629', '59631', '59632', '59633', '59634', '59635', '59636', '59637', '59638', '59639', '59640', '59641', '59642', '59643', '59644', '59645', '59646', '59647', '59648', '59650', '59651', '59653', '59654', '59655', '59656', '59657', '59658'].
+           * Run identifier: 20250424-121239_43080f11-e0c3-4952-bb76-7e8ecfdc8826.
+250424-12:13:10,547 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:10,578 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:10,580 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:10,583 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:10,670 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59640/ses-b9/dwi/sub-59640_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59640/ses-b9/dwi/sub-59640_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59640_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59640/ses-sd9/dwi/sub-59640_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59640/ses-sd9/dwi/sub-59640_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59640_ses-sd9'}]
+250424-12:13:11,419 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:11,574 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:11,588 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:11,602 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:11,926 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:12,80 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:12,93 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:12,107 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:16,462 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:16,490 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:16,493 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:16,495 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:16,578 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59639/ses-b9/dwi/sub-59639_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59639/ses-b9/dwi/sub-59639_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59639_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59639/ses-sd9/dwi/sub-59639_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59639/ses-sd9/dwi/sub-59639_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59639_ses-sd9'}]
+250424-12:13:16,773 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:16,921 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:16,934 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:16,948 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:17,260 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:18,78 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:18,92 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:18,105 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:22,835 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:22,863 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:22,866 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:22,868 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:22,951 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59643/ses-b9/dwi/sub-59643_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59643/ses-b9/dwi/sub-59643_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59643_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59643/ses-sd9/dwi/sub-59643_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59643/ses-sd9/dwi/sub-59643_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59643_ses-sd9'}]
+250424-12:13:23,147 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:23,293 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:23,307 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:23,320 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:23,636 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:23,784 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:23,797 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:23,811 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:24,200 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:24,227 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:24,229 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:24,232 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:24,315 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59656/ses-b9/dwi/sub-59656_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59656/ses-b9/dwi/sub-59656_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59656_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59656/ses-sd9/dwi/sub-59656_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59656/ses-sd9/dwi/sub-59656_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59656_ses-sd9'}]
+250424-12:13:24,512 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:24,660 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:24,673 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:24,686 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:25,1 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:25,149 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:25,162 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:25,175 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:25,564 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:25,591 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:25,593 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:25,595 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:25,678 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59650/ses-b9/dwi/sub-59650_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59650/ses-b9/dwi/sub-59650_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59650_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59650/ses-sd9/dwi/sub-59650_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59650/ses-sd9/dwi/sub-59650_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59650_ses-sd9'}]
+250424-12:13:25,873 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:26,20 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:26,33 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:26,47 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:27,124 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:27,278 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:27,292 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:27,305 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:31,821 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:31,850 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:31,852 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:31,854 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:31,937 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59617/ses-b9/dwi/sub-59617_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59617/ses-b9/dwi/sub-59617_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59617_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59617/ses-sd9/dwi/sub-59617_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59617/ses-sd9/dwi/sub-59617_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59617_ses-sd9'}]
+250424-12:13:32,133 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:33,102 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:33,115 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:33,128 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:33,450 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:33,604 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:33,617 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:33,631 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:38,214 nipype.workflow INFO:
+	 Running nonlinear normalization to template
+250424-12:13:38,241 nipype.workflow INFO:
+	 Combining all DWI files within each available session and acquisition:
+250424-12:13:38,244 nipype.workflow INFO:
+	 	- 2 scans in session b9/acquisition None
+250424-12:13:38,246 nipype.workflow INFO:
+	 	- 2 scans in session sd9/acquisition None
+250424-12:13:38,329 nipype.workflow INFO:
+	 [{'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59623/ses-b9/dwi/sub-59623_ses-b9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59623/ses-b9/dwi/sub-59623_ses-b9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59623_ses-b9'}, {'dwi_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59623/ses-sd9/dwi/sub-59623_ses-sd9_dir-PA_dwi.nii.gz'], 'dwi_series_pedir': 'j', 'fieldmap_info': {'suffix': 'rpe_series', 'rpe_series': ['/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/sub-59623/ses-sd9/dwi/sub-59623_ses-sd9_dir-AP_dwi.nii.gz']}, 'concatenated_bids_name': 'sub-59623_ses-sd9'}]
+250424-12:13:39,354 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:39,510 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:39,523 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:39,536 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only
+250424-12:13:39,859 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:40,13 nipype.workflow INFO:
+	 Automatically using 5, 5, 5 window for dwidenoise
+250424-12:13:40,27 nipype.workflow INFO:
+	 Using 8 threads in eddy
+250424-12:13:40,40 nipype.workflow INFO:
+	 Using single-stage SDC, TOPUP-only

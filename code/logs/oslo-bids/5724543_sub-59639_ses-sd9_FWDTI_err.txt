@@ -1,0 +1,5 @@
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:501: RuntimeWarning: overflow encountered in exp
+  y = (1 - f) * np.exp(np.dot(design_matrix, tensor[:7])) + f * np.exp(
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:701: RuntimeWarning: Number of calls to function has reached maxfev = 1800.
+  this_tensor, status = opt.leastsq(
+

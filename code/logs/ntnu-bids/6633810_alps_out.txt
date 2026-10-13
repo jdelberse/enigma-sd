@@ -1,0 +1,40 @@
+ROI analysis with default ROIs
+Default FA template will be used: JHU-ICBM-FA-1mm.nii.gz
+Running ALPS with the following parameters: 
+
+-a /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.nii.gz 
+
+-b /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.bval 
+
+-c /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.bvec 
+
+-m  
+
+-i  
+
+-j  
+
+-k  
+
+-n  
+
+-d 0 
+
+-e 0 
+
+-r /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/L_SCR.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/R_SCR.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/L_SLF.nii.gz,/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/ROIs_JHU_ALPS/R_SLF.nii.gz 
+
+-t /opt/fsl-6.0.7.14/data/atlases/JHU/JHU-ICBM-FA-1mm.nii.gz 
+
+-v  
+
+-h 1 
+
+-w 0 
+
+-f 1 
+
+-s 0 
+
+-o 
+ERROR! Final output alps.csv already exists and is not empty! Remove/rename the output folder in order to re-run the pipeline with input /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6006/ses-b9/dwi/sub-6006_ses-b9_dir-AP_space-ACPC_desc-preproc_dwi.nii.gz

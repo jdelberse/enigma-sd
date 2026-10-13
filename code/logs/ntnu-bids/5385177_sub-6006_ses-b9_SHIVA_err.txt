@@ -1,0 +1,17 @@
+usage: run_shiva.py [-h] -i IN_DIR -o OUT_DIR [-it {standard,BIDS}]
+                    [-db DB_NAME] [--preproc_only | -pr PREPROC_RESULTS] -c
+                    CONFIG
+                    [-p {PVS,PVS2,WMH,CMB,LAC,all} [{PVS,PVS2,WMH,CMB,LAC,all} ...]]
+                    [--sub_list SUB_LIST | --sub_names SUB_NAMES [SUB_NAMES ...]
+                    | --exclusion_list EXCLUSION_LIST] [--replace_t1 img_type]
+                    [--replace_flair img_type] [--replace_swi img_type]
+                    [--use_t1]
+                    [--brain_seg {shiva,shiva_gpu,synthseg,synthseg_cpu,synthseg_precomp,premasked,custom}]
+                    [--ss_qc] [--ai_threads AI_THREADS]
+                    [--custom_LUT CUSTOM_LUT] [--use_cpu]
+                    [--run_plugin RUN_PLUGIN]
+                    [--run_plugin_args RUN_PLUGIN_ARGS] [--anonymize]
+                    [--keep_all | --debug | --remove_intermediates]
+run_shiva.py: error: argument --brain_seg: invalid choice: 'fs_precomp' (choose from 'shiva', 'shiva_gpu', 'synthseg', 'synthseg_cpu', 'synthseg_precomp', 'premasked', 'custom')
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/shiva/run_shiva.py -i /tmp/shivai -o /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/shivai -c /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/shiva_config.yml -p PVS -it standard --brain_seg fs_precomp` failed. (See above for error)

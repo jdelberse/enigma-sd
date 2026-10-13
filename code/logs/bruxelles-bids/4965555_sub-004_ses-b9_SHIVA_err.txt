@@ -1,0 +1,681 @@
+2025-02-26 11:25:24.301870: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:25:25.498120: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:25:25.498311: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/:/home/jd.elberse/anaconda3/envs/SHIVA_PVS/lib/python3.7/site-packages/nvidia/cudnn/lib:
+2025-02-26 11:25:25.498338: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+Your GPU may run slowly with dtype policy mixed_float16 because it does not have compute capability of at least 7.0. Your GPU:
+  NVIDIA GeForce GTX 1080 Ti, compute capability 6.1
+See https://developer.nvidia.com/cuda-gpus for a list of GPUs and their compute capabilities.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-02-26 11:25:27.962520: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-26 11:25:28.489002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 9852 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1
+2025-02-26 11:25:28.508540: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330701824 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509065: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 8.66G (9297631232 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509287: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 7.79G (8367867904 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509455: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 7.01G (7531080704 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509634: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 6.31G (6777972224 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509806: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.68G (6100174848 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.509969: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.11G (5490157056 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510130: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.60G (4941140992 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510297: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.14G (4447026688 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510462: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.73G (4002323968 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510633: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.35G (3602091520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510797: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.02G (3241882368 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.510960: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.72G (2917693952 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511143: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.45G (2625924608 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511313: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.20G (2363332096 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511476: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.98G (2126998784 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511641: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.78G (1914298880 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511810: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.60G (1722868992 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.511970: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.44G (1550582016 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512122: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.30G (1395523840 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512276: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.17G (1255971584 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512429: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.05G (1130374400 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512577: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 970.21M (1017337088 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512722: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 873.19M (915603456 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.512869: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 785.87M (824043264 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.513015: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 707.28M (741638912 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.515306: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 636.55M (667475200 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.515504: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 572.90M (600727808 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.515661: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 515.61M (540655104 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.515832: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 464.05M (486589696 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.515966: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 417.64M (437930752 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516102: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 375.88M (394137856 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516236: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 338.29M (354724096 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516379: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 304.46M (319251712 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516523: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 274.02M (287326720 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516707: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 246.61M (258594048 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516812: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 221.95M (232734720 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.516912: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 199.76M (209461248 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517018: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 179.78M (188515328 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517130: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 161.80M (169664000 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517250: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 145.62M (152697600 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517370: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 131.06M (137427968 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517549: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 117.96M (123685376 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517700: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 106.16M (111316992 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517862: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 95.54M (100185344 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.517992: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 85.99M (90167040 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.518168: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 77.39M (81150464 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.518387: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 69.65M (73035520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.518560: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 62.69M (65732096 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.518732: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 56.42M (59159040 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.518915: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 50.78M (53243136 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519089: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 45.70M (47918848 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519257: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 41.13M (43127040 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519431: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 37.02M (38814464 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519604: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 33.31M (34933248 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519797: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 29.98M (31440128 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.519930: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 26.99M (28296192 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.520086: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 24.29M (25466624 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.520291: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 21.86M (22920192 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.520493: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 19.67M (20628224 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.520678: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 17.71M (18565632 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.520891: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 15.93M (16709120 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521085: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 14.34M (15038208 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521215: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 12.91M (13534464 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521326: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 11.62M (12181248 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521456: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 10.46M (10963200 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521599: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.41M (9867008 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521710: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 8.47M (8880384 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.521852: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 7.62M (7992576 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522058: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 6.86M (7193344 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522166: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 6.17M (6474240 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522339: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.56M (5826816 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522497: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.00M (5244160 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522665: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.50M (4719872 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522844: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.05M (4248064 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.522983: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.65M (3823360 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523062: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.28M (3441152 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523176: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.95M (3097088 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523287: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.66M (2787584 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523373: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.39M (2509056 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523468: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.15M (2258176 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523594: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.94M (2032384 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523725: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.74M (1829376 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523839: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.57M (1646592 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.523922: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.41M (1481984 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524015: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.27M (1334016 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524117: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.14M (1200640 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524200: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 1.03M (1080576 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524291: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 949.8K (972544 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524394: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 855.0K (875520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524475: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 769.5K (787968 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524565: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 692.8K (709376 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524658: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 623.5K (638464 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524752: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 561.2K (574720 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524841: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 505.2K (517376 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.524945: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 454.8K (465664 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525026: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 409.5K (419328 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525114: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 368.8K (377600 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525233: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 332.0K (339968 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525353: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 299.0K (306176 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525463: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 269.2K (275712 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525555: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 242.5K (248320 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525644: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 218.2K (223488 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525748: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 196.5K (201216 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525851: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 177.0K (181248 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.525926: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 159.5K (163328 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526033: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 143.8K (147200 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526123: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 129.5K (132608 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526412: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 116.8K (119552 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526572: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 105.2K (107776 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526666: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 94.8K (97024 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526767: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 85.5K (87552 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526853: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 77.0K (78848 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.526943: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 69.5K (71168 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527042: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 62.8K (64256 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527129: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 56.5K (57856 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527217: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 51.0K (52224 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527319: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 46.0K (47104 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527433: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 41.5K (42496 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527543: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 37.5K (38400 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527655: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 33.8K (34560 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527771: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 30.5K (31232 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.527882: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 27.5K (28160 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528187: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 24.8K (25344 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528348: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 22.5K (23040 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528456: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 20.2K (20736 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528563: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 18.2K (18688 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528672: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 16.5K (16896 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528778: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 15.0K (15360 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.528931: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 13.5K (13824 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529031: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 12.2K (12544 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529131: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 11.2K (11520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529232: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 10.2K (10496 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529333: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.2K (9472 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529434: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 8.5K (8704 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529548: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 7.8K (7936 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529650: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 7.0K (7168 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529750: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 6.5K (6656 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529853: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 6.0K (6144 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.529956: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.5K (5632 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530058: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 5.0K (5120 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530165: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.5K (4608 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530275: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.2K (4352 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530383: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 4.0K (4096 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530488: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.8K (3840 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530642: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.5K (3584 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530743: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.2K (3328 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530843: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 3.0K (3072 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.530944: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.8K (2816 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531045: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.5K (2560 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531145: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531247: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531348: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531449: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531551: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531653: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531755: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531856: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.531958: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532060: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532160: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532265: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532369: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532470: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532576: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532678: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532781: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.532888: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535180: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535338: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535438: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535538: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535638: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535739: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535840: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.535941: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536041: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536142: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536244: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536345: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536447: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536548: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536650: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536753: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536853: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.536954: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537058: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537163: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537265: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537368: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537470: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537586: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537694: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537800: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.537906: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538018: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538127: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538234: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538340: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538441: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538556: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538663: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538769: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538876: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.538983: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539084: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539196: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539299: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539404: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539508: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539610: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539712: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539818: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.539926: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540032: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540135: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540240: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540348: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540452: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540556: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540664: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540767: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540870: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.540977: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541082: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541192: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541299: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541405: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541509: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541627: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541738: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541846: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.541949: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542053: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542158: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542263: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542370: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542477: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542582: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542688: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542796: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.542899: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543002: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543111: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543214: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543319: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543424: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543530: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543632: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543737: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543846: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.543952: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544057: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544163: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544265: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544371: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544479: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544581: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544686: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544796: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.544900: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545004: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545116: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545219: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545325: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545431: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545553: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545688: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545794: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.545908: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546013: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546117: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546222: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546331: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546432: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546542: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546649: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546752: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546857: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.546966: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547070: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547177: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547282: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547386: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547498: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547606: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547711: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547821: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.547935: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548049: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548154: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548265: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548375: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548483: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548594: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548705: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548809: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.548911: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549021: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549124: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549225: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549330: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549438: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549668: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549782: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549886: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.549994: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550101: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550205: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550307: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550416: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550510: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550615: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550724: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550833: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.550936: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551044: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551148: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551253: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551359: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551464: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551574: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551678: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551785: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551889: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.551998: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552100: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552212: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552315: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552421: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552525: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552633: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552735: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552845: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.552948: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555148: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555292: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555425: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555529: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555631: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555730: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555830: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.555930: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556031: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556132: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556233: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556333: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556434: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556535: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556639: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556740: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556841: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.556942: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557045: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557148: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557250: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557353: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557460: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557585: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557698: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557805: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.557909: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558023: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558130: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558238: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558351: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558462: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558565: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558676: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558784: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.558890: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.559008: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.559118: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.559229: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.559334: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.559744: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.560031: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.560326: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.560769: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.561295: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.561826: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.562357: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.562907: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.563222: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.563540: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.563992: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.564325: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.564565: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.564784: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.565079: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.565411: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.565749: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.566090: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.566453: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.566757: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.567051: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.567364: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.567642: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.567923: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.568212: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.568466: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.568744: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.568995: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.569240: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.569549: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.569733: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.569921: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.570119: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.570263: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.570455: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.570621: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571021: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571131: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571241: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571347: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571455: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571558: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571666: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571775: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571880: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.571990: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.572110: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 2.2K (2304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.655220: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:28.655510: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:38.656396: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:38.657068: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:38.657151: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4B (rounded to 256)requested by op _EagerConst
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:25:38.657203: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:25:38.657249: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657293: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657335: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657384: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.2KiB allocated for chunks. 2.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-26 11:25:38.657428: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657470: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657512: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657576: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657618: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657659: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657718: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657760: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657801: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657842: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657884: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657925: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.657966: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.658007: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.658048: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.658089: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.658131: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:38.658172: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 256B was 256B, Chunk State: 
+2025-02-26 11:25:38.658213: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 2304
+2025-02-26 11:25:38.658258: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 147386400000 of size 2304 next 18446744073709551615
+2025-02-26 11:25:38.658298: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:25:38.658341: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:25:38.658383: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 2.2KiB
+2025-02-26 11:25:38.658424: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 2304 memory_limit_: 10330701824 available bytes: 10330699520 curr_region_allocation_bytes_: 20661403648
+2025-02-26 11:25:38.658479: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                     10330701824
+InUse:                            2304
+MaxInUse:                         2304
+NumAllocs:                           1
+MaxAllocSize:                     2304
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:25:38.658522: W tensorflow/tsl/framework/bfc_allocator.cc:492] *********************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:25:38.854113: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:38.854346: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:48.855118: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:48.855667: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:48.855748: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4B (rounded to 256)requested by op _EagerConst
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:25:48.855798: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:25:48.855845: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.855888: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.855930: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.855980: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.2KiB allocated for chunks. 2.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-26 11:25:48.856024: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856067: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856109: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856165: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856207: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856248: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856290: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856331: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856373: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856414: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856456: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856497: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856538: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856580: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856622: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856663: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856704: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:48.856749: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 256B was 256B, Chunk State: 
+2025-02-26 11:25:48.856788: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 2304
+2025-02-26 11:25:48.856833: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 147386400000 of size 2304 next 18446744073709551615
+2025-02-26 11:25:48.856880: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:25:48.856924: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:25:48.856966: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 2.2KiB
+2025-02-26 11:25:48.857006: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 2304 memory_limit_: 10330701824 available bytes: 10330699520 curr_region_allocation_bytes_: 20661403648
+2025-02-26 11:25:48.857054: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                     10330701824
+InUse:                            2304
+MaxInUse:                         2304
+NumAllocs:                           1
+MaxAllocSize:                     2304
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:25:48.857096: W tensorflow/tsl/framework/bfc_allocator.cc:492] *********************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:25:49.050311: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:49.050537: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:59.051238: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:59.051780: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:59.051863: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4B (rounded to 256)requested by op _EagerConst
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:25:59.051914: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:25:59.051963: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052007: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052049: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052100: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.2KiB allocated for chunks. 2.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-26 11:25:59.052144: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052205: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052248: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052289: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052330: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052372: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052414: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052455: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052497: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052538: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052581: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052622: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052664: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052706: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052747: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052788: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052830: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:25:59.052879: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 256B was 256B, Chunk State: 
+2025-02-26 11:25:59.052920: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 2304
+2025-02-26 11:25:59.052964: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 147386400000 of size 2304 next 18446744073709551615
+2025-02-26 11:25:59.053004: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:25:59.053047: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:25:59.053088: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 2.2KiB
+2025-02-26 11:25:59.053129: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 2304 memory_limit_: 10330701824 available bytes: 10330699520 curr_region_allocation_bytes_: 20661403648
+2025-02-26 11:25:59.053176: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                     10330701824
+InUse:                            2304
+MaxInUse:                         2304
+NumAllocs:                           1
+MaxAllocSize:                     2304
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:25:59.053219: W tensorflow/tsl/framework/bfc_allocator.cc:492] *********************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:25:59.248059: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:25:59.248278: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:09.248998: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:09.249570: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:09.249657: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4B (rounded to 256)requested by op _EagerConst
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:26:09.249708: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:26:09.249755: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.249799: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.249857: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.249907: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.2KiB allocated for chunks. 2.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-26 11:26:09.249950: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.249993: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250034: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250076: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250117: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250159: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250201: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250242: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250284: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250326: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250369: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250411: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250453: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250495: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250545: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250587: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250628: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:09.250670: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 256B was 256B, Chunk State: 
+2025-02-26 11:26:09.250709: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 2304
+2025-02-26 11:26:09.250754: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 147386400000 of size 2304 next 18446744073709551615
+2025-02-26 11:26:09.250795: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:26:09.250838: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:26:09.250880: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 2.2KiB
+2025-02-26 11:26:09.250920: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 2304 memory_limit_: 10330701824 available bytes: 10330699520 curr_region_allocation_bytes_: 20661403648
+2025-02-26 11:26:09.250968: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                     10330701824
+InUse:                            2304
+MaxInUse:                         2304
+NumAllocs:                           1
+MaxAllocSize:                     2304
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:26:09.251011: W tensorflow/tsl/framework/bfc_allocator.cc:492] *********************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:26:09.446023: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:09.446260: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:19.456334: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:19.457022: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:19.457092: W tensorflow/tsl/framework/bfc_allocator.cc:479] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4B (rounded to 256)requested by op _EagerConst
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-26 11:26:19.457135: I tensorflow/tsl/framework/bfc_allocator.cc:1034] BFCAllocator dump for GPU_0_bfc
+2025-02-26 11:26:19.457187: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457224: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457259: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457300: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.2KiB allocated for chunks. 2.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-26 11:26:19.457337: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457371: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457406: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457441: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457476: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457511: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457556: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457591: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457626: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457661: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457697: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457732: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457774: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457809: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457844: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457879: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457914: I tensorflow/tsl/framework/bfc_allocator.cc:1041] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-26 11:26:19.457948: I tensorflow/tsl/framework/bfc_allocator.cc:1057] Bin for 256B was 256B, Chunk State: 
+2025-02-26 11:26:19.457981: I tensorflow/tsl/framework/bfc_allocator.cc:1070] Next region of size 2304
+2025-02-26 11:26:19.458020: I tensorflow/tsl/framework/bfc_allocator.cc:1090] InUse at 147386400000 of size 2304 next 18446744073709551615
+2025-02-26 11:26:19.458054: I tensorflow/tsl/framework/bfc_allocator.cc:1095]      Summary of in-use Chunks by size: 
+2025-02-26 11:26:19.458091: I tensorflow/tsl/framework/bfc_allocator.cc:1098] 1 Chunks of size 2304 totalling 2.2KiB
+2025-02-26 11:26:19.458126: I tensorflow/tsl/framework/bfc_allocator.cc:1102] Sum Total of in-use chunks: 2.2KiB
+2025-02-26 11:26:19.458161: I tensorflow/tsl/framework/bfc_allocator.cc:1104] total_region_allocated_bytes_: 2304 memory_limit_: 10330701824 available bytes: 10330699520 curr_region_allocation_bytes_: 20661403648
+2025-02-26 11:26:19.458202: I tensorflow/tsl/framework/bfc_allocator.cc:1110] Stats: 
+Limit:                     10330701824
+InUse:                            2304
+MaxInUse:                         2304
+NumAllocs:                           1
+MaxAllocSize:                     2304
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-26 11:26:19.458239: W tensorflow/tsl/framework/bfc_allocator.cc:492] *********************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-02-26 11:26:19.662652: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:19.662873: I tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:735] failed to allocate 9.62G (10330699520 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2025-02-26 11:26:31.812443: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:352] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+2025-02-26 11:26:31.812607: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:352] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+2025-02-26 11:26:32.470214: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:428] Loaded cuDNN version 8600
+

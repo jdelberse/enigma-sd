@@ -1,0 +1,41 @@
+000 (4997172.000.000) 2025-03-14 12:05:06 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (4997172.000.000) 2025-03-14 12:05:24 Job executing on host: <10.0.9.47:9618?addrs=10.0.9.47-9618&alias=cpu47.htc.inm7.de&noUDP&sock=startd_3371_cdd8>
+...
+006 (4997172.000.000) 2025-03-14 12:05:33 Image size of job updated: 3958120
+	349  -  MemoryUsage of job (MB)
+	356660  -  ResidentSetSize of job (KB)
+...
+006 (4997172.000.000) 2025-03-14 12:10:34 Image size of job updated: 4611272
+	628  -  MemoryUsage of job (MB)
+	642112  -  ResidentSetSize of job (KB)
+...
+006 (4997172.000.000) 2025-03-14 12:20:35 Image size of job updated: 4611272
+	2030  -  MemoryUsage of job (MB)
+	2078316  -  ResidentSetSize of job (KB)
+...
+006 (4997172.000.000) 2025-03-14 12:30:36 Image size of job updated: 4753884
+	2708  -  MemoryUsage of job (MB)
+	2772292  -  ResidentSetSize of job (KB)
+...
+006 (4997172.000.000) 2025-03-14 12:55:39 Image size of job updated: 4753884
+	2892  -  MemoryUsage of job (MB)
+	2960436  -  ResidentSetSize of job (KB)
+...
+005 (4997172.000.000) 2025-03-14 13:24:29 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 01:17:37, Sys 0 00:00:08  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 01:17:37, Sys 0 00:00:08  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        4         4 
+	   Disk (KB)            : 40000    94371840 104048913 
+	   Memory (MB)          :  2892       32768     32768 
+
+	Job terminated of its own accord at 2025-03-14T12:24:29Z with exit-code 0.
+...

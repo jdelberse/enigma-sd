@@ -1,0 +1,10 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids/derivatives/qsiprep/sub-180/anat/sub-180_space-ACPC_label-WM_dseg.nii.gz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids/derivatives/qsiprep/sub-180/ses-bl/dwi/sub-180_ses-bl_dir-AP_space-ACPC_dwiref.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+=============================================================================
+WARNING: No transforms found, using identify transform
+Default pixel value: 0
+Interpolation type: NearestNeighborInterpolateImageFunction
+Output warped image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids/derivatives/qsiprep/sub-180/anat/sub-180_space-ACPC_label-DTIWM_dseg.nii.gz

@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/opt/conda/envs/qsiprep/bin/qsiprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/run.py", line 43, in main
+    parse_args()
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/parser.py", line 709, in parse_args
+    config.from_dict({})
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/config.py", line 721, in from_dict
+    execution.load(settings, init=initialize("execution"), ignore=ignore)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/config.py", line 251, in load
+    cls.init()
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/config.py", line 489, in init
+    re.compile(r"sub-(?!(" + "|".join(cls.participant_label) + r")(\b|_))")
+  File "/opt/conda/envs/qsiprep/lib/python3.10/re.py", line 251, in compile
+    return _compile(pattern, flags)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 755, in _parse
+    p = _parse_sub(source, state, verbose, nested + 1)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 841, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/opt/conda/envs/qsiprep/lib/python3.10/sre_parse.py", line 599, in _parse
+    raise source.error(msg, len(this) + 1 + len(that))
+re.error: bad character range b-5 at position 12

@@ -1,0 +1,7 @@
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd
+Trying to run inference on GPU 0
+
+	WARNING : Exception loading model : code/shiva/models/T1-PVS
+SavedModel file does not exist at: code/shiva/models/T1-PVS/{saved_model.pbtxt|saved_model.pb}
+Inference time : 0.0013431827227274576 sec.
+

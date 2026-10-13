@@ -1,0 +1,3 @@
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py:27: UserWarning: Pass ['bvecs'] as keyword args. From version 2.0.0 passing these as positional arguments will result in an error. 
+  gtab = gradient_table(f"{dwi}_desc-preproc_dwi.bval", f"{dwi}_desc-preproc_dwi.bvec")
+

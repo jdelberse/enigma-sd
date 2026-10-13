@@ -1,0 +1,42 @@
+000 (4997217.000.000) 2025-03-14 12:05:09 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (4997217.000.000) 2025-03-14 12:05:24 Job executing on host: <10.0.9.38:9618?addrs=10.0.9.38-9618&alias=cpu38.htc.inm7.de&noUDP&sock=startd_3306_3830>
+...
+006 (4997217.000.000) 2025-03-14 12:05:33 Image size of job updated: 3958116
+	872  -  MemoryUsage of job (MB)
+	892704  -  ResidentSetSize of job (KB)
+...
+006 (4997217.000.000) 2025-03-14 12:10:34 Image size of job updated: 4611264
+	872  -  MemoryUsage of job (MB)
+	892704  -  ResidentSetSize of job (KB)
+...
+006 (4997217.000.000) 2025-03-14 12:40:36 Image size of job updated: 4611264
+	1845  -  MemoryUsage of job (MB)
+	1888712  -  ResidentSetSize of job (KB)
+...
+006 (4997217.000.000) 2025-03-14 12:45:37 Image size of job updated: 4611264
+	2008  -  MemoryUsage of job (MB)
+	2055616  -  ResidentSetSize of job (KB)
+...
+006 (4997217.000.000) 2025-03-14 12:50:38 Image size of job updated: 4780704
+	2712  -  MemoryUsage of job (MB)
+	2776224  -  ResidentSetSize of job (KB)
+...
+006 (4997217.000.000) 2025-03-14 13:20:41 Image size of job updated: 4780704
+	2896  -  MemoryUsage of job (MB)
+	2964600  -  ResidentSetSize of job (KB)
+...
+004 (4997217.000.000) 2025-03-14 13:47:33 Job was evicted.
+	(0) CPU times
+		Usr 0 01:41:50, Sys 0 00:00:12  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        4         4 
+	   Disk (KB)            : 40000    94371840  96727741 
+	   Memory (MB)          :  2896       32768     32768 
+...
+009 (4997217.000.000) 2025-03-14 13:47:33 Job was aborted.
+	via condor_rm (by user jd.elberse)
+...

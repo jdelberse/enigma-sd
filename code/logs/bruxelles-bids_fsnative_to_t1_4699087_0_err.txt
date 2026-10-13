@@ -1,3 +1,0 @@
-terminate called after throwing an instance of 'itk::ExceptionObject'
-  what():  /home/conda/feedstock_root/build_artifacts/libitk_1717078286681/work/Modules/Remote/MGHIO/src/itkMGHImageIO.cxx:187:
-ITK ERROR: MGHImageIO(0x55c1c312b4d0): Can't find/open file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/fmriprep/sub-028/ses-sd9/sourcedata/freesurfer/sub-028/mri/aparc+aseg.mgz

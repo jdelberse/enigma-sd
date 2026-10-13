@@ -1,0 +1,165 @@
+Error: cant open file ntnu-bids/derivatives/alps/b0.nii.gz
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/b0
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/b0
+Error : No image files match: ntnu-bids/derivatives/alps/b0
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/b0
+Error : No image files match: ntnu-bids/derivatives/alps/b0
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 517: 254207 Aborted                 bet2 "${outdir}/b0" "${outdir}/b0_brain" -m
+Image Exception : #63 :: No image files match: b0_brain_mask
+Image Exception : #22 :: Failed to read volume b0_brain_mask.nii.gz
+Error : No image files match: b0_brain_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume b0_brain_mask.nii.gz
+Error : No image files match: b0_brain_mask
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 517: 254215 Aborted                 dtifit --data="${dwi1_processed}" --out=dti --mask=b0_brain_mask.nii.gz --bvecs=bvec1 --bvals=bval1 --save_tensor
+cp: cannot create regular file 'ntnu-bids/derivatives/alps/t1w.nii.gz': No such file or directory
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/t1w
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 687: 254359 Aborted                 bet2 "${outdir}/dti_FA.nii.gz" "${outdir}/dti_FA_brain" -m
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/t1w
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/t1w
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: ntnu-bids/derivatives/alps/t1w
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 687: 254375 Aborted                 fslmaths "${outdir}/${smri}.nii.gz" -mul "${outdir}/dti_FA_brain_mask_2_struct.nii.gz" "${outdir}/${smri}_brain.nii.gz"
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/t1w_brain
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/t1w_brain.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w_brain
+Failed to read volume ntnu-bids/derivatives/alps/t1w_brain.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w_brain
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/t1w
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume ntnu-bids/derivatives/alps/t1w.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/t1w
+Could not open matrix file ntnu-bids/derivatives/alps/dti2struct.mat
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/dti_FA.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 687: 254399 Aborted                 applywarp --in="${outdir}/dti_FA.nii.gz" --ref="${template}" --warp="${outdir}/struct2template_warps" --premat="${outdir}/dti2struct.mat" --out="${outdir}/dti_FA_to_${template_abbreviation}.nii.gz"
+Could not open matrix file ntnu-bids/derivatives/alps/dti2struct.mat
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/dti_MD.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 687: 254407 Aborted                 applywarp --in="${outdir}/dti_MD.nii.gz" --ref="${template}" --warp="${outdir}/struct2template_warps" --premat="${outdir}/dti2struct.mat" --out="${outdir}/dti_MD_to_${template_abbreviation}.nii.gz"
+Could not open matrix file ntnu-bids/derivatives/alps/dti2struct.mat
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_tensor.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_tensor
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume ntnu-bids/derivatives/alps/dti_tensor.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_tensor
+/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/alps/alps.sh: line 687: 254415 Aborted                 applywarp --in="${outdir}/dti_tensor.nii.gz" --ref="${template}" --warp="${outdir}/struct2template_warps" --premat="${outdir}/dti2struct.mat" --out="${outdir}/dti_tensor_in_${template_abbreviation}.nii.gz"
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+No image files match: ntnu-bids/derivatives/alps/dti_tensor_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dxx_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dyy_in_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dzz_in_MNI152_T1_1mm
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_FA_to_MNI152_T1_1mm
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #63 :: No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Image Exception : #22 :: Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+Failed to read volume ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm.nii.gz
+Error : No image files match: ntnu-bids/derivatives/alps/dti_MD_to_MNI152_T1_1mm
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error

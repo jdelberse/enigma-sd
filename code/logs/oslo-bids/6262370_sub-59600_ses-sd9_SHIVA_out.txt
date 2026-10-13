@@ -1,0 +1,673 @@
+
+SHiVAi segmentation pipeline
+
+Licences:
+- The SHiVAi segmentation pipeline (source code and Apptainer image) is distributed underthe GNU General Public License - version 3 (GPLv3):
+https://www.gnu.org/licenses/gpl-3.0.fr.html#license-text 
+- The SHiVAi trained AI models are distributed under and protected by the CC BY-NC-SA 4.0 license:
+https://creativecommons.org/licenses/by-nc-sa/4.0/ 
+
+The segmentation models have been registered at the french 'Association de Protection des Programmes' under the numbers:
+- For PVS: IDDN.FR.001.240015.000.S.P.2022.000.31230
+- For WMH: IDDN.FR.001.240030.000.S.P.2022.000.31230
+- For CMB: IDDN.FR.001.420007.000.S.P.2023.000.31230
+
+
+Working directory set to: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs
+250501-17:37:32,251 nipype.workflow INFO:
+	 Generated workflow graph: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/graph.svg (graph2use=colored, simple_form=True).
+250501-17:37:32,292 nipype.workflow INFO:
+	 Workflow main_workflow settings: ['check', 'execution', 'logging', 'monitoring']
+250501-17:37:32,345 nipype.workflow INFO:
+	 Running serially.
+250501-17:37:32,345 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/datagrabber".
+250501-17:37:32,362 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+250501-17:37:32,365 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.001743s.
+250501-17:37:32,374 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.datagrabber" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/datagrabber".
+250501-17:37:32,384 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+250501-17:37:32,387 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.001627s.
+250501-17:37:32,394 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.conform" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/conform".
+250501-17:37:32,398 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.conform" - collecting precomputed outputs
+250501-17:37:32,398 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.conform" found cached.
+250501-17:37:32,398 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.conform" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/conform".
+250501-17:37:32,409 nipype.workflow INFO:
+	 [Node] Executing "conform" <shivai.interfaces.image.Conform>
+250501-17:37:38,264 nipype.workflow INFO:
+	 [Node] Finished "conform", elapsed time 5.854003s.
+250501-17:37:38,273 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_conform" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/mask_to_conform".
+250501-17:37:38,279 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_conform" - collecting precomputed outputs
+250501-17:37:38,279 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_conform" found cached.
+250501-17:37:38,279 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_conform" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/mask_to_conform".
+250501-17:37:38,292 nipype.workflow INFO:
+	 [Node] Executing "mask_to_conform" <shivai.interfaces.image.Resample_from_to>
+250501-17:37:40,110 nipype.workflow INFO:
+	 [Node] Finished "mask_to_conform", elapsed time 1.816493s.
+250501-17:37:40,118 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.binarize_brain_mask" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/binarize_brain_mask".
+250501-17:37:40,122 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.binarize_brain_mask" - collecting precomputed outputs
+250501-17:37:40,122 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.binarize_brain_mask" found cached.
+250501-17:37:40,122 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.binarize_brain_mask" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/binarize_brain_mask".
+250501-17:37:40,132 nipype.workflow INFO:
+	 [Node] Executing "binarize_brain_mask" <shivai.interfaces.image.Threshold>
+250501-17:37:41,312 nipype.workflow INFO:
+	 [Node] Finished "binarize_brain_mask", elapsed time 1.179385s.
+250501-17:37:41,321 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.defacing_img1" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/defacing_img1".
+250501-17:37:41,325 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.defacing_img1" - collecting precomputed outputs
+250501-17:37:41,325 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.defacing_img1" found cached.
+250501-17:37:41,326 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.defacing_img1" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/defacing_img1".
+250501-17:37:41,337 nipype.workflow INFO:
+	 [Node] Executing "defacing_img1" <nipype.interfaces.quickshear.Quickshear>
+250501-17:37:43,843 nipype.interface INFO:
+	 stderr 2025-05-01T17:37:43.842835:Defaced file: sub-59600_ses-sd9_T1_resampled_defaced.nii.gz
+250501-17:37:43,974 nipype.workflow INFO:
+	 [Node] Finished "defacing_img1", elapsed time 2.636045s.
+250501-17:37:43,982 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/crop".
+250501-17:37:43,987 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.crop" - collecting precomputed outputs
+250501-17:37:43,987 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.crop" found cached.
+250501-17:37:43,987 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/crop".
+250501-17:37:43,999 nipype.workflow INFO:
+	 [Node] Executing "crop" <shivai.interfaces.image.Crop>
+bbox1: [47 16 31]
+bbox2: [207 230 207]
+cdg_ijk: [127 123 119]
+span: [160 214 176]
+offset: [0 0 0]
+padding: [-127. -145. -109.    1.]
+padding offset: [0. 0. 0. 0.]
+halfs xyz: [-47. -38. -21.   1.]
+250501-17:37:45,848 nipype.workflow INFO:
+	 [Node] Finished "crop", elapsed time 1.847073s.
+250501-17:37:45,860 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/mask_to_crop".
+250501-17:37:45,865 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_crop" - collecting precomputed outputs
+250501-17:37:45,865 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_crop" found cached.
+250501-17:37:45,866 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.seg_to_crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/seg_to_crop".
+250501-17:37:45,871 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.seg_to_crop" - collecting precomputed outputs
+250501-17:37:45,871 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.seg_to_crop" found cached.
+250501-17:37:45,871 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-b9/qc_crop_box".
+250501-17:37:45,875 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box" - collecting precomputed outputs
+250501-17:37:45,875 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box" found cached.
+250501-17:37:45,875 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.mask_to_crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/mask_to_crop".
+250501-17:37:45,888 nipype.workflow INFO:
+	 [Node] Executing "mask_to_crop" <shivai.interfaces.image.Resample_from_to>
+250501-17:37:46,913 nipype.workflow INFO:
+	 [Node] Finished "mask_to_crop", elapsed time 1.024049s.
+250501-17:37:46,923 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.seg_to_crop" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/seg_to_crop".
+250501-17:37:46,936 nipype.workflow INFO:
+	 [Node] Executing "seg_to_crop" <shivai.interfaces.image.Resample_from_to>
+250501-17:37:48,228 nipype.workflow INFO:
+	 [Node] Finished "seg_to_crop", elapsed time 1.291997s.
+250501-17:37:48,237 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/qc_crop_box".
+250501-17:37:48,248 nipype.workflow INFO:
+	 [Node] Executing "qc_crop_box" <shivai.interfaces.image.Mask_and_Crop_QC>
+250501-17:37:48,801 nipype.workflow INFO:
+	 [Node] Finished "qc_crop_box", elapsed time 0.543905s.
+250501-17:37:48,801 nipype.workflow WARNING:
+	 Storing result file without outputs
+250501-17:37:48,805 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/qc_crop_box)
+250501-17:37:48,810 nipype.workflow ERROR:
+	 Node qc_crop_box.a1 failed to run on host gpu1.
+250501-17:37:48,810 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173748-jd.elberse-qc_crop_box.a1-4a93bae0-cfdd-4348-96f5-7592707bdc72.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node qc_crop_box.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/interfaces/image.py", line 1089, in _run_interface
+	    crop_brain_img = bounding_crop(brain_img, brainmask, bbox1, bbox2, slice_coord)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/quality_control.py", line 120, in bounding_crop
+	    fig, ax = plt.subplots(1, 3, figsize=(12, 4))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 1501, in subplots
+	    fig = figure(**fig_kw)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+	    return func(*args, **kwargs)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 840, in figure
+	    manager = new_figure_manager(
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 383, in new_figure_manager
+	    _warn_if_gui_out_of_main_thread()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 361, in _warn_if_gui_out_of_main_thread
+	    if _get_required_interactive_framework(_get_backend_mod()):
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 208, in _get_backend_mod
+	    switch_backend(rcParams._get("backend"))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 271, in switch_backend
+	    backend_mod = importlib.import_module(
+	  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+	    return _bootstrap._gcd_import(name[level:], package, level)
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+	  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/__init__.py", line 1, in <module>
+	    from . import backend_inline, config  # noqa
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/backend_inline.py", line 13, in <module>
+	    from IPython.core.interactiveshell import InteractiveShell
+	ModuleNotFoundError: No module named 'IPython'
+
+
+250501-17:37:48,814 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.img1_final_intensity_normalization" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-b9/img1_final_intensity_normalization".
+250501-17:37:48,818 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.img1_final_intensity_normalization" - collecting precomputed outputs
+250501-17:37:48,818 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.img1_final_intensity_normalization" found cached.
+250501-17:37:48,819 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.img1_final_intensity_normalization" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/_subject_id_sub-59600_ses-sd9/img1_final_intensity_normalization".
+250501-17:37:48,832 nipype.workflow INFO:
+	 [Node] Executing "img1_final_intensity_normalization" <shivai.interfaces.image.Normalization>
+571.4436645507812
+250501-17:37:50,210 nipype.workflow INFO:
+	 [Node] Finished "img1_final_intensity_normalization", elapsed time 1.376768s.
+250501-17:37:50,223 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.preproc_joiner_mask" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/preproc_joiner_mask".
+250501-17:37:50,227 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.preproc_joiner_mask".
+250501-17:37:50,243 nipype.workflow INFO:
+	 [Node] Executing "preproc_joiner_mask" <nipype.interfaces.utility.wrappers.Function>
+250501-17:37:50,244 nipype.workflow INFO:
+	 [Node] Finished "preproc_joiner_mask", elapsed time 0.000338s.
+250501-17:37:50,252 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-b9/qc_overlay_brainmask".
+250501-17:37:50,256 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask" - collecting precomputed outputs
+250501-17:37:50,256 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask" found cached.
+250501-17:37:50,256 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-b9/save_hist_final".
+250501-17:37:50,259 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final" - collecting precomputed outputs
+250501-17:37:50,259 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final" found cached.
+250501-17:37:50,259 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/qc_overlay_brainmask".
+250501-17:37:50,270 nipype.workflow INFO:
+	 [Node] Executing "qc_overlay_brainmask" <shivai.interfaces.image.Brainmask_Overlay>
+250501-17:37:50,527 nipype.workflow INFO:
+	 [Node] Finished "qc_overlay_brainmask", elapsed time 0.254999s.
+250501-17:37:50,527 nipype.workflow WARNING:
+	 Storing result file without outputs
+250501-17:37:50,531 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/qc_overlay_brainmask)
+250501-17:37:50,533 nipype.workflow ERROR:
+	 Node qc_overlay_brainmask.a1 failed to run on host gpu1.
+250501-17:37:50,533 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173750-jd.elberse-qc_overlay_brainmask.a1-190a5ea2-1a16-4b6a-8e6a-35ed59ade254.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node qc_overlay_brainmask.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/interfaces/image.py", line 1174, in _run_interface
+	    overlayed_brainmask = overlay_brainmask(ref_vol, brainmask_vol, outname, cols_nb, orient, alpha)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/quality_control.py", line 57, in overlay_brainmask
+	    fig, ax = plt.subplots(row_nb, nb_of_cols, figsize=(nb_of_cols*0.75, row_nb), dpi=300)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 1501, in subplots
+	    fig = figure(**fig_kw)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+	    return func(*args, **kwargs)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 840, in figure
+	    manager = new_figure_manager(
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 383, in new_figure_manager
+	    _warn_if_gui_out_of_main_thread()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 361, in _warn_if_gui_out_of_main_thread
+	    if _get_required_interactive_framework(_get_backend_mod()):
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 208, in _get_backend_mod
+	    switch_backend(rcParams._get("backend"))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 271, in switch_backend
+	    backend_mod = importlib.import_module(
+	  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+	    return _bootstrap._gcd_import(name[level:], package, level)
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+	  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/__init__.py", line 1, in <module>
+	    from . import backend_inline, config  # noqa
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/backend_inline.py", line 13, in <module>
+	    from IPython.core.interactiveshell import InteractiveShell
+	ModuleNotFoundError: No module named 'IPython'
+
+
+250501-17:37:50,537 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/save_hist_final".
+250501-17:37:50,548 nipype.workflow INFO:
+	 [Node] Executing "save_hist_final" <shivai.interfaces.image.Save_Histogram>
+250501-17:37:50,762 nipype.workflow INFO:
+	 [Node] Finished "save_hist_final", elapsed time 0.212429s.
+250501-17:37:50,763 nipype.workflow WARNING:
+	 Storing result file without outputs
+250501-17:37:50,766 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-sd9/save_hist_final)
+250501-17:37:50,769 nipype.workflow ERROR:
+	 Node save_hist_final.a1 failed to run on host gpu1.
+250501-17:37:50,769 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173750-jd.elberse-save_hist_final.a1-3ef732fd-d57b-4892-960c-df83830bc777.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node save_hist_final.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/interfaces/image.py", line 1042, in _run_interface
+	    histo, peak = save_histogram(img_normalized, bins)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/quality_control.py", line 174, in save_histogram
+	    _, ax = plt.subplots()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 1501, in subplots
+	    fig = figure(**fig_kw)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+	    return func(*args, **kwargs)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 840, in figure
+	    manager = new_figure_manager(
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 383, in new_figure_manager
+	    _warn_if_gui_out_of_main_thread()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 361, in _warn_if_gui_out_of_main_thread
+	    if _get_required_interactive_framework(_get_backend_mod()):
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 208, in _get_backend_mod
+	    switch_backend(rcParams._get("backend"))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 271, in switch_backend
+	    backend_mod = importlib.import_module(
+	  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+	    return _bootstrap._gcd_import(name[level:], package, level)
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+	  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/__init__.py", line 1, in <module>
+	    from . import backend_inline, config  # noqa
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/backend_inline.py", line 13, in <module>
+	    from IPython.core.interactiveshell import InteractiveShell
+	ModuleNotFoundError: No module named 'IPython'
+
+
+250501-17:37:50,773 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.preproc_joiner_t1" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/preproc_joiner_t1".
+250501-17:37:50,776 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.preproc_joiner_t1".
+250501-17:37:50,793 nipype.workflow INFO:
+	 [Node] Executing "preproc_joiner_t1" <nipype.interfaces.utility.wrappers.Function>
+250501-17:37:50,794 nipype.workflow INFO:
+	 [Node] Finished "preproc_joiner_t1", elapsed time 0.000338s.
+250501-17:37:50,803 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_metrics" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/shiva_t1_preprocessing_custom_seg/preproc_qc_workflow/_subject_id_sub-59600_ses-b9/qc_metrics".
+250501-17:37:50,807 nipype.workflow INFO:
+	 [Node] Cached "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_metrics" - collecting precomputed outputs
+250501-17:37:50,807 nipype.workflow INFO:
+	 [Node] "main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_metrics" found cached.
+250501-17:37:50,807 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.Segmentation.predict_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/Segmentation/predict_pvs".
+250501-17:37:50,811 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.Segmentation.predict_pvs".
+250501-17:37:50,828 nipype.workflow INFO:
+	 [Node] Executing "predict_pvs" <shivai.interfaces.shiva.Predict_Multi>
+250501-17:37:52,368 nipype.interface INFO:
+	 stderr 2025-05-01T17:37:52.368774:2025-05-01 17:37:52.368684: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+250501-17:37:52,369 nipype.interface INFO:
+	 stderr 2025-05-01T17:37:52.368774:To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+250501-17:38:02,289 nipype.interface INFO:
+	 stdout 2025-05-01T17:38:02.289185:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_0_model.h5
+250501-17:40:46,8 nipype.interface INFO:
+	 stderr 2025-05-01T17:40:46.008471:WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+250501-17:40:46,9 nipype.interface INFO:
+	 stderr 2025-05-01T17:40:46.008471:Your GPUs may run slowly with dtype policy mixed_float16 because they do not have compute capability of at least 7.0. Your GPUs:
+250501-17:40:46,9 nipype.interface INFO:
+	 stderr 2025-05-01T17:40:46.008471:  NVIDIA GeForce GTX 1080 Ti, compute capability 6.1 (x4)
+250501-17:40:46,9 nipype.interface INFO:
+	 stderr 2025-05-01T17:40:46.008471:See https://developer.nvidia.com/cuda-gpus for a list of GPUs and their compute capabilities.
+250501-17:40:46,9 nipype.interface INFO:
+	 stderr 2025-05-01T17:40:46.008471:If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+250501-17:51:49,665 nipype.interface INFO:
+	 stderr 2025-05-01T17:51:49.665033:2025-05-01 17:51:49.664440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10532 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1
+250501-17:51:49,674 nipype.interface INFO:
+	 stderr 2025-05-01T17:51:49.674713:2025-05-01 17:51:49.674646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 10488 MB memory:  -> device: 1, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1b:00.0, compute capability: 6.1
+250501-17:51:49,681 nipype.interface INFO:
+	 stderr 2025-05-01T17:51:49.681825:2025-05-01 17:51:49.681760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 10532 MB memory:  -> device: 2, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:60:00.0, compute capability: 6.1
+250501-17:52:01,708 nipype.interface INFO:
+	 stderr 2025-05-01T17:52:01.708520:2025-05-01 17:52:01.707985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 10532 MB memory:  -> device: 3, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:b1:00.0, compute capability: 6.1
+250501-17:53:38,409 nipype.interface INFO:
+	 stderr 2025-05-01T17:53:38.409797:2025-05-01 17:53:38.409709: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:53:38,410 nipype.interface INFO:
+	 stderr 2025-05-01T17:53:38.410414:2025-05-01 17:53:38.410031: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:54:50,677 nipype.interface INFO:
+	 stderr 2025-05-01T17:54:50.677600:2025-05-01 17:54:50.677503: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:432] Loaded cuDNN version 8600
+250501-17:55:24,729 nipype.interface INFO:
+	 stdout 2025-05-01T17:55:24.729215:1/2 [==============>...............] - ETA: 2:442/2 [==============================] - 165s 18ms/step
+250501-17:55:25,545 nipype.interface INFO:
+	 stdout 2025-05-01T17:55:25.545274:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_1_model.h5
+250501-17:56:39,370 nipype.interface INFO:
+	 stderr 2025-05-01T17:56:39.370345:2025-05-01 17:56:39.370271: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:56:39,370 nipype.interface INFO:
+	 stderr 2025-05-01T17:56:39.370839:2025-05-01 17:56:39.370574: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:56:43,601 nipype.interface INFO:
+	 stdout 2025-05-01T17:56:43.600911:1/2 [==============>...............] - ETA: 1:152/2 [==============================] - ETA: 0s  2/2 [==============================] - 76s 294ms/step
+250501-17:56:44,358 nipype.interface INFO:
+	 stdout 2025-05-01T17:56:44.358247:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_2_model.h5
+250501-17:57:47,683 nipype.interface INFO:
+	 stderr 2025-05-01T17:57:47.683078:2025-05-01 17:57:47.683006: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:57:47,683 nipype.interface INFO:
+	 stderr 2025-05-01T17:57:47.683348:2025-05-01 17:57:47.683316: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:57:51,886 nipype.interface INFO:
+	 stdout 2025-05-01T17:57:51.886363:1/2 [==============>...............] - ETA: 1:052/2 [==============================] - ETA: 0s  2/2 [==============================] - 66s 284ms/step
+250501-17:57:52,644 nipype.interface INFO:
+	 stdout 2025-05-01T17:57:52.644732:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_3_model.h5
+250501-17:58:39,943 nipype.interface INFO:
+	 stderr 2025-05-01T17:58:39.943151:2025-05-01 17:58:39.943076: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:58:39,943 nipype.interface INFO:
+	 stderr 2025-05-01T17:58:39.943416:2025-05-01 17:58:39.943384: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:58:44,605 nipype.interface INFO:
+	 stdout 2025-05-01T17:58:44.605259:1/2 [==============>...............] - ETA: 49s2/2 [==============================] - ETA: 0s 2/2 [==============================] - 50s 729ms/step
+250501-17:58:45,803 nipype.interface INFO:
+	 stdout 2025-05-01T17:58:45.803594:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_4_model.h5
+250501-17:59:28,246 nipype.interface INFO:
+	 stderr 2025-05-01T17:59:28.246433:2025-05-01 17:59:28.246360: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:59:28,246 nipype.interface INFO:
+	 stderr 2025-05-01T17:59:28.246680:2025-05-01 17:59:28.246651: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-17:59:32,176 nipype.interface INFO:
+	 stderr 2025-05-01T17:59:32.176027:WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x15507ccd55e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+250501-17:59:32,524 nipype.interface INFO:
+	 stdout 2025-05-01T17:59:32.524097:1/2 [==============>...............] - ETA: 44s2/2 [==============================] - ETA: 0s 2/2 [==============================] - 45s 347ms/step
+250501-17:59:33,342 nipype.interface INFO:
+	 stdout 2025-05-01T17:59:33.342065:Loading model file: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/shiva/models/T1-PVS/V1/20211030-162753_Unet3Dv2-10.7.2-1.8-T1.VRS_fold_1x6_pi_fold_5_model.h5
+250501-18:00:32,561 nipype.interface INFO:
+	 stderr 2025-05-01T18:00:32.561025:2025-05-01 18:00:32.560954: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D2/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D2/Pad transpose_after=model/Dec_Unet_D2/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-18:00:32,561 nipype.interface INFO:
+	 stderr 2025-05-01T18:00:32.561272:2025-05-01 18:00:32.561243: I tensorflow/core/grappler/optimizers/generic_layout_optimizer.cc:403] Cancel Transpose nodes around Pad: transpose_before=model/Dec_Ups_D3/concat_2-0-0-TransposeNCDHWToNDHWC-LayoutOptimizer pad=model/Dec_ZPad_D3/Pad transpose_after=model/Dec_Unet_D3/concat-0-TransposeNDHWCToNCDHW-LayoutOptimizer
+250501-18:00:36,473 nipype.interface INFO:
+	 stderr 2025-05-01T18:00:36.473513:WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x155075ef8550> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+250501-18:00:36,789 nipype.interface INFO:
+	 stdout 2025-05-01T18:00:36.789501:1/2 [==============>...............] - ETA: 1:012/2 [==============================] - ETA: 0s  2/2 [==============================] - 62s 315ms/step
+250501-18:00:37,417 nipype.interface INFO:
+	 stdout 2025-05-01T18:00:37.417468:Averaging the results of each model (done for each subject)...
+250501-18:01:49,125 nipype.workflow INFO:
+	 [Node] Finished "predict_pvs", elapsed time 1438.295509s.
+250501-18:01:49,139 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.seg_getter_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/_subject_id_sub-59600_ses-b9/seg_getter_pvs".
+250501-18:01:49,144 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.seg_getter_pvs".
+250501-18:01:49,159 nipype.workflow INFO:
+	 [Node] Executing "seg_getter_pvs" <nipype.interfaces.utility.wrappers.Function>
+250501-18:01:49,160 nipype.workflow INFO:
+	 [Node] Finished "seg_getter_pvs", elapsed time 0.00032s.
+250501-18:01:49,169 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.seg_getter_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/_subject_id_sub-59600_ses-sd9/seg_getter_pvs".
+250501-18:01:49,180 nipype.workflow INFO:
+	 [Node] Executing "seg_getter_pvs" <nipype.interfaces.utility.wrappers.Function>
+250501-18:01:49,181 nipype.workflow INFO:
+	 [Node] Finished "seg_getter_pvs", elapsed time 0.000246s.
+250501-18:01:49,190 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.pvs_overlay_node" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-b9/pvs_overlay_node".
+250501-18:01:49,195 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.post_processing_workflow.pvs_overlay_node".
+250501-18:01:49,211 nipype.workflow INFO:
+	 [Node] Executing "pvs_overlay_node" <shivai.interfaces.image.Brainmask_Overlay>
+250501-18:01:49,699 nipype.workflow INFO:
+	 [Node] Finished "pvs_overlay_node", elapsed time 0.485274s.
+250501-18:01:49,699 nipype.workflow WARNING:
+	 Storing result file without outputs
+250501-18:01:49,703 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.post_processing_workflow.pvs_overlay_node" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-b9/pvs_overlay_node)
+250501-18:01:49,706 nipype.workflow ERROR:
+	 Node pvs_overlay_node.a0 failed to run on host gpu1.
+250501-18:01:49,706 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-180149-jd.elberse-pvs_overlay_node.a0-ed0bdd69-42aa-483f-babe-99fdb0622c0d.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node pvs_overlay_node.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/interfaces/image.py", line 1174, in _run_interface
+	    overlayed_brainmask = overlay_brainmask(ref_vol, brainmask_vol, outname, cols_nb, orient, alpha)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/quality_control.py", line 57, in overlay_brainmask
+	    fig, ax = plt.subplots(row_nb, nb_of_cols, figsize=(nb_of_cols*0.75, row_nb), dpi=300)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 1501, in subplots
+	    fig = figure(**fig_kw)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+	    return func(*args, **kwargs)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 840, in figure
+	    manager = new_figure_manager(
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 383, in new_figure_manager
+	    _warn_if_gui_out_of_main_thread()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 361, in _warn_if_gui_out_of_main_thread
+	    if _get_required_interactive_framework(_get_backend_mod()):
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 208, in _get_backend_mod
+	    switch_backend(rcParams._get("backend"))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 271, in switch_backend
+	    backend_mod = importlib.import_module(
+	  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+	    return _bootstrap._gcd_import(name[level:], package, level)
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+	  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/__init__.py", line 1, in <module>
+	    from . import backend_inline, config  # noqa
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/backend_inline.py", line 13, in <module>
+	    from IPython.core.interactiveshell import InteractiveShell
+	ModuleNotFoundError: No module named 'IPython'
+
+
+250501-18:01:49,710 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.cluster_labelling_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-b9/cluster_labelling_pvs".
+250501-18:01:49,714 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.post_processing_workflow.cluster_labelling_pvs".
+250501-18:01:49,730 nipype.workflow INFO:
+	 [Node] Executing "cluster_labelling_pvs" <shivai.interfaces.image.Label_clusters>
+250501-18:01:50,687 nipype.workflow INFO:
+	 [Node] Finished "cluster_labelling_pvs", elapsed time 0.956543s.
+250501-18:01:50,697 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.pvs_overlay_node" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-sd9/pvs_overlay_node".
+250501-18:01:50,709 nipype.workflow INFO:
+	 [Node] Executing "pvs_overlay_node" <shivai.interfaces.image.Brainmask_Overlay>
+250501-18:01:51,201 nipype.workflow INFO:
+	 [Node] Finished "pvs_overlay_node", elapsed time 0.48856s.
+250501-18:01:51,201 nipype.workflow WARNING:
+	 Storing result file without outputs
+250501-18:01:51,203 nipype.workflow WARNING:
+	 [Node] Error on "main_workflow.post_processing_workflow.pvs_overlay_node" (/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-sd9/pvs_overlay_node)
+250501-18:01:51,206 nipype.workflow ERROR:
+	 Node pvs_overlay_node.a1 failed to run on host gpu1.
+250501-18:01:51,206 nipype.workflow ERROR:
+	 Saving crash info to /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-180151-jd.elberse-pvs_overlay_node.a1-b17851f1-5781-4c67-80d6-1f4a34dbd86d.pklz
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/plugins/linear.py", line 47, in run
+    node.run(updatehash=updatehash)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+  File "/usr/local/lib/python3.8/dist-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node pvs_overlay_node.
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.8/dist-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/interfaces/image.py", line 1174, in _run_interface
+	    overlayed_brainmask = overlay_brainmask(ref_vol, brainmask_vol, outname, cols_nb, orient, alpha)
+	  File "/usr/local/lib/python3.8/dist-packages/shivai/utils/quality_control.py", line 57, in overlay_brainmask
+	    fig, ax = plt.subplots(row_nb, nb_of_cols, figsize=(nb_of_cols*0.75, row_nb), dpi=300)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 1501, in subplots
+	    fig = figure(**fig_kw)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+	    return func(*args, **kwargs)
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 840, in figure
+	    manager = new_figure_manager(
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 383, in new_figure_manager
+	    _warn_if_gui_out_of_main_thread()
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 361, in _warn_if_gui_out_of_main_thread
+	    if _get_required_interactive_framework(_get_backend_mod()):
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 208, in _get_backend_mod
+	    switch_backend(rcParams._get("backend"))
+	  File "/usr/local/lib/python3.8/dist-packages/matplotlib/pyplot.py", line 271, in switch_backend
+	    backend_mod = importlib.import_module(
+	  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+	    return _bootstrap._gcd_import(name[level:], package, level)
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+	  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+	  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+	  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+	  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+	  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/__init__.py", line 1, in <module>
+	    from . import backend_inline, config  # noqa
+	  File "/home/jd.elberse/.local/lib/python3.8/site-packages/matplotlib_inline/backend_inline.py", line 13, in <module>
+	    from IPython.core.interactiveshell import InteractiveShell
+	ModuleNotFoundError: No module named 'IPython'
+
+
+250501-18:01:51,208 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.cluster_labelling_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-sd9/cluster_labelling_pvs".
+250501-18:01:51,217 nipype.workflow INFO:
+	 [Node] Executing "cluster_labelling_pvs" <shivai.interfaces.image.Label_clusters>
+250501-18:01:52,333 nipype.workflow INFO:
+	 [Node] Finished "cluster_labelling_pvs", elapsed time 1.114617s.
+250501-18:01:52,343 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.prediction_metrics_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-b9/prediction_metrics_pvs".
+250501-18:01:52,355 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.post_processing_workflow.prediction_metrics_pvs".
+250501-18:01:52,414 nipype.workflow INFO:
+	 [Node] Executing "prediction_metrics_pvs" <shivai.interfaces.image.Regionwise_Prediction_metrics>
+250501-18:01:54,543 nipype.workflow INFO:
+	 [Node] Finished "prediction_metrics_pvs", elapsed time 2.127628s.
+250501-18:01:54,563 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.post_processing_workflow.prediction_metrics_pvs" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/post_processing_workflow/_subject_id_sub-59600_ses-sd9/prediction_metrics_pvs".
+250501-18:01:54,641 nipype.workflow INFO:
+	 [Node] Executing "prediction_metrics_pvs" <shivai.interfaces.image.Regionwise_Prediction_metrics>
+250501-18:01:56,688 nipype.workflow INFO:
+	 [Node] Finished "prediction_metrics_pvs", elapsed time 2.045402s.
+250501-18:01:56,708 nipype.workflow INFO:
+	 [Node] Setting-up "main_workflow.prediction_metrics_pvs_all" in "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/shivai/outputs/main_workflow/prediction_metrics_pvs_all".
+250501-18:01:56,715 nipype.workflow INFO:
+	 [Node] Outdated cache found for "main_workflow.prediction_metrics_pvs_all".
+250501-18:01:56,729 nipype.workflow INFO:
+	 [Node] Executing "prediction_metrics_pvs_all" <shivai.interfaces.post.Join_Prediction_metrics>
+250501-18:01:56,856 nipype.workflow INFO:
+	 [Node] Finished "prediction_metrics_pvs_all", elapsed time 0.125122s.
+250501-18:01:56,865 nipype.workflow INFO:
+	 ***********************************
+250501-18:01:56,865 nipype.workflow ERROR:
+	 could not run node: main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_crop_box.a1
+250501-18:01:56,865 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173748-jd.elberse-qc_crop_box.a1-4a93bae0-cfdd-4348-96f5-7592707bdc72.pklz
+250501-18:01:56,865 nipype.workflow ERROR:
+	 could not run node: main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.qc_overlay_brainmask.a1
+250501-18:01:56,865 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173750-jd.elberse-qc_overlay_brainmask.a1-190a5ea2-1a16-4b6a-8e6a-35ed59ade254.pklz
+250501-18:01:56,865 nipype.workflow ERROR:
+	 could not run node: main_workflow.shiva_t1_preprocessing_custom_seg.preproc_qc_workflow.save_hist_final.a1
+250501-18:01:56,865 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-173750-jd.elberse-save_hist_final.a1-3ef732fd-d57b-4892-960c-df83830bc777.pklz
+250501-18:01:56,865 nipype.workflow ERROR:
+	 could not run node: main_workflow.post_processing_workflow.pvs_overlay_node.a0
+250501-18:01:56,865 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-180149-jd.elberse-pvs_overlay_node.a0-ed0bdd69-42aa-483f-babe-99fdb0622c0d.pklz
+250501-18:01:56,865 nipype.workflow ERROR:
+	 could not run node: main_workflow.post_processing_workflow.pvs_overlay_node.a1
+250501-18:01:56,865 nipype.workflow INFO:
+	 crashfile: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/crash-20250501-180151-jd.elberse-pvs_overlay_node.a1-b17851f1-5781-4c67-80d6-1f4a34dbd86d.pklz
+250501-18:01:56,865 nipype.workflow INFO:
+	 ***********************************

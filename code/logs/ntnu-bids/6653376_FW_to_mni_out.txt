@@ -1,0 +1,10 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6022/ses-sd9/dwi/sub-6022_ses-sd9_space-ACPC_FW.nii.gz
+Could not create ImageIO for the input file, assuming dimension = 3 and scalar pixel type
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/fmriprep/sub-6022/ses-sd9/anat/sub-6022_ses-sd9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+  1. /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6022/anat/sub-6022_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5[0] (type = AffineTransform)
+  2. /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6022/anat/sub-6022_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5[1] (type = DisplacementFieldTransform)
+=============================================================================
+Default pixel value: 0

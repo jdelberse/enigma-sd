@@ -1,0 +1,45 @@
+000 (4997293.000.000) 2025-03-14 13:49:31 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (4997293.000.000) 2025-03-14 13:49:51 Job executing on host: <10.0.9.36:9618?addrs=10.0.9.36-9618&alias=cpu36.htc.inm7.de&noUDP&sock=startd_3154_f5cb>
+...
+006 (4997293.000.000) 2025-03-14 13:50:00 Image size of job updated: 2924372
+	2856  -  MemoryUsage of job (MB)
+	2924372  -  ResidentSetSize of job (KB)
+...
+006 (4997293.000.000) 2025-03-14 13:55:01 Image size of job updated: 4962372
+	2856  -  MemoryUsage of job (MB)
+	2924372  -  ResidentSetSize of job (KB)
+...
+006 (4997293.000.000) 2025-03-14 15:00:08 Image size of job updated: 4962372
+	2859  -  MemoryUsage of job (MB)
+	2926980  -  ResidentSetSize of job (KB)
+...
+006 (4997293.000.000) 2025-03-14 15:05:09 Image size of job updated: 4962372
+	2894  -  MemoryUsage of job (MB)
+	2963172  -  ResidentSetSize of job (KB)
+...
+006 (4997293.000.000) 2025-03-14 15:10:10 Image size of job updated: 4962372
+	2930  -  MemoryUsage of job (MB)
+	2999692  -  ResidentSetSize of job (KB)
+...
+006 (4997293.000.000) 2025-03-14 15:15:10 Image size of job updated: 4962372
+	3009  -  MemoryUsage of job (MB)
+	3080632  -  ResidentSetSize of job (KB)
+...
+005 (4997293.000.000) 2025-03-14 15:18:05 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 01:27:44, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 01:27:44, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        4         4 
+	   Disk (KB)            :     1    94371840  96727501 
+	   Memory (MB)          :  3009       32768     32768 
+
+	Job terminated of its own accord at 2025-03-14T14:18:05Z with exit-code 1.
+...

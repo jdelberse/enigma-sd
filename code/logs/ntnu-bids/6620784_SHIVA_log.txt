@@ -1,0 +1,27 @@
+000 (6620784.000.000) 2025-05-08 13:41:03 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (6620784.000.000) 2025-05-08 13:41:03 Job executing on host: <10.0.9.201:9618?addrs=10.0.9.201-9618&alias=gpu1.htc.inm7.de&noUDP&sock=startd_3142_baa8>
+...
+006 (6620784.000.000) 2025-05-08 13:41:12 Image size of job updated: 1
+	6  -  MemoryUsage of job (MB)
+	5608  -  ResidentSetSize of job (KB)
+...
+006 (6620784.000.000) 2025-05-08 13:42:09 Image size of job updated: 1978572
+	378  -  MemoryUsage of job (MB)
+	386564  -  ResidentSetSize of job (KB)
+...
+004 (6620784.000.000) 2025-05-08 13:42:09 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:56, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :                 1         1 
+	   Disk (KB)            :        1 94371840  98047463 
+	   Gpus (Average)       :                 4         4 "GPU-c11b402c,GPU-3f21fba3,GPU-1bd8e1be,GPU-8cb09c5b"
+	   Memory (MB)          :      378    32768     32768 
+...
+009 (6620784.000.000) 2025-05-08 13:42:09 Job was aborted.
+	via condor_rm (by user jd.elberse)
+...

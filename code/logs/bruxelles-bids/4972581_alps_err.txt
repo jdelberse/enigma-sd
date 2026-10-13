@@ -1,0 +1,2 @@
+WARNING: skipping mount of /opt/conda/envs/fslqsiprep/data: stat /opt/conda/envs/fslqsiprep/data: no such file or directory
+FATAL:   container creation failed: mount /opt/conda/envs/fslqsiprep/data->/home/jd.elberse/fsl/data error: while mounting /opt/conda/envs/fslqsiprep/data: mount source /opt/conda/envs/fslqsiprep/data doesn't exist

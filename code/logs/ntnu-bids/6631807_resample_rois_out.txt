@@ -1,0 +1,8 @@
+Using double precision for computations.
+Input scalar image: code/alps/ROIs_JHU_ALPS/L_SCR.nii.gz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/fmriprep/sub-6006/ses-b9/anat/sub-6006_ses-b9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+=============================================================================
+WARNING: No transforms found, using identify transform
+Default pixel value: 0

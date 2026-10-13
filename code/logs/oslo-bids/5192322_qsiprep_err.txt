@@ -1,0 +1,20 @@
+**************************************************************
+WARNING: The pennbbl/qsiprep Docker image has been DEPRECATED.
+Please use the pennlinc/qsiprep image instead.
+**************************************************************
+
+Process Process-2:
+Traceback (most recent call last):
+  File "/opt/conda/envs/qsiprep/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/qsiprep/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/workflow.py", line 52, in build_workflow
+    config.load(config_file)
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/config.py", line 749, in load
+    settings = loads(filename.read_text())
+  File "/opt/conda/envs/qsiprep/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/opt/conda/envs/qsiprep/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/20250424-115934_695208ca-eef3-4620-977d-3da114ce41b6/config.toml'

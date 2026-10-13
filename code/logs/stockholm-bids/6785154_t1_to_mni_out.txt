@@ -1,0 +1,11 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/stockholm-bids/derivatives/fmriprep/sub-9069/ses-sd/sub-9069/ses-sd/anat/sub-9069_ses-sd_aparc+aseg.nii.gz
+Could not create ImageIO for the input file, assuming dimension = 3 and scalar pixel type
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/stockholm-bids/derivatives/fmriprep/sub-9069/ses-sd/anat/sub-9069_ses-sd_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+=============================================================================
+The composite transform comprises the following transforms (in order): 
+  1. /data/project/sleep_ENIGMA_glymphatic/enigma-sd/stockholm-bids/derivatives/fmriprep/sub-9069/ses-sd/anat/sub-9069_ses-sd_from-T1w_to-MNI152NLin2009cAsym_mode-image_xfm.h5[0] (type = AffineTransform)
+  2. /data/project/sleep_ENIGMA_glymphatic/enigma-sd/stockholm-bids/derivatives/fmriprep/sub-9069/ses-sd/anat/sub-9069_ses-sd_from-T1w_to-MNI152NLin2009cAsym_mode-image_xfm.h5[1] (type = DisplacementFieldTransform)
+=============================================================================
+Default pixel value: 0
+Interpolation type: NearestNeighborInterpolateImageFunction

@@ -1,0 +1,10 @@
+** ERROR (nifti_image_write_engine): cannot open output file 'derivatives/qsiprep/sub-6022/ses-sd9/dwi/sub-6022_ses-sd9_space-MNI152NLin2009cAsym_FW.nii.gz'
+Caught an ITK exception: 
+
+itk::ExceptionObject (0x5640d4b02790)
+Location: "unknown" 
+File: /home/conda/feedstock_root/build_artifacts/libitk_1717078286681/work/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx
+Line: 2375
+Description: ITK ERROR: NiftiImageIO(0x5640d4a704a0): ERROR: nifti library failed to write image: derivatives/qsiprep/sub-6022/ses-sd9/dwi/sub-6022_ses-sd9_space-MNI152NLin2009cAsym_FW.nii.gz
+
+ /home/conda/feedstock_root/build_artifacts/ants_1724715802074/work/Examples/antsApplyTransforms.cxx 843

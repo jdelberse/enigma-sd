@@ -1,0 +1,10 @@
+** ERROR (nifti_image_write_engine): cannot open output file '/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59624/ses-sd9/sub-59624/ses-sd9/anat/sub-59624_ses-sd9_space-MNI152NLin2009cAsym_aparc+aseg.nii.gz'
+Caught an ITK exception: 
+
+itk::ExceptionObject (0x55e9e64bd840)
+Location: "unknown" 
+File: /home/conda/feedstock_root/build_artifacts/libitk_1717078286681/work/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx
+Line: 2375
+Description: ITK ERROR: NiftiImageIO(0x55e9e64c9760): ERROR: nifti library failed to write image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59624/ses-sd9/sub-59624/ses-sd9/anat/sub-59624_ses-sd9_space-MNI152NLin2009cAsym_aparc+aseg.nii.gz
+
+ /home/conda/feedstock_root/build_artifacts/ants_1724715802074/work/Examples/antsApplyTransforms.cxx 843

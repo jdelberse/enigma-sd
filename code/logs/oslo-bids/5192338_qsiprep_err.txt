@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/opt/conda/envs/qsiprep/bin/qsiprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/run.py", line 43, in main
+    parse_args()
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/parser.py", line 735, in parse_args
+    validate_input_dir(
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/utils/bids.py", line 377, in validate_input_dir
+    error_msg += (
+TypeError: can only concatenate str (not "tuple") to str

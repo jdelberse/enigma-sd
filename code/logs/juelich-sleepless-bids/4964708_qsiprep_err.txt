@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/opt/conda/envs/qsiprep/bin/qsiprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/run.py", line 43, in main
+    parse_args()
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/cli/parser.py", line 735, in parse_args
+    validate_input_dir(
+  File "/opt/conda/envs/qsiprep/lib/python3.10/site-packages/qsiprep/utils/bids.py", line 394, in validate_input_dir
+    subprocess.check_call(["bids-validator", bids_dir, "-c", temp.name])
+  File "/opt/conda/envs/qsiprep/lib/python3.10/subprocess.py", line 369, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', PosixPath('/data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-sleepless-bids'), '-c', '/tmp/tmp9aechvt5']' returned non-zero exit status 1.

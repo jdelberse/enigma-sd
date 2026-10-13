@@ -1,0 +1,31 @@
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:701: RuntimeWarning: Number of calls to function has reached maxfev = 1800.
+  this_tensor, status = opt.leastsq(
+/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/dipy/reconst/fwdti.py:501: RuntimeWarning: overflow encountered in exp
+  y = (1 - f) * np.exp(np.dot(design_matrix, tensor[:7])) + f * np.exp(
+Traceback (most recent call last):
+  File "/data/project/sleep_ENIGMA_glymphatic/enigma-sd/code/fwdti/fit_fwdti_model.py", line 78, in <module>
+    nib.save(FA_img, f"{dwi}_FA.nii.gz")
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/loadsave.py", line 164, in save
+    img.to_filename(filename, **kwargs)
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/filebasedimages.py", line 308, in to_filename
+    self.to_file_map(**kwargs)
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/nifti1.py", line 2377, in to_file_map
+    super().to_file_map(file_map, dtype)
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/analyze.py", line 1040, in to_file_map
+    hdrf = hdr_fh.get_prepare_fileobj(mode='wb')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/fileholders.py", line 77, in get_prepare_fileobj
+    obj = ImageOpener(self.filename, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/openers.py", line 181, in __init__
+    self.fobj = opener(fileish, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/openers.py", line 89, in _gzip_open
+    gzip_file = DeterministicGzipFile(filename, mode, compresslevel, mtime=mtime)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jd.elberse/anaconda3/envs/please/lib/python3.11/site-packages/nibabel/openers.py", line 71, in __init__
+    fileobj = self.myfileobj = ty.cast(io.FileIO, open(filename, modestr))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/qsiprep/sub-59618/ses-b9/dwi/sub-59618_ses-b9_space-ACPC_FA.nii.gz'
+
+ERROR conda.cli.main_run:execute(125): `conda run python code/fwdti/fit_fwdti_model.py sub-59618 ses-b9 /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids` failed. (See above for error)

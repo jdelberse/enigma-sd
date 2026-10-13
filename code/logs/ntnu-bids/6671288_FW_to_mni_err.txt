@@ -1,0 +1,4 @@
+ file /data/project/sleep_ENIGMA_glymphatic/enigma-sd/ntnu-bids/derivatives/qsiprep/sub-6009/ses-sd9/dwi/sub-6009_ses-sd9_space-ACPC_FW.nii.gz does not exist . 
+terminate called after throwing an instance of 'itk::ExceptionObject'
+  what():  /home/conda/feedstock_root/build_artifacts/libitk_1717078286681/work/Modules/Core/Common/src/itkProcessObject.cxx:1339:
+ITK ERROR: ResampleImageFilter(0x560254ba6de0): Input Primary is required but not set.

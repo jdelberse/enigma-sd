@@ -1,0 +1,47 @@
+000 (6262370.000.000) 2025-05-01 17:37:26 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (6262370.000.000) 2025-05-01 17:37:27 Job executing on host: <10.0.9.201:9618?addrs=10.0.9.201-9618&alias=gpu1.htc.inm7.de&noUDP&sock=startd_3142_baa8>
+...
+006 (6262370.000.000) 2025-05-01 17:37:35 Image size of job updated: 40000
+	6  -  MemoryUsage of job (MB)
+	5616  -  ResidentSetSize of job (KB)
+...
+006 (6262370.000.000) 2025-05-01 17:42:35 Image size of job updated: 26997764
+	948  -  MemoryUsage of job (MB)
+	970276  -  ResidentSetSize of job (KB)
+...
+006 (6262370.000.000) 2025-05-01 17:47:36 Image size of job updated: 36178912
+	1198  -  MemoryUsage of job (MB)
+	1226660  -  ResidentSetSize of job (KB)
+...
+006 (6262370.000.000) 2025-05-01 17:52:37 Image size of job updated: 52719500
+	1662  -  MemoryUsage of job (MB)
+	1701064  -  ResidentSetSize of job (KB)
+...
+006 (6262370.000.000) 2025-05-01 17:57:37 Image size of job updated: 54394940
+	2336  -  MemoryUsage of job (MB)
+	2391684  -  ResidentSetSize of job (KB)
+...
+006 (6262370.000.000) 2025-05-01 18:01:57 Image size of job updated: 54470708
+	2336  -  MemoryUsage of job (MB)
+	2391684  -  ResidentSetSize of job (KB)
+...
+005 (6262370.000.000) 2025-05-01 18:01:57 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:01:00, Sys 0 00:00:17  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:00, Sys 0 00:00:17  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :     0.25        1         1 
+	   Disk (KB)            : 40000    94371840  98047463 
+	   Gpus (Average)       :     0.01        4         4 "GPU-17a7c7a1,GPU-df1f4867,GPU-c11b402c,GPU-3f21fba3"
+	   GpusMemory (MB)      :   232                       
+	   Memory (MB)          :  2336       32768     32768 
+
+	Job terminated of its own accord at 2025-05-01T16:01:57Z with exit-code 1.
+...

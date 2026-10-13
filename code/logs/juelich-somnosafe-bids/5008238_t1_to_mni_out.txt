@@ -1,0 +1,5 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-somnosafe-bids/derivatives/fmriprep/sub-105173/ses-rc/anat/sub-105173_ses-rc_aparc+aseg.nii.gz
+Could not create ImageIO for the input file, assuming dimension = 3 and scalar pixel type
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-somnosafe-bids/derivatives/fmriprep/sub-105173/ses-rc/anat/sub-105173_ses-rc_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+Can't read initial transform /data/project/sleep_ENIGMA_glymphatic/enigma-sd/juelich-somnosafe-bids/derivatives/fmriprep/sub-105173/ses-rc/anat/sub-105173_ses-rc_from-T1w_to-MNI152NLin2009cAsym_mode-image_xfm.h5

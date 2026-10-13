@@ -1,0 +1,49 @@
+000 (4996879.000.000) 2025-03-13 12:03:05 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_6128_e074>
+...
+001 (4996879.000.000) 2025-03-13 17:15:16 Job executing on host: <10.0.9.46:9618?addrs=10.0.9.46-9618&alias=cpu46.htc.inm7.de&noUDP&sock=startd_3256_ec74>
+...
+006 (4996879.000.000) 2025-03-13 17:15:24 Image size of job updated: 3946980
+	788  -  MemoryUsage of job (MB)
+	806680  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 17:20:24 Image size of job updated: 4597492
+	788  -  MemoryUsage of job (MB)
+	806680  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 17:30:26 Image size of job updated: 4597492
+	2027  -  MemoryUsage of job (MB)
+	2074968  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 17:35:26 Image size of job updated: 4597492
+	2080  -  MemoryUsage of job (MB)
+	2129176  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 17:40:26 Image size of job updated: 4724552
+	2670  -  MemoryUsage of job (MB)
+	2733560  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 17:45:27 Image size of job updated: 4781412
+	2670  -  MemoryUsage of job (MB)
+	2733560  -  ResidentSetSize of job (KB)
+...
+006 (4996879.000.000) 2025-03-13 18:20:31 Image size of job updated: 4781412
+	2852  -  MemoryUsage of job (MB)
+	2919872  -  ResidentSetSize of job (KB)
+...
+005 (4996879.000.000) 2025-03-13 18:24:43 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 01:08:03, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 01:08:03, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        4         4 
+	   Disk (KB)            : 40000    94371840 104048934 
+	   Memory (MB)          :  2852       32768     32768 
+
+	Job terminated of its own accord at 2025-03-13T17:24:43Z with exit-code 0.
+...

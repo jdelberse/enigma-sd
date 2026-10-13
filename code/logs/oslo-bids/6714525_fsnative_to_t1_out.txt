@@ -1,0 +1,4 @@
+Using double precision for computations.
+Input scalar image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/freesurfer/ses-sd9/sub-59632/mri/aparc+aseg.mgz
+Reference image: /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59632/ses-sd9/anat/sub-59632_ses-sd9_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz
+Can't read initial transform /data/project/sleep_ENIGMA_glymphatic/enigma-sd/oslo-bids/derivatives/fmriprep/sub-59632/ses-sd9/sub-59632/ses-sd9/anat/sub-59632_ses-sd9_space-MNI152NLin2009cAsym_from-fsnative_to-T1w_mode-image_xfm.txt

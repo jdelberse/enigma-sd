@@ -1,0 +1,3 @@
+ROI analysis with default ROIs
+The structural MRI /data/project/sleep_ENIGMA_glymphatic/enigma-sd/bruxelles-bids/derivatives/qsiprep/sub-001/anat/sub-001_space-ACPC_desc-preproc_T1w.nii.gz is a T1-weighted image, therefore the default template that will be used is: MNI152_T1_1mm
+ERROR! Cannot find the template /opt/conda/envs/fmriprep/data/standard/MNI152_T1_1mm_brain.nii.gz. The template file must exist if -t option is not 0.

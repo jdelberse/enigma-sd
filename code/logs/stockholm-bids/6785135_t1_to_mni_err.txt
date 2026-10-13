@@ -1,0 +1,4 @@
+ file /data/project/sleep_ENIGMA_glymphatic/enigma-sd/stockholm-bids/derivatives/fmriprep/sub-9058/ses-bl/sub-9058/ses-bl/anat/sub-9058_ses-bl_aparc+aseg.nii.gz does not exist . 
+terminate called after throwing an instance of 'itk::ExceptionObject'
+  what():  /home/conda/feedstock_root/build_artifacts/libitk_1717078286681/work/Modules/Core/Common/src/itkProcessObject.cxx:1339:
+ITK ERROR: ResampleImageFilter(0x559501311060): Input Primary is required but not set.
