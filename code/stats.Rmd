@@ -1,14 +1,2847 @@
-```{r}
-packrat::init("~/.renvs/enigma-sd")
+### 0. Parameters
+
+Set the working directory:
+
+```{r setup}
+root <- "/Volumes/Juseless/data/project/sleep_ENIGMA_glymphatic/enigma-sd"
+knitr::opts_knit$set(root.dir = root)
 ```
 
+Load the required packages:
+
 ```{r}
-knitr::opts_chunk$set(echo = TRUE)
-packages = c('dplyr','tidyverse','lme4','reshape','tidyr','broom.mixed',
-             'ggpubr','ggstatsplot','nlme','lmerTest')
-new.packages <- packages[!(packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
-require(packages)
-lapply(packages, require, character.only = TRUE)
+core_packages <- c(
+  "tidyverse", "skimr", "CGPfunctions", "ggthemes", "ggstatsplot",
+  "lmerTest", "broom.mixed", "ordinal", "emmeans", "brms",
+  "ggridges", "scales", "gt", "nlme", "naniar", "car", "robustlmm",
+  "effects", "pracma", "performance", "knitr", "kableExtra", "hms",
+  "finalfit", "MASS", "polycor", "ppcor", "patchwork", "ggpubr",
+  "grid", "gridExtra", "sjPlot", "ggtext", "Hmisc","partR2", "multcomp"
+)
+
+# Install missing core packages
+new_core <- setdiff(core_packages, installed.packages()[, "Package"])
+if (length(new_core)) install.packages(new_core)
+
+# Load core packages (fail fast if something is wrong)
+invisible(lapply(core_packages, library, character.only = TRUE))
+
+# Output folder
+output = "~/R/ENIGMA-SD/final-figures"
+```
+
+Load the data:
+
+```{r}
+data_name <- "master_dataframe.csv"
+master_data = read_csv(file.path("~/Downloads",data_name), show_col_types=F)
+```
+
+Create some functions:
+
+```{r}
+f <- str_glue
+```
+
+
+Set colors for sites and protocols:
+
+```{r}
+site_colors <- c(
+  Bruxelles = "#f781bf",
+  Christchurch = "#999999",
+  Cologne = "#17becf",
+  Juelich = "#377eb8",
+  Montreal = "#e41a1c",
+  Oslo = "#4daf4a",
+  Singapore = "#984ea3",
+  Stockholm = "#ff7f00",
+  Trondheim = "#F0E442",
+  Zurich = "#a65628"
+)
+
+protocolors <- c(
+  NS = "#1b9e77",
+  SR = "#d95f02",
+  SD = "#7570b3",
+  SR1 = "#E8C020",
+  aSR = "#E8C020",
+  SR3 = "#d95f02",
+  SR5 = "#D73027",
+  cSR = "#D73027"
+)
+
+index_colors <- c(
+  "cpvf"  = "#FC8D59",
+  "pvsvf" = "#D73027",
+  "mfwi"  = "#AB63C2",
+  "alps"  = "#4292C6"
+)
+```
+
+
+Set country iso codes for later functions:
+
+```{r}
+iso_codes <- c(
+  "Belgium"     = "be",
+  "Germany"     = "de",
+  "New Zealand"   = "nz",
+  "Canada"      = "ca",
+  "Singapore"   = "sg",
+  "Norway"      = "no",
+  "Sweden"      = "se",
+  "Switzerland" = "ch"
+)
+```
+
+
+### 1. Format Data
+
+Fix some labelling issues:
+
+```{r}
+# Fix some labelling issues
+master_data$site[master_data$site == "NTNU"] <- "Trondheim"
+master_data$site[master_data$site == "Melbourne"] <- "Christchurch"
+master_data$site[master_data$dataset == "juelich-petcoffee-bids"] <- "Cologne"
+master_data$site[master_data$dataset == "juelich-somnosafe-bids"] <- "Cologne"
+master_data$group[master_data$dataset == "singapore-alfie-bids"] <- "3"
+
+# Fix a mistake in the one-hot encoding of chronotype
+master_data <- master_data %>%
+  mutate(
+    chrono_morning = ifelse(is.na(chronotype), NA, chrono_morning),
+    chrono_evening = ifelse(is.na(chronotype), NA, chrono_evening)
+  )
+```
+
+
+R prefers data in a narrow ("melted") format. This means we create two rows for each subject, one where `SD = 0` (i.e. the baseline condition) and one where `SD = 1` (i.e. the sleep deprived condition). This formatting will facilitate some later analyses in R.
+
+```{r}
+# Fix some labelling issues
+master_data$site[master_data$site == "NTNU"] <- "Trondheim"
+master_data$site[master_data$site == "Melbourne"] <- "Christchurch"
+master_data$site[master_data$dataset == "juelich-petcoffee-bids"] <- "Cologne"
+master_data$site[master_data$dataset == "juelich-somnosafe-bids"] <- "Cologne"
+master_data$group[master_data$dataset == "singapore-alfie-bids"] <- "3"
+
+# Fix a mistake in the one-hot encoding of chronotype
+master_data <- master_data %>%
+  mutate(
+    chrono_morning = ifelse(is.na(chronotype), NA, chrono_morning),
+    chrono_evening = ifelse(is.na(chronotype), NA, chrono_evening)
+  )
+
+# Duplicate rows and define structural vs actual SD flags
+melted_data <- master_data[rep(1:nrow(master_data), each = 2), ] %>%
+  mutate(
+    sd_original = rep(c(FALSE, TRUE), times = nrow(master_data)), # session pairing (baseline vs "sd" row)
+    ses = factor(ifelse(sd_original, "2", "1")),                      # session label
+    sd = ifelse(group %in% c("1", "2"), FALSE, sd_original)          # deprivation flag (controls FALSE)
+  )
+
+# Helper to coerce possible different time representations into hms 
+coerce_to_hms <- function(vec) {
+  if (inherits(vec, "hms")) return(vec)
+  if (inherits(vec, "POSIXt")) return(hms::as_hms(as.POSIXct(vec)))
+  if (is.character(vec)) return(hms::as_hms(vec))
+  if (is.numeric(vec)) return(hms::as_hms(vec)) 
+  vec
+}
+
+# Coerce time columns (and any other time columns if needed)
+if ("time_bl" %in% names(melted_data) && "time_sd" %in% names(melted_data)) {
+  melted_data <- melted_data %>%
+    mutate(
+      time_bl = coerce_to_hms(time_bl),
+      time_sd = coerce_to_hms(time_sd)
+    )
+}
+
+# Combine function
+combine_baseline_sd <- function(data, base_col, sd_col, new_col, handle_na_pair = FALSE) {
+  # if needed, enforce NA-pairing semantics before combining
+  if (handle_na_pair) {
+    data <- data %>%
+      mutate(
+        !!sym(base_col) := ifelse(is.na(.data[[base_col]]) != is.na(.data[[sd_col]]),
+                                  NA, .data[[base_col]]),
+        !!sym(sd_col) := ifelse(is.na(.data[[base_col]]), NA, .data[[sd_col]])
+      )
+  }
+  
+  # Create the new column by copying the baseline and replacing rows where sd_original == TRUE
+  data %>%
+    mutate(
+      !!sym(new_col) := {
+        base_vec <- .data[[base_col]]
+        sd_vec   <- .data[[sd_col]]
+        # If sd_original is TRUE for that row, take sd_vec value; otherwise keep base_vec.
+        idx <- which(.data$sd_original)
+        # guard against length mismatch / all NA
+        if (length(idx) > 0) {
+          base_vec[idx] <- sd_vec[idx]
+        }
+        base_vec
+      }
+    )
+}
+
+# Apply the combine function to your variables
+melted_data <- melted_data %>%
+  combine_baseline_sd("time_bl", "time_sd", "time") %>%
+  combine_baseline_sd("kss_score_baseline", "kss_score_sd", "kss") %>%
+  combine_baseline_sd("pvt_meanrs_bl", "pvt_meanrs_followup", "pvt_meanrs") %>%
+  combine_baseline_sd("pvsvf_baseline", "pvsvf_sd", "pvsvf") %>%
+  combine_baseline_sd("cpvf_baseline", "cpvf_sd", "cpvf") %>%
+  combine_baseline_sd("mfwi_baseline", "mfwi_sd", "mfwi", handle_na_pair = TRUE) %>%
+  combine_baseline_sd("alps_baseline", "alps_sd", "alps", handle_na_pair = TRUE)
+
+# Select columns
+melted_data <- melted_data %>%
+  dplyr::select(participant_id, site, dataset, group, total_deprivation, time,
+                age, sex_male, chrono_morning, chrono_evening, psqi_score, bmi, handedness,
+                sd, ses, kss, pvt_meanrs, pvsvf, cpvf, mfwi, alps) |>
+  arrange(site)
+
+melted_data
+```
+
+Set the variables to the right data type:
+
+```{r}
+# Apply the as.factor function to participants, sites, groups
+cols = c("participant_id", "site", "group", "dataset", "handedness")
+melted_data[cols] <- lapply(
+  melted_data[cols], as.factor)
+master_data[cols] <- lapply(
+  master_data[cols], as.factor)
+
+# Set KSS to an ordinal factor
+melted_data$kss <- factor(melted_data$kss, levels=c(1:9), ordered=T)
+master_data$kss_score_baseline <- factor(master_data$kss_score_baseline, levels=c(1:9), ordered=T)
+master_data$kss_score_sd <- factor(master_data$kss_score_sd, levels=c(1:9), ordered=T)
+
+# Set PSQI to an ordinal factor
+melted_data$psqi_score <- factor(melted_data$psqi_score, levels=c(0:21), ordered=T)
+master_data$psqi_score <- factor(master_data$psqi_score, levels=c(0:21), ordered=T)
+
+melted_data
+master_data
+```
+
+Refactorise chronotype and protocol:
+
+```{r}
+melted_data <- melted_data %>%
+  mutate(
+    chronotype = case_when(
+      chrono_morning ~ "morning",
+      chrono_evening ~ "evening",
+      is.na(chrono_morning) | is.na(chrono_evening) ~ NA_character_,
+      TRUE ~ "intermediate"
+    ),
+    chronotype = factor(chronotype),
+    condition = case_when(
+      sd == FALSE ~ "NS", # Baseline
+      sd == TRUE & total_deprivation == FALSE ~ "SR", # Sleep Restricted
+      sd == TRUE & total_deprivation == TRUE ~ "SD", # Sleep Deprived
+      TRUE ~ NA_character_  # just in case of unexpected combos
+    ),
+    condition = factor(condition, levels = c("NS", "SR", "SD"))
+  )
+```
+
+Create long:
+
+```{r}
+long_data <- melted_data %>%
+  pivot_longer(cols = c(pvsvf, cpvf, mfwi, alps),
+               names_to = "index",
+               values_to = "value") |>
+  mutate(
+    index = factor(index)
+  )
+```
+
+
+### 2. Descriptive Statistics
+
+Summarize the data:
+
+```{r}
+skim(melted_data)
+```
+
+Create a list of subject numbers:
+
+```{r}
+# Split subject numbers by site into a list
+counts <- master_data %>%
+  count(site)
+
+print(counts)
+```
+
+Get average age, %male, protocol, and images:
+
+```{r}
+master_data %>%
+  group_by(site) %>%
+  summarise(
+    mean_age    = mean(age, na.rm = TRUE),
+    sd_age      = sd(age, na.rm = TRUE),
+    pct_male    = mean(sex_male, na.rm = TRUE) * 100,
+    protocol    = paste(sort(unique(protocol)), collapse = " / "),
+    images      = case_when(
+      any(!is.na(pvsvf_baseline) & !is.na(alps_baseline)) ~ "T1w+dMRI",
+      any(!is.na(pvsvf_baseline))                   ~ "T1w",
+      any(!is.na(alps_baseline))                    ~ "dMRI"
+    )
+  )
+```
+
+
+Create participant demographics table:
+
+```{r}
+# Create a new grouping variable
+demo_data <- master_data %>%
+  mutate(
+    group = case_when(
+      group == "1" ~ "Control",
+      group == "2" ~ "Control",
+      group == "3" ~ "Sleep Restriction",
+      group == "4" ~ "Sleep Deprivation",
+      group == "7" ~ "Sleep Deprivation",
+      TRUE ~ NA_character_
+    ),
+    group = factor(group, levels = c("Control", "Sleep Restriction", "Sleep Deprivation")),
+    
+    psqi = as.numeric(psqi_score),
+    psqi = case_when(
+      psqi < 6 ~ "0-5",
+      psqi <= 10 ~ "6-10",
+      psqi <= 15 ~ "11-15",
+      psqi > 15 ~ "16-21",
+      TRUE ~ NA_character_
+    ),
+    psqi = factor(psqi, levels = c("0-5","6-10","11-15","16-21")),
+
+    time_sec = apply(
+      cbind(as.numeric(as_hms(time_bl)),
+            as.numeric(as_hms(time_sd))),
+      1,
+      mean,
+      na.rm = TRUE
+    ),
+    time = format(hms::as_hms(time_sec), "%H:%M")
+  )
+
+explanatory_vars <- c("age", "sex", "chronotype", "psqi", "bmi", "handedness", "time_sec")
+
+summary_table <- summary_factorlist(
+  .data = demo_data,
+  dependent = "group",
+  explanatory = explanatory_vars,
+  column = TRUE,
+  total_col = TRUE,
+  p = TRUE,
+  add_dependent_label = TRUE,
+  add_col_totals = TRUE
+)
+
+# Rename the correct variable label
+time_row <- which(summary_table$var == "time_sec")
+if(length(time_row) > 0) {
+  summary_table$label[time_row] <- "Median Time (HH:MM)"
+}
+
+kbl <- kbl(summary_table) %>%
+  kable_paper("striped") %>%
+  add_header_above(c("ENIGMA-Sleep Data Sample (N = 433)" = 7))
+
+kbl
+```
+
+### 3. Dataframe
+
+Create a dataframe for the linear mixed model:
+
+```{r}
+lme_df <- long_data %>%
+  group_by(index) %>% # Temporarily group by index
+  mutate(value_z = scale(value), # Z-score the values
+         value_z = ifelse(index == "alps", -value_z, value_z),
+         value_prop = (value - min(value, na.rm = TRUE)) / 
+           (max(value, na.rm = TRUE) - min(value, na.rm = TRUE)),
+         value_prop = case_when(
+           value_prop == 0 ~ 0.001,
+           value_prop == 1 ~ 0.999,
+           TRUE ~ value_prop) # Make sure we don't have exactly 0 or 1
+         ) %>% 
+  ungroup() %>% 
+  filter(!is.na(value_z)) |> # Filter out missing data
+  filter(abs(value_z) <= 3) |>  # Remove outliers
+  mutate(time_sec = as.numeric(as_hms(time))) |> # converts HH:MM:SS → seconds
+  mutate(time_sec_z = scale(time_sec)) 
+```
+
+Also create a df that separates SR1/aSR and SR3-5/cSR:
+
+```{r}
+sr_df <- lme_df |>
+  dplyr::mutate(
+    condition = as.character(condition),
+    
+    condition_long = dplyr::case_when(
+      condition == "SR" & dataset %in% c(
+        "ntnu-bids"
+      ) ~ "SR3",
+      
+      condition == "SR" & dataset %in% c(
+        "juelich-petcoffee-bids",
+        "juelich-sleepless-bids"
+      ) ~ "SR5",
+      
+      condition == "SR" ~ "SR1",
+      
+      TRUE ~ condition
+    ),
+    
+    condition = dplyr::case_when(
+      condition_long == "SR1"             ~ "aSR",
+      condition_long %in% c("SR3", "SR5") ~ "cSR",
+      TRUE                                ~ condition_long
+    ),
+    
+    condition      = factor(condition,      levels = c("NS", "aSR", "cSR", "SD")),
+    condition_long = factor(condition_long, levels = c("NS", "SR1", "SR3", "SR5", "SD"))
+  )
+
+sr_df
+```
+
+### 4. KSS and PVT
+
+Run KSS model (cumulative link mixed model):
+
+```{r}
+kss_clmm <- clmm(
+  as.factor(kss) ~ condition + (1 | participant_id),
+  data = sr_df
+)
+```
+
+Inspect:
+
+```{r}
+summary(kss_clmm)
+```
+KSS estimated marginal means:
+
+```{r}
+kss_emm <- emmeans(kss_clmm, ~ condition, mode = "mean.class")
+kss_contrasts <- pairs(kss_emm, adjust = "fdr") %>%
+  as.data.frame()
+kss_contrasts
+```
+Create a function for formatting contrasts for the plot:
+
+```{r}
+format_contrasts <- function(df, cond_levels = c("NS", "aSR", "cSR", "SD")) {
+  out <- as.data.frame(df) |>
+    tidyr::separate(contrast, into = c("cond1", "cond2"), sep = " - ") |>
+    dplyr::mutate(
+      cond1 = factor(trimws(cond1), levels = cond_levels),
+      cond2 = factor(trimws(cond2), levels = cond_levels)
+    )
+  
+  if (anyNA(out$cond1) || anyNA(out$cond2)) {
+    warning("Some contrast labels don't match cond_levels. Check that the model uses the recoded conditions.")
+  }
+  
+  out
+}
+
+kss_contrasts_df <- format_contrasts(kss_contrasts)
+```
+
+Create a function for mixed violin plots:
+
+```{r}
+plot_mixed_violin <- function(sr_df, value_col, emm_df, contrasts_df, ylab,
+                              cond_levels = c("NS", "aSR", "cSR", "SD")) {
+  
+  get_sig_label <- function(p) {
+    dplyr::case_when(
+      p < 0.001 ~ "***",
+      p < 0.01  ~ "**",
+      p < 0.05  ~ "*",
+      TRUE      ~ "ns"
+    )
+  }
+  
+  # Raw data: drop NAs, set order, numeric copy of the outcome
+  plot_df <- sr_df |>
+    dplyr::filter(!is.na(condition), !is.na(.data[[value_col]])) |>
+    dplyr::mutate(
+      condition = factor(condition, levels = cond_levels),
+      y_num     = as.numeric(as.character(.data[[value_col]]))
+    )
+  
+  if (!is.numeric(plot_df$y_num) || all(is.na(plot_df$y_num))) {
+    stop("Could not convert `", value_col, "` to numeric.")
+  }
+  
+  levels_present <- cond_levels[cond_levels %in% unique(as.character(plot_df$condition))]
+  plot_df$condition <- factor(plot_df$condition, levels = levels_present)
+  
+  # EMMs
+  emm_plot <- as.data.frame(emm_df) |>
+    dplyr::filter(!is.na(condition)) |>
+    dplyr::mutate(condition = factor(condition, levels = levels_present))
+  
+  # Bracket layout
+  y_max  <- max(plot_df$y_num, na.rm = TRUE)
+  y_rng  <- diff(range(plot_df$y_num, na.rm = TRUE))
+  y_base <- y_max + 0.10 * y_rng
+  y_step <- 0.10 * y_rng
+  y_tick <- 0.02 * y_rng
+  
+  brackets_df <- as.data.frame(contrasts_df) |>
+    dplyr::filter(p.value < 0.05) |>
+    dplyr::mutate(
+      pos1       = match(as.character(cond1), levels_present),
+      pos2       = match(as.character(cond2), levels_present),
+      left       = pmin(pos1, pos2),
+      right      = pmax(pos1, pos2),
+      span       = right - left,
+      annotation = get_sig_label(p.value)
+    ) |>
+    dplyr::filter(!is.na(pos1), !is.na(pos2)) |>
+    dplyr::mutate(
+      tier       = as.integer(factor(span)),
+      y.position = y_base + (tier - 1) * y_step
+    )
+  
+  y_top <- if (nrow(brackets_df) > 0) max(brackets_df$y.position) + 0.6 * y_step else y_max
+  
+  ggplot(plot_df, aes(x = condition, y = y_num, fill = condition)) +
+    geom_violin(color = "black", alpha = 1) +
+    geom_boxplot(width = 0.05, fill = "black", color = "black", outlier.shape = NA) +
+    geom_line(data = emm_plot,
+              aes(x = condition, y = mean.class, group = 1),
+              color = "grey40", linewidth = 1, inherit.aes = FALSE) +
+    geom_point(data = emm_plot,
+               aes(x = condition, y = mean.class),
+               size = 4, shape = 21, fill = "white", color = "black", stroke = 1.2,
+               inherit.aes = FALSE) +
+    geom_segment(data = brackets_df,
+                 aes(x = left, xend = right, y = y.position, yend = y.position),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_segment(data = brackets_df,
+                 aes(x = left, xend = left, y = y.position, yend = y.position - y_tick),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_segment(data = brackets_df,
+                 aes(x = right, xend = right, y = y.position, yend = y.position - y_tick),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_text(data = brackets_df,
+              aes(x = (left + right) / 2, y = y.position + 0.3 * y_step, label = annotation),
+              inherit.aes = FALSE, size = 5) +
+    scale_fill_manual(values = protocolors) +
+    coord_cartesian(ylim = c(0, y_top)) +
+    labs(x = "Sleep Condition", y = ylab) +
+    theme_minimal(base_size = 18) +
+    theme(
+      legend.position = "none",
+      axis.title.x = element_text(face = "bold", size = 16),
+      axis.title.y = element_text(face = "bold", size = 16),
+      panel.grid.minor = element_blank()
+    )
+}
+
+```
+
+Plot KSS:
+
+```{r}
+plot_kss <- plot_mixed_violin(
+  sr_df,
+  "kss",
+  kss_emm,
+  kss_contrasts_df,
+  "Karolinska Sleepiness Scale"
+)
+
+plot_kss
+
+ggsave(
+  filename = f("{output}/kss.png"),
+  width = 8,
+  height = 5,
+  dpi = 600
+)
+```
+Run PVT model:
+
+```{r}
+pvt_lme <- nlme::lme(
+    pvt_meanrs ~ condition,
+    random = ~ 1 | participant_id,
+    data = sr_df,
+    na.action = na.omit
+  )
+```
+
+Inspect:
+
+```{r}
+summary(pvt_lme)
+```
+
+PVT Estimated Marginal Means:
+
+```{r}
+pvt_emm <- emmeans(pvt_lme, ~ condition)
+pvt_contrasts <- pairs(pvt_emm, adjust = "fdr") |>
+  as.data.frame()
+pvt_emm <- pvt_emm |> as.data.frame()
+pvt_contrasts
+```
+
+Create a function for PVT plotting using means and contrasts:
+
+```{r}
+plot_pvt <- function(df, contrasts_df, cond_levels = c("NS", "aSR", "cSR", "SD")) {
+  
+  get_sig_label <- function(p) {
+    dplyr::case_when(
+      p < 0.001 ~ "***",
+      p < 0.01  ~ "**",
+      p < 0.05  ~ "*",
+      TRUE      ~ "ns"
+    )
+  }
+  
+  # clean raw data  
+  df_plot <- df |>
+    dplyr::filter(!is.na(pvt_meanrs), !is.na(condition)) |>
+    dplyr::mutate(
+      condition  = factor(condition, levels = cond_levels),
+      pvt_meanrs = as.numeric(as.character(pvt_meanrs))
+    )
+  
+  levels_present <- cond_levels[cond_levels %in% unique(as.character(df_plot$condition))]
+  df_plot$condition <- factor(df_plot$condition, levels = levels_present)
+  
+  # means  
+  mean_df <- df_plot |>
+    dplyr::group_by(condition) |>
+    dplyr::summarise(
+      mean_pvt = mean(pvt_meanrs, na.rm = TRUE),
+      se       = sd(pvt_meanrs, na.rm = TRUE) / sqrt(dplyr::n()),
+      .groups  = "drop"
+    )
+  
+  # contrasts: split the label only if it hasn't been done yet  
+  contrasts_df <- as.data.frame(contrasts_df)
+  if (!all(c("cond1", "cond2") %in% names(contrasts_df))) {
+    contrasts_df <- contrasts_df |>
+      tidyr::separate(.data$contrast, into = c("cond1", "cond2"), sep = " - ")
+  }
+  
+  # bracket layout  
+  y_min  <- min(df_plot$pvt_meanrs, na.rm = TRUE)
+  y_max  <- max(df_plot$pvt_meanrs, na.rm = TRUE)
+  y_rng  <- y_max - y_min
+  y_base <- y_max + 0.10 * y_rng
+  y_step <- 0.10 * y_rng
+  y_tick <- 0.02 * y_rng
+  
+  brackets_df <- contrasts_df |>
+    dplyr::filter(p.value < 0.05) |>
+    dplyr::mutate(
+      pos1       = match(trimws(as.character(cond1)), levels_present),
+      pos2       = match(trimws(as.character(cond2)), levels_present),
+      left       = pmin(pos1, pos2),
+      right      = pmax(pos1, pos2),
+      span       = right - left,
+      annotation = get_sig_label(p.value)
+    ) |>
+    dplyr::filter(!is.na(pos1), !is.na(pos2)) |>
+    dplyr::mutate(
+      tier       = as.integer(factor(span)),
+      y.position = y_base + (tier - 1) * y_step
+    )
+  
+  y_top    <- if (nrow(brackets_df) > 0) max(brackets_df$y.position) + 0.6 * y_step else y_max
+  y_bottom <- y_min - 0.05 * y_rng
+  
+  # plot  
+  ggplot(df_plot, aes(x = condition, y = pvt_meanrs, fill = condition)) +
+    geom_violin(color = "black", alpha = 1) +
+    geom_boxplot(width = 0.05, fill = "black", color = "black", outlier.shape = NA) +
+    geom_line(data = mean_df,
+              aes(x = condition, y = mean_pvt, group = 1),
+              color = "grey40", linewidth = 1, inherit.aes = FALSE) +
+    geom_point(data = mean_df,
+               aes(x = condition, y = mean_pvt),
+               size = 4, shape = 21, fill = "white", color = "black", stroke = 1.2,
+               inherit.aes = FALSE) +
+    geom_segment(data = brackets_df,
+                 aes(x = left, xend = right, y = y.position, yend = y.position),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_segment(data = brackets_df,
+                 aes(x = left, xend = left, y = y.position, yend = y.position - y_tick),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_segment(data = brackets_df,
+                 aes(x = right, xend = right, y = y.position, yend = y.position - y_tick),
+                 inherit.aes = FALSE, linewidth = 0.5) +
+    geom_text(data = brackets_df,
+              aes(x = (left + right) / 2, y = y.position + 0.3 * y_step, label = annotation),
+              inherit.aes = FALSE, size = 5) +
+    scale_fill_manual(values = protocolors) +
+    coord_cartesian(ylim = c(y_bottom, y_top)) +
+    labs(x = "Sleep Condition", y = "PVT Mean RS") +
+    theme_minimal(base_size = 18) +
+    theme(
+      legend.position = "none",
+      axis.title.x = element_text(face = "bold", size = 16),
+      axis.title.y = element_text(face = "bold", size = 16),
+      panel.grid.minor = element_blank()
+    )
+}
+```
+
+Plot PVT:
+
+```{r}
+plot_pvt(sr_df, pvt_contrasts)
+ggsave(
+  filename = glue::glue("{output}/pvt.png"),
+  width = 10,
+  height = 5,
+  dpi = 600
+)
+```
+
+### 5. PVS Validation
+
+Correlate PVS segmentation with external reference (Custer et al., 2025)
+
+```{r}
+frangi <- read_csv("~/Downloads/stockholm_RawPVS_JD.csv", show_col_types = FALSE)
+
+frangi <- frangi |>
+  mutate(
+    participant_id = Subject,
+    pvsvf = BG_VF + CSO_VF,
+    sd = ifelse(SD == 1, FALSE, TRUE)
+  )
+
+shiva <- melted_data |>
+  filter(dataset == "stockholm-bids") |>
+  mutate(participant_id = str_replace(participant_id, "sub-STOC", "sub-"))
+
+stockholm <- inner_join(frangi, shiva, 
+                        by = c("participant_id", "sd"), 
+                        suffix = c("_frangi", "_shiva"))
+
+r = cor(stockholm$pvsvf_frangi, stockholm$pvsvf_shiva, use = "complete.obs", method = "pearson")
+r2 = r^2
+print(paste("Correlation:", r))
+print(paste("About", round(r2 * 100, 2), "% of variance explained"))
+```
+
+Bland-Altman plot
+
+```{r}
+stockholm <- stockholm %>%
+  mutate(
+    average = (pvsvf_frangi + pvsvf_shiva) / 2,
+    difference = pvsvf_frangi - pvsvf_shiva
+  )
+
+# Compute Bland–Altman stats
+mean_diff <- mean(stockholm$difference, na.rm = TRUE)
+sd_diff <- sd(stockholm$difference, na.rm = TRUE)
+loa_upper <- mean_diff + 1.96 * sd_diff
+loa_lower <- mean_diff - 1.96 * sd_diff
+
+# Plot
+ggplot(stockholm, aes(x = average, y = difference)) +
+  geom_point(alpha = 0.6) +
+  geom_hline(yintercept = mean_diff, color = "blue", linetype = "dashed") +
+  geom_hline(yintercept = loa_upper, color = "red", linetype = "dotted") +
+  geom_hline(yintercept = loa_lower, color = "red", linetype = "dotted") +
+  labs(
+    title = "Bland–Altman Plot",
+    x = "Mean of Methods (Frangi & Shiva)",
+    y = "Difference (Frangi - Shiva)"
+  ) +
+  theme_minimal()
+
+```
+
+
+### 6. Composite model
+
+Z-Normalize Indices:
+
+```{r}
+lme_df <- long_data %>%
+  group_by(index) %>% # Temporarily group by index
+  mutate(value_z = scale(value), # Z-score the values
+         value_z = ifelse(index == "alps", -value_z, value_z),
+         value_prop = (value - min(value, na.rm = TRUE)) / 
+           (max(value, na.rm = TRUE) - min(value, na.rm = TRUE)),
+         value_prop = case_when(
+           value_prop == 0 ~ 0.001,
+           value_prop == 1 ~ 0.999,
+           TRUE ~ value_prop) # Make sure we don't have exactly 0 or 1
+         ) %>% 
+  ungroup() %>% 
+  filter(!is.na(value_z)) |> # Filter out missing data
+  filter(abs(value_z) <= 3) |>  # Remove outliers
+  mutate(time_sec = as.numeric(as_hms(time))) |> # converts HH:MM:SS to seconds
+  mutate(time_sec_z = scale(time_sec)) 
+```
+
+Create a function for fitting the LME model:
+
+```{r}
+fit_lme <- function(lme_df) {
+  # Fit the linear mixed-effects model
+  model <- nlme::lme(
+    value_z ~ condition * index + age + sex_male + time_sec_z,
+    random = ~ 1 | participant_id,
+    data = lme_df
+  )
+  
+  # Model summary
+  print(summary(model))
+  
+  # Create a tidy report with FDR-adjusted p-values
+  report <- broom.mixed::tidy(model) %>%
+    dplyr::mutate(
+      p.adj = p.adjust(p.value, method = "fdr"),
+      p.sig = dplyr::case_when(
+        p.adj < 0.001 ~ "***",
+        p.adj < 0.01  ~ "**",
+        p.adj < 0.05  ~ "*",
+        TRUE          ~ "ns"
+      )
+    )
+  
+  # Display compact results
+  print(report %>% dplyr::select(term, estimate, p.adj, p.sig))
+  
+  # Assumption checks 
+  par(mfrow = c(2, 2))  # 4 plots in one window
+  
+  # Shapiro-Wilkes
+  print(shapiro.test(resid(model)))
+  
+  # Residuals vs Fitted
+  plot(fitted(model), resid(model),
+       xlab = "Fitted values", ylab = "Residuals",
+       main = "Residuals vs Fitted")
+  abline(h = 0, col = "red")
+  
+  # Q-Q plot of residuals
+  qqnorm(resid(model), main = "Q-Q plot of residuals")
+  qqline(resid(model))
+  
+  # Q-Q plot of random effects
+  ranef_vals <- nlme::ranef(model)[[1]]
+  qqnorm(ranef_vals, main = "Q-Q plot of random effects (intercepts)")
+  qqline(ranef_vals)
+  
+  # ACF plot of residuals
+  acf(resid(model), main = "ACF of residuals")
+  
+  par(mfrow = c(1, 1))  # reset
+  
+  # Estimated Marginal Means
+  emm <- emmeans::emmeans(model, ~ condition | index)
+  emm_df <- as.data.frame(emm)
+  
+  contrasts <- emmeans::contrast(emm, method = "revpairwise", adjust = "fdr") %>%
+    as.data.frame()
+  
+  print(contrasts)
+  
+  # Effects plot
+  tryCatch({
+    eff_obj <- effects::allEffects(model)
+    plot(eff_obj)
+  }, error = function(e) {
+    message("⚠️ Could not plot allEffects(): ", e$message)
+  })
+  
+  return(list(model = model, report = report, emm = emm, contrasts = contrasts))
+}
+```
+
+Fit the model:
+
+```{r}
+results <- fit_lme(lme_df)
+results$report
+```
+
+It appears the residuals are non-normal. 
+Create a function for fitting a robust LME:
+
+```{r}
+fit_rlme <- function(lme_df) {
+  # Fit robust linear mixed-effects model
+  model_robust <- robustlmm::rlmer(
+    value_z ~ condition * index + age + sex_male + time_sec_z +
+      (1 | participant_id) + (1 | site),
+    data = lme_df
+  )
+  
+  # Model summary
+  print(summary(model_robust))
+  
+  # Tidy output
+  report <- broom.mixed::tidy(model_robust)
+  print(report)
+  
+  # Assumption checks  
+  par(mfrow = c(2, 2))  # 4-panel layout
+  
+  # Residuals vs Fitted
+  plot(fitted(model_robust), resid(model_robust),
+       xlab = "Fitted values", ylab = "Residuals",
+       main = "Residuals vs Fitted")
+  abline(h = 0, col = "red")
+  
+  # Q-Q plot of residuals
+  qqnorm(resid(model_robust), main = "Q-Q plot of residuals")
+  qqline(resid(model_robust))
+  
+  # Q-Q plot of random effects
+  ranef_df <- ranef(model_robust)[[1]]
+  ranef_vals <- ranef_df[, 1]
+  qqnorm(ranef_vals, main = "Q-Q plot of random effects (intercepts)")
+  qqline(ranef_vals)
+  
+  # ACF of residuals
+  acf(resid(model_robust), main = "ACF of residuals")
+  
+  par(mfrow = c(1, 1))  # reset layout
+  
+  # Shapiro-Wilk test
+  cat("\nShapiro-Wilk normality test on residuals:\n")
+  print(shapiro.test(resid(model_robust)))
+  
+  # Effects plot
+  tryCatch({
+    eff_obj <- effects::allEffects(model_robust)
+    plot(eff_obj)
+  }, error = function(e) {
+    message("⚠️ Could not plot allEffects(): ", e$message)
+  })
+  
+  # Estimated marginal means and contrasts  
+  emm <- emmeans::emmeans(model_robust, ~ condition | index)
+  emm_df <- as.data.frame(emm)
+  
+  contrasts <- emmeans::contrast(emm, method = "revpairwise", adjust = "fdr") %>%
+    as.data.frame()
+  
+  print(contrasts)
+  
+  # Return everything
+  return(list(
+    model = model_robust,
+    report = report,
+    emm = emm_df,
+    contrasts = contrasts
+  ))
+}
+```
+
+Fit RLME:
+
+```{r}
+results_rlme <- fit_rlme(lme_df)
+```
+
+Report:
+
+```{r}
+results_rlme$report
+```
+
+EMMs & contrasts:
+
+```{r}
+results_rlme$emm
+emm_df <- as.data.frame(results_rlme$emm)
+contrasts <- results_rlme$contrasts
+```
+
+Effect sizes:
+
+```{r}
+eff_contrasts <- emmeans::eff_size(
+  results$emm,
+  sigma = sigma(results$model),
+  edf = df.residual(results$model)
+)
+
+eff_contrasts
+
+# Compute standardized parameters  
+std_params <- effectsize::standardize_parameters(
+  results$model,   # your rlmer model
+  method = "refit"     # most accurate (refits internally if supported)
+)
+
+# View all effects
+print(std_params)
+```
+
+Create a function for making violin plots from RLME outcomes:
+
+```{r}
+plot_rlme2 <- function(lme_df, emm_df, contrasts, comparison = c("all", "NS_SR", "NS_SD")) {
+  comparison <- match.arg(comparison)
+  
+  # Determine which conditions to include  
+  conditions_to_keep <- switch(
+    comparison,
+    "all"   = c("NS", "SR", "SD"),
+    "NS_SR" = c("NS", "SR"),
+    "NS_SD" = c("NS", "SD")
+  )
+  
+  # Filter data frames  
+  lme_plot <- lme_df %>% dplyr::filter(condition %in% conditions_to_keep) %>%
+    dplyr::mutate(value_plot = ifelse(index == "alps", -value_z, value_z))
+  
+  emm_plot <- emm_df %>% dplyr::filter(condition %in% conditions_to_keep) %>%
+    dplyr::mutate(
+      emmean_plot = ifelse(index == "alps", -emmean, emmean),
+      asymp.LCL_plot = ifelse(index == "alps", -asymp.LCL, asymp.LCL),
+      asymp.UCL_plot = ifelse(index == "alps", -asymp.UCL, asymp.UCL)
+    )
+  
+  # Prepare significance labels  
+  get_sig_label <- function(p) {
+    if (p < 0.001) return("***")
+    else if (p < 0.01) return("**")
+    else if (p < 0.05) return("*")
+    else return("ns")
+  }
+  
+  # Filter contrasts based on selected conditions  
+  contrasts_filtered <- contrasts %>%
+    tidyr::separate(contrast, into = c("cond1", "cond2"), sep = " - ") %>%
+    dplyr::filter(cond1 %in% conditions_to_keep & cond2 %in% conditions_to_keep)
+  
+  brackets_df <- contrasts_filtered %>%
+    dplyr::filter(p.value < 0.05) %>%
+    dplyr::mutate(
+      y.position = dplyr::case_when(
+        (cond1 == "SR" & cond2 == "NS") | (cond1 == "SD" & cond2 == "SR") ~ 3.5,
+        (cond1 == "SD" & cond2 == "NS") ~ 4,
+        TRUE ~ 3
+      ),
+      annotation = sapply(p.value, get_sig_label),
+      cond1 = factor(cond1, levels = c("NS", "SR", "SD")),
+      cond2 = factor(cond2, levels = c("NS", "SR", "SD"))
+    ) %>%
+    dplyr::select(index, cond1, cond2, y.position, annotation)
+  
+  # Factor setup  
+  indices <- c("cpvf", "pvsvf", "mfwi", "alps")
+  emm_plot$index <- factor(emm_plot$index, levels = indices)
+  emm_plot$condition <- factor(emm_plot$condition, levels = conditions_to_keep)
+  lme_plot$index <- factor(lme_plot$index, levels = indices)
+  lme_plot$condition <- factor(lme_plot$condition, levels = conditions_to_keep)
+  brackets_df$index <- factor(brackets_df$index, levels = indices)
+  
+  new_labels <- c(
+    alps = "DTI-ALPS",
+    cpvf = "ChP Volume",
+    mfwi = "Free Water Index",
+    pvsvf = "PVS Volume"
+  )
+  
+  # Main plot  
+  p <- ggplot() +
+    # Solid violin with black outline
+    geom_violin(
+      data = lme_plot, 
+      aes(x = condition, y = value_plot, fill = condition),
+      color = "black", alpha = 1
+    ) +
+    
+    # Black boxplot inside violin
+    geom_boxplot(
+      data = lme_plot, 
+      aes(x = condition, y = value_plot),
+      width = 0.05, fill = "black", color = "black"
+    ) +
+    
+    # Mean points and connecting lines
+    geom_line(
+      data = emm_plot, 
+      aes(x = condition, y = emmean_plot, group = 1),
+      color = "darkgrey", size = 1
+    ) +
+    geom_point(
+      data = emm_plot, 
+      aes(x = condition, y = emmean_plot),
+      size = 4, shape = 21, fill = "white", color = "black", stroke = 1.2
+    ) +
+    
+    # Significance brackets
+    ggsignif::geom_signif(
+      data = brackets_df,
+      aes(xmin = cond1, xmax = cond2, annotations = annotation, y_position = y.position),
+      manual = TRUE,
+      tip_length = 0.03,
+      textsize = 6,
+      vjust = 0.5,
+      color = "black"
+    ) +
+    ylim(-3, 4) +
+    facet_wrap(~ index, ncol = 4, scales = "fixed", labeller = labeller(index = new_labels)) +
+    scale_fill_manual(values = protocolors) +
+    scale_x_discrete(labels = conditions_to_keep) +
+    labs(
+      x = "Sleep Condition",
+      y = "Z-Scored Index",
+      title = ""
+    ) +
+    theme_minimal(base_size = 18) +
+    theme(
+      legend.position = "none",
+      axis.title.x = element_text(face = "bold", size = 16),
+      axis.title.y = element_text(face = "bold", size = 16),
+      panel.grid.minor = element_blank()
+    )
+  
+  return(p)
+}
+```
+
+Plot:
+
+```{r}
+plot_rlme2(lme_df, emm_df, contrasts)
+ggsave(
+  filename = glue::glue("{output}/emm.png"),
+  width = 12,
+  height = 5,
+  dpi = 600
+)
+```
+
+Plot model estimates:
+
+```{r}
+# Clean y-axis labels (reversed so first label is at top)
+custom_labels <- rev(c(
+  "SR", "SD", "ChPV", "FWI", "PVSV", 
+  "Age", "Sex", "Time of day",
+  "SR × ChPV", "SD × ChPV",
+  "SR × FWI", "SD × FWI",
+  "SR × PVSV", "SD × PVSV"
+))
+
+# Colors for negative and positive estimates
+coef_colors <- c("#317EC2", "#C03830")  # negative = blue, positive = red
+
+# Plot model
+plot_model(
+  results_rlme$model,
+  show.values = FALSE,
+  value.offset = 0.3,
+  sort.est = FALSE,
+  colors = coef_colors,   # negative = blue, positive = red
+  axis.labels = custom_labels
+) +
+  labs(
+    title = "",  # no title
+    x = "",
+    y = "Estimate"
+  ) +
+  theme_minimal(base_size = 16) +  # overall text slightly bigger
+  theme(
+    axis.title.x = element_text(face = "bold", size = 16),  # make "Estimate" bold
+    axis.text.y = element_text(size = 12),                  # y-axis labels slightly bigger
+    axis.text.x = element_text(size = 12)                   # x-axis tick labels slightly bigger
+  )
+
+ggsave(
+  filename = f("{output}/model_estimates.png"),
+  width = 7,
+  height = 5,
+  dpi = 600
+)
+```
+
+### 7. Single index models
+
+Create a function for fitting single index models:
+
+```{r}
+fit_lme_simple <- function(lme_df) {
+  # Fit the linear mixed-effects model
+  model <- nlme::lme(
+    value_z ~ condition + age + sex_male + time_sec_z,
+    random = ~ 1 | participant_id,
+    data = lme_df
+  )
+  
+  # Model summary
+  print(summary(model))
+  
+  # Create a tidy report with FDR-adjusted p-values
+  report <- broom.mixed::tidy(model) %>%
+    dplyr::mutate(
+      p.adj = p.adjust(p.value, method = "fdr"),
+      p.sig = dplyr::case_when(
+        p.adj < 0.001 ~ "***",
+        p.adj < 0.01  ~ "**",
+        p.adj < 0.05  ~ "*",
+        TRUE          ~ "ns"
+      )
+    )
+  
+  # Display compact results
+  print(report %>% dplyr::select(term, estimate, p.adj, p.sig))
+  
+  # Assumption checks  
+  par(mfrow = c(2, 2))  # 4 plots in one window
+  
+  # Residuals vs Fitted
+  plot(fitted(model), resid(model),
+       xlab = "Fitted values", ylab = "Residuals",
+       main = "Residuals vs Fitted")
+  abline(h = 0, col = "red")
+  
+  # Q-Q plot of residuals
+  qqnorm(resid(model), main = "Q-Q plot of residuals")
+  qqline(resid(model))
+  
+  # Q-Q plot of random effects
+  ranef_vals <- nlme::ranef(model)[[1]]
+  qqnorm(ranef_vals, main = "Q-Q plot of random effects (intercepts)")
+  qqline(ranef_vals)
+  
+  # ACF plot of residuals
+  acf(resid(model), main = "ACF of residuals")
+  
+  par(mfrow = c(1, 1))  # reset
+  
+  # Effects plot
+  tryCatch({
+    eff_obj <- effects::allEffects(model)
+    plot(eff_obj)
+  }, error = function(e) {
+    message("⚠️ Could not plot allEffects(): ", e$message)
+  })
+  
+  return(list(model = model, report = report))
+}
+```
+
+Get all single-index models:
+
+```{r}
+# Single indices
+results_cp <- fit_lme_simple(lme_df |> filter(index == "cpvf")) 
+results_pvs <- fit_lme_simple(lme_df |> filter(index == "pvsvf"))
+results_mfwi <- fit_lme_simple(lme_df |> filter(index == "mfwi"))
+results_alps <- fit_lme_simple(
+  lme_df |>
+    filter(index == "alps") |>
+    mutate(value_z = -value_z))
+
+# Combine all models
+models <- list(results$model, results_cp$model, results_pvs$model, 
+            results_mfwi$model, results_alps$model)
+```
+
+Compare performance across models
+
+```{r}
+compare_performance(models)
+```
+
+Plot model comparison:
+
+```{r}
+model_labels <- c(
+  "Composite",  # Model 1
+  "ChPV",       # Model 2
+  "PVSV",       # Model 3
+  "FWI",        # Model 4
+  "ALPS"        # Model 5
+)
+
+# Define colors for each model
+model_colors <- c("#1B9E77", "#FC8D59",  "#D73027", "#AB63C2", "#4292C6")
+
+# Generate the performance comparison object
+perf <- compare_performance(models)
+
+# Plot with custom labels and colors, larger text, legend at bottom, no title
+plot(perf) +
+  scale_color_manual(
+    values = model_colors,
+    labels = model_labels
+  ) +
+  theme_minimal(base_size = 18) +  
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom",   
+    axis.text = element_text(size = 14),
+    plot.title = element_blank()    
+  )
+
+# Save the plot
+ggsave(
+  filename = f("{output}/model_performance.png"),
+  width = 7,
+  height = 7,
+  dpi = 600
+)
+```
+
+Plot single-index model estimates:
+
+```{r}
+# Clean y-axis labels (reversed so first label is at top)
+custom_labels <- rev(c(
+  "SR", "SD", "Age", "Sex", "Time of day"
+))
+
+# Colors for negative and positive estimates
+coef_colors <- c("#4292C6", "#D73027")  # negative = blue, positive = red
+
+# Helper function to generate a single plot
+make_coef_plot <- function(model, title) {
+  plot_model(
+    model,
+    show.values = TRUE,
+    value.offset = 0.3,
+    sort.est = FALSE,
+    colors = coef_colors,
+    axis.labels = custom_labels
+  ) +
+    labs(
+      title = title,
+      x = "",
+      y = "Estimate"
+    ) +
+    theme_minimal(base_size = 16) +
+    theme(
+      axis.title.x = element_text(face = "bold", size = 16),
+      axis.text.y = element_text(size = 12),
+      axis.text.x = element_text(size = 12),
+      plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+    )
+}
+
+# Create plots for models 2–5
+p_chp  <- make_coef_plot(models[[2]], "ChP Volume")
+p_pvs  <- make_coef_plot(models[[3]], "PVS Volume")
+p_fwi  <- make_coef_plot(models[[4]], "Free water index")
+p_alps <- make_coef_plot(models[[5]], "DTI-ALPS")
+
+# Combine into 2x2 grid
+final_plot <- (p_chp | p_pvs) /
+              (p_fwi | p_alps)
+
+# Save
+ggsave(
+  filename = f("{output}/single_index_model_estimates.png"),
+  plot = final_plot,
+  width = 10,
+  height = 8,
+  dpi = 600
+)
+
+```
+
+Calculate effect size of time for PVSV:
+
+```{r}
+# Compute standardized parameters
+std_params <- effectsize::standardize_parameters(
+  results_pvs$model,  
+  method = "refit"     
+)
+
+# View all effects
+print(std_params)
+```
+
+Calculate effect size of time for FWI:
+
+```{r}
+# Compute standardized parameters
+std_params <- effectsize::standardize_parameters(
+  results_mfwi$model,  
+  method = "refit"     
+)
+
+# View all effects
+print(std_params)
+```
+
+### 8 Site effects
+
+There appears to be a significant contribution of site (as expected). Let's check the distributions.
+
+```{r}
+plot_site_violins <- function(lme_df) {
+  
+   # Refactor
+  site_df <- lme_df %>%
+    mutate(
+      index = factor(
+        index,
+        levels = c("cpvf", "pvsvf", "mfwi", "alps"),
+        labels = c("(A) Choroid Plexus Volume", "(B) Perivascular Space Volume",
+                   "(C) Free Water Index", "(D) DTI-ALPS Index")
+      )
+    )
+
+  # Find sites that differ significantly from every other site (tukey adjusted)
+  strict_sig_sites <- function(d) {
+    sites <- as.character(unique(d$site))
+    if (length(sites) < 2) return(character(0))
+
+    fit <- lm(value_z ~ site, data = d)
+    pw  <- as.data.frame(pairs(emmeans(fit, ~ site), adjust = "tukey"))
+
+    sig_sites <- character(0)
+    for (s in sites) {
+      all_sig <- TRUE
+      for (o in setdiff(sites, s)) {
+        row <- pw[pw$contrast %in% c(paste(s, "-", o), paste(o, "-", s)), ]
+        if (nrow(row) == 0 || row$p.value[1] >= 0.05) {
+          all_sig <- FALSE
+          break
+        }
+      }
+      if (all_sig) sig_sites <- c(sig_sites, s)
+    }
+    sig_sites
+  }
+
+  # Apply the test within each index
+  sig_all <- bind_rows(lapply(split(site_df, site_df$index), function(d) {
+    s <- strict_sig_sites(d)
+    if (length(s) == 0) return(NULL)
+    tibble(index = unique(d$index), site = s)
+  }))
+
+  # Position the stars just above the highest value per site and index
+  if (nrow(sig_all) > 0) {
+    label_pos <- site_df %>%
+      mutate(site = as.character(site)) %>%
+      group_by(index, site) %>%
+      summarise(y = max(value_z, na.rm = TRUE) + 0.25, .groups = "drop")
+
+    sig_all <- sig_all %>%
+      left_join(label_pos, by = c("index", "site")) %>%
+      mutate(label = "*")
+  }
+
+  # Build the plot
+  p <- ggplot(site_df, aes(x = site, y = value_z, fill = site)) +
+    geom_violin(trim = FALSE, alpha = 0.6, color = NA) +
+    geom_boxplot(width = 0.15, outlier.size = 0.5, alpha = 0.8) +
+    facet_wrap(~ index, nrow = 2, drop = FALSE) +
+    scale_fill_manual(values = site_colors) +
+    geom_hline(yintercept = 0, linetype = "dashed", linewidth = 0.4) +
+    theme_minimal(base_size = 20) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(face = "bold"),
+      legend.position = "none"
+    ) +
+    labs(x = "Site", y = "Normalized Index Value", fill = "Site")
+
+  # Add significance
+  if (nrow(sig_all) > 0) {
+    p <- p + geom_text(
+      data = sig_all,
+      aes(x = site, y = y, label = label),
+      inherit.aes = FALSE,
+      size = 6
+    )
+  }
+
+  p
+}
+```
+
+Plot:
+
+```{r}
+plot_site_violins(lme_df)
+ggsave(
+  filename = f("{output}/site_violin.png"),
+  width = 15,
+  height = 8,
+  dpi = 600
+)
+```
+
+There appears to be a significant site-based effect for the ALPS and especially the FWI indices. 
+We will run a leave-one-site-out bootstrapping analysis to make sure our main findings are not confounded.
+
+```{r}
+fit_lme_bootstrap <- function(lme_df) {
+  tryCatch({
+    model <- nlme::lme(
+      value_z ~ condition * index + age + sex_male + time_sec_z,
+      random = ~ 1 | participant_id,
+      data = lme_df,
+      na.action = na.omit,
+      control = nlme::lmeControl(
+        msMaxIter = 100,
+        opt = "optim"
+      )
+    )
+    
+    broom.mixed::tidy(model) |>
+      dplyr::filter(term %in% c("conditionSD", "conditionSR")) |>
+      dplyr::select(term, estimate, p.value) |>
+      dplyr::mutate(converged = TRUE)
+    
+  }, error = function(e) {
+    tibble::tibble(
+      term = c("conditionSD", "conditionSR"),
+      estimate = NA_real_,
+      p.value = NA_real_,
+      converged = FALSE,
+      error = e$message
+    )
+  })
+}
+
+loso_results <- function(df, site_var = "site") {
+  
+  sites <- unique(df[[site_var]])
+  
+  purrr::map_dfr(sites, function(s) {
+    
+    df_sub <- df |>
+      dplyr::filter(.data[[site_var]] != s) |>
+      dplyr::group_by(participant_id) |>
+      dplyr::filter(dplyr::n() > 1) |>
+      dplyr::ungroup()
+    
+    fit_lme_bootstrap(df_sub) |>
+      dplyr::mutate(left_out_site = s)
+  })
+}
+
+loso_res <- loso_results(lme_df)
+
+```
+
+Filter for any sites that caused an error in convergence:
+
+```{r}
+loso_res |>
+  dplyr::filter(converged == FALSE) |>
+  dplyr::distinct(left_out_site, error)
+```
+
+Give a summary of the outcomes:
+
+```{r}
+loso_summary <- loso_res |>
+  dplyr::filter(converged == TRUE) |>
+  dplyr::mutate(significant = p.value < 0.05) |>
+  dplyr::group_by(term) |>
+  dplyr::summarise(
+    n_models = n(),
+    n_sig = sum(significant),
+    prop_sig = mean(significant),
+    worst_p = max(p.value),
+    .groups = "drop"
+  )
+
+loso_summary
+
+```
+
+
+### 9. Refit Model Excluding Outlier Site (POST HOC 1)
+
+Bruxelles seems to be an extreme outlier in the FWI plot. We will do a sensitivity analyses to ensure the findings hold up.
+
+```{r}
+lme_nb <- lme_df |> filter(site != "Bruxelles")
+results_nb <- fit_rlme(lme_nb)
+results_nb_lme <- fit_lme(lme_nb)
+results_nb$contrasts
+```
+
+Model performance:
+
+```{r}
+model_performance(results_nb_lme$model)
+```
+
+Calculate effect sizes:
+
+```{r}
+emmeans::eff_size(
+  results_nb_lme$emm,
+  sigma = sigma(results_nb_lme$model),
+  edf = df.residual(results_nb_lme$model)
+)
+
+# Compute Standardized Parameters
+std_params <- effectsize::standardize_parameters(
+  results_nb_lme$model,  
+  method = "refit"     
+)
+
+# View all effects
+print(std_params)
+```
+
+Violin plots without Bruxelles:
+
+```{r}
+plot_rlme2(lme_nb, as.data.frame(results_nb$emm), results_nb$contrasts)
+ggsave(
+  filename = glue::glue("{output}/emm_sensitivity2.png"),
+  width = 12,
+  height = 5,
+  dpi = 600
+)
+```
+
+
+
+### 10 Age Plot
+
+MRI indices appear to be strongly correlated with age. Let's plot it.
+
+```{r}
+# Colors
+age_color <- "#7570B3"
+z_color <- "#D55E00"
+
+# Shared x-axis limits
+x_limits <- c(min(lme_df$age, na.rm = TRUE), 70)
+
+# Helper function for ggscatterstats
+plot_index <- function(df, title_text, color_index, show_xaxis = FALSE) {
+  p <- ggscatterstats(
+    data = df,
+    x = age,
+    y = value_z,
+    title = title_text,
+    xlab = "Age",
+    ylab = "Z-Scored Index",
+    point.args = list(size = 3, alpha = 0.6, color = model_colors[color_index]),
+    smooth.line.args = list(linewidth = 1.5, method = "lm", formula = y ~ x),
+    marginal = TRUE,
+    bf.message = FALSE,
+    xsidehistogram.args = list(fill = age_color, color = "black", na.rm = TRUE, breaks = NULL),
+    ysidehistogram.args = list(fill = z_color, color = "black", na.rm = TRUE),
+    ggtheme = theme_minimal(base_size = 14),
+    ggplot.component = list(coord_cartesian(xlim = x_limits))
+  )
+  
+  # Remove x-axis text/ticks for all but bottom plot
+  if (!show_xaxis) {
+    p <- p + theme(
+      axis.title.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.ticks.x = element_blank()
+    )
+  }
+  
+  return(p)
+}
+
+# Create plots
+plot_all  <- plot_index(lme_df, "Composite index", 1)
+plot_cpvf <- plot_index(lme_df |> filter(index == "cpvf"), "ChP volume", 2)
+plot_pvsvf <- plot_index(lme_df |> filter(index == "pvsvf"), "PVS volume", 3)
+plot_mfwi <- plot_index(lme_df |> filter(index == "mfwi"), "Free water index", 4)
+plot_alps <- plot_index(lme_df |> filter(index == "alps"), "DTI-ALPS", 5, show_xaxis = TRUE)  # bottom plot shows x-axis
+
+# Stack vertically with shared x-axis
+combined_plot <- plot_all / plot_cpvf / plot_pvsvf / plot_mfwi / plot_alps +
+  plot_layout(ncol = 1, heights = rep(1, 5))
+
+# Display
+combined_plot
+
+# Save figure
+ggsave(
+  filename = glue::glue("{output}/age_plot.png"),
+  plot = combined_plot,
+  width = 12,
+  height = 15,
+  dpi = 600
+)
+```
+
+
+### 11 Refit Model Excluding ChPV (POST HOC 2)
+
+ChPV might not change acutely in a similar way that PVSV, FWI, and ALPS do. 
+Therefore, we should also fit the same LME and RLME models excluding ChPV from the composite index.
+
+```{r}
+lme_nochp <- lme_df |> filter(index != "cpvf")
+results_nochp <- fit_lme(lme_nochp)
+```
+
+Report:
+
+```{r}
+results$report |>
+  filter(term != "indexcpvf")
+results_nochp$report
+```
+
+Differences:
+* Most previously significant effects persist and are strengthened
+* PVSV main effect became significant
+* FWI interaction effect became non-significant
+* The effect of time of day went from non-significant to highly significant (where later hours are associated with increased PVS, FWI, and DTI-ALPS index)
+* Non-normality of residuals persist, requiring re-assessment with RLME (see below)
+
+Model performance:
+
+```{r}
+model_performance(results_nochp$model)
+```
+
+Calculate effect sizes:
+
+```{r}
+std_params <- effectsize::standardize_parameters(
+  results_nochp$model,  
+  method = "refit"     
+)
+
+# View all effects
+print(std_params)
+```
+
+Plot:
+
+```{r}
+results_nochpr <- fit_rlme(lme_nochp)
+plot_rlme2(lme_nochp, results_nochpr$emm, results_nochpr$contrasts)
+ggsave(
+  filename = glue::glue("{output}/main_nochp.png"),
+  width = 10,
+  height = 6,
+  dpi = 600
+)
+```
+
+### 12. Correlation Matrix
+
+Changes across MRI indices may be correlated with other sleep-related variables, e.g. KSS,chronotype, and PVT.
+We will create a correlogram of all continuous variables, and violin plots for all ordinal/categorical variables.
+
+Let's first set our variables/labels:
+
+```{r}
+mri_vars   <- c("cpvf", "pvsvf", "mfwi", "alps")
+  mri_labels <- c(
+    cpvf  = "ChP Volume",
+    pvsvf = "PVS Volume",
+    mfwi  = "Free Water Index",
+    alps  = "DTI-ALPS"
+  )
+```
+
+Create a function for plotting the correlogram:
+
+```{r}
+plot_correlogram <- function(lme_df, mri_vars, mri_labels) {
+  
+  
+  # Prepare violin data
+  violin_df <- lme_df %>%
+    dplyr::filter(!(index == "alps" & abs(value_z) > 2)) %>%
+    dplyr::mutate(
+      value_plot = value_z, # ALPS already reinverted
+      index = factor(index, levels = mri_vars),
+      index_label = dplyr::recode(
+        index,
+        cpvf  = "ChP Volume",
+        pvsvf = "PVS Volume",
+        mfwi  = "Free Water Index",
+        alps  = "DTI-ALPS"
+      ),
+      chronotype = factor(chronotype,
+                          levels = c("morning", "intermediate", "evening"),
+                          labels = c("Morning", "Intermediate", "Evening")),
+      sex_male = factor(sex_male,
+                   levels = c("FALSE", "TRUE"),
+                   labels = c("Female", "Male"))
+    )
+  
+  ylims <- c(-2, 4.5)
+  
+  # Prepare brackets
+  
+  prepare_brackets <- function(df, xvar) {
+  
+    if (xvar == "sex_male") {
+      pairwise <- df %>%
+        dplyr::group_by(index_label) %>%
+        rstatix::t_test(value_plot ~ sex_male) %>%
+        rstatix::add_xy_position(x = "sex_male") %>%
+        dplyr::mutate(
+          y.position = 3.5
+        )
+      
+    } else {
+      pairwise <- df %>%
+        dplyr::group_by(index_label) %>%
+        rstatix::pairwise_t_test(value_plot ~ chronotype) %>%
+        rstatix::add_xy_position(x = "chronotype") %>%
+        dplyr::mutate(
+          # convert to character
+          group1 = as.character(group1),
+          group2 = as.character(group2),
+          # assign fixed y-positions
+          y.position = dplyr::case_when(
+            group1 == "Morning"   & group2 == "Intermediate"  ~ 3.5,
+            group1 == "Intermediate" & group2 == "Evening"   ~ 3.5,
+            group1 == "Morning"   & group2 == "Evening"      ~ 4,
+            TRUE                                               ~ 3.5
+          )
+        )
+      
+    }
+  
+    # Add significance labels
+    pairwise <- pairwise %>%
+      dplyr::mutate(
+        annotation = dplyr::case_when(
+          p < 0.001 ~ "***",
+          p < 0.01  ~ "**",
+          p < 0.05  ~ "*",
+          TRUE      ~ NA
+        ),
+        index = factor(index_label, levels = unique(index_label))
+      ) %>%
+      dplyr::filter(!is.na(annotation)) |>
+      dplyr::ungroup()
+  
+    return(pairwise)
+  }
+  
+  # Compute brackets
+  sex_brackets <- prepare_brackets(violin_df, "sex_male")
+  chrono_brackets <- prepare_brackets(violin_df, "chronotype")
+  
+  
+  plot_violin_brackets <- function(df, xvar, col_title, brackets, sex = TRUE) {
+  
+    # Compute means per xvar
+    means <- df %>%
+      dplyr::group_by(index_label, .data[[xvar]]) %>%
+      dplyr::summarise(mean_val = mean(value_plot, na.rm = TRUE), .groups = "drop")
+  
+    ggplot(df, aes(x = .data[[xvar]], y = value_plot, fill = index)) +
+      geom_violin(color = "black", alpha = 1) +
+      geom_boxplot(width = 0.2, fill = "black", color = "black") +
+      geom_line(
+        data = means,
+        aes(x = .data[[xvar]], y = mean_val, group = 1),
+        color = "darkgrey",
+        size = 0.7,
+        inherit.aes = FALSE
+      ) +
+      geom_point(
+        data = means,
+        aes(x = .data[[xvar]], y = mean_val),
+        color = "black", fill = "white", shape = 21, size = 3, stroke = 1.2
+      ) +
+      ggsignif::geom_signif(
+        data = brackets,
+        aes(xmin = xmin, xmax = xmax, annotations = annotation, y_position = y.position),
+        manual = TRUE,
+        tip_length = 0.03,
+        textsize = 8,
+        vjust = 0.5,
+        color = "black"
+      ) +
+      coord_cartesian(ylim = ylims) +
+      facet_wrap(~index_label, ncol = 1, scales = "fixed", strip.position = "right") +
+      scale_fill_manual(values = index_colors) +
+      labs(
+        x = NULL,
+        y = ifelse(sex, "Z-scored index", ""),
+        title = col_title
+      ) +
+      theme_minimal(base_size = 16) +
+      theme(
+        strip.text.y = if (sex==FALSE) element_text(face = "bold", size = 18) else element_blank(),
+        plot.title = element_text(face = "bold", hjust = 0.5),
+        axis.text.x = element_text(face = "bold", size = 18),
+        axis.title.y = element_text(size = 20),
+        title.text = element_text(face = "bold", size = 6),
+        legend.position = "none",
+        panel.spacing = unit(1, "lines")
+      )
+  }
+  
+  # Create violin plots
+  
+  sex_plot <- plot_violin_brackets(
+    df = violin_df %>% dplyr::select(dplyr::all_of(c("index_label","index","value_plot","sex_male"))),
+    xvar = "sex_male",
+    col_title = "Sex",
+    brackets = sex_brackets,
+    sex = TRUE
+  )
+  
+  chrono_plot <- plot_violin_brackets(
+    df = violin_df %>%
+      dplyr::select(dplyr::all_of(c("index_label", "index", "value_plot", "chronotype"))) %>%
+      dplyr::filter(!is.na(chronotype)),
+    xvar = "chronotype",
+    col_title = "Chronotype",
+    brackets = chrono_brackets,
+    sex = FALSE
+  )
+  
+  violin_panel <- (sex_plot | chrono_plot)
+    
+  # Create collegram
+  
+  corr_vars <- c("age", "bmi", "psqi_score", "kss", "pvt_meanrs", "alps", "mfwi", "pvsvf", "cpvf")
+  corr_labels <- c("Age", "BMI", "PSQI", "KSS", "PVT RS",
+                   "ALPS", "FWI", "PVSV", "ChPV")
+  
+  corr_df <- melted_data |>
+    mutate(
+      time_sec = as.numeric(time),
+      kss = as.numeric(as.character(kss)), # Coerce to numeric without normalization
+      psqi_score = as.numeric(as.character(psqi_score))) # Coerce to numeric, invert
+  
+  # Select only relevant columns
+  corr_data <- corr_df %>% dplyr::select(all_of(corr_vars))
+  
+  # Compute correlation matrix (Spearman) with p-values
+  corr_res <- Hmisc::rcorr(as.matrix(corr_data), type = "spearman")
+  
+  # Extract correlation coefficients and p-values
+  corr_mat <- corr_res$r
+  p_mat <- corr_res$P
+  
+  corr_long <- as.data.frame(corr_mat) %>%
+    mutate(Var1 = rownames(corr_mat)) %>%
+    pivot_longer(cols = -Var1, names_to = "Var2", values_to = "Correlation")
+  
+  p_long <- as.data.frame(p_mat) %>%
+    mutate(Var1 = rownames(p_mat)) %>%
+    pivot_longer(cols = -Var1, names_to = "Var2", values_to = "p_value")
+  
+  # Merge correlation and p-values
+  corr_plot_data <- left_join(corr_long, p_long, by = c("Var1", "Var2"))
+  
+  # Add significance asterisks
+  corr_plot_data <- corr_plot_data %>%
+    mutate(
+      sig = case_when(
+        p_value < 0.001 ~ "***",
+        p_value < 0.01  ~ "**",
+        p_value < 0.05  ~ "*",
+        TRUE            ~ ""
+      ),
+      label = ifelse(sig != "", paste0(round(Correlation, 2), sig), round(Correlation, 2)),
+      bold = ifelse(sig != "", "bold", "plain"),
+      alpha_sig = ifelse(sig == "", 0.4, 1)  # non-significant = greyed out
+    )
+  
+  # Map variable names to labels
+  label_map <- setNames(corr_labels, corr_vars)
+  corr_plot_data <- corr_plot_data %>%
+    mutate(Var1 = label_map[Var1],
+           Var2 = label_map[Var2])
+  
+  # Create color vectors for x/y-axis positions
+  x_colors <- rep("black", length(corr_labels))
+  y_colors <- rep("black", length(corr_labels))
+  
+  # Assign colors manually based on positions
+  pos <- c(2,5,8,4)
+  x_colors[pos] <- c("#4292C6", "#AB63C2", "#D73027", "#FC8D59")
+  y_colors[pos] <- c("#4292C6", "#AB63C2", "#D73027", "#FC8D59")
+  
+  # Assign bold for same positions
+  x_face <- rep("plain", length(corr_labels))
+  y_face <- rep("plain", length(corr_labels))
+  x_face[pos] <- "bold"
+  y_face[pos] <- "bold"
+  
+  # Plot with manual colors/faces
+  corr_plot <- ggplot(corr_plot_data, aes(x = Var1, y = Var2, fill = Correlation)) +
+    geom_tile(color = "black", linewidth = 1) +
+    geom_text(aes(label = label, fontface = bold, alpha = alpha_sig), size = 6) +
+    scale_fill_gradient2(low = "#4292C6", mid = "white", high = "#D73027", midpoint = 0,
+                         name = "Estimate") +
+    scale_alpha_identity() +
+    theme_minimal() +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1, size = 18,
+                                 color = x_colors, face = x_face),
+      axis.text.y = element_text(size = 18,
+                                 color = y_colors, face = y_face),
+      axis.title = element_blank(),
+      legend.title = element_text(size = 18, face = "bold"),
+      legend.text = element_text(size = 10),
+      plot.title = element_text(size = 20, face = "bold")
+    ) +
+    ggtitle("") +
+    coord_fixed()
+  
+  # Combine plots
+  
+  final_plot <- corr_plot | violin_panel +
+    patchwork::plot_layout(widths = c(2, 3))
+  
+  return(final_plot)
+
+}
+```
+
+Plot:
+
+```{r}
+correlogram <- plot_correlogram(lme_df, mri_vars, mri_labels)
+ggsave(
+  glue::glue("{output}/correlogram.png"),
+  correlogram,
+  width = 22, height = 14, dpi = 600
+)
+```
+
+### 11. Acquisition Time
+
+We have a pretty broad spread of acquisition times. This can be a drawback (as it means circadian time can confound results),
+but it can also be a benefit: we can assess how these indices change across different acquisition times.
+
+Let's check how data points are distributed
+
+```{r}
+ggplot(lme_df, aes(x = time, y = value_z, color = index)) +
+  
+  # Jittered points
+  geom_jitter(
+    width = 0.15,
+    height = 0,
+    alpha = 1,
+    size = 1.5
+  ) +
+  
+  facet_wrap(~ condition, nrow = 3) +
+  
+  scale_color_manual(values = index_colors) +
+  
+  labs(
+    x = "Time",
+    y = "Z-scored value",
+    color = "Index"
+  ) +
+  
+  theme_classic(base_size = 12) +
+  theme(
+    strip.background = element_blank(),
+    strip.text = element_text(face = "bold"),
+    
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    
+    legend.position = "top",
+    legend.title = element_text(face = "bold"),
+    
+    panel.spacing = unit(1, "lines")
+  )
+
+ggsave(
+  filename = glue::glue("{output}/acquisition_time.png"),
+  width = 10,
+  height = 5,
+  dpi = 600
+)
+```
+
+We can also check by site:
+
+```{r}
+ggplot(lme_df, aes(x = time, y = value_z, color = site)) +
+  
+  # Jittered points
+  geom_jitter(
+    width = 0.15,
+    height = 0,
+    alpha = 1,
+    size = 1.5
+  ) +
+  
+  facet_wrap(~ condition, nrow = 3) +
+  
+  scale_color_manual(values = site_colors) +
+  
+  labs(
+    x = "Time",
+    y = "Z-scored value",
+    color = "Site"
+  ) +
+  
+  theme_classic(base_size = 12) +
+  theme(
+    strip.background = element_blank(),
+    strip.text = element_text(face = "bold"),
+    
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    
+    legend.position = "top",
+    legend.title = element_text(face = "bold"),
+    
+    panel.spacing = unit(1, "lines")
+  )
+
+ggsave(
+  filename = glue::glue("{output}/acquisition_time_site.png"),
+  width = 10,
+  height = 5,
+  dpi = 600
+)
+
+```
+
+The NS and SD condition have the cleanest spread of values. We will create a pseudo-time course
+where we group data points by 30-minute bins and test if they are different from baseline:
+
+Set some labels:
+
+```{r}
+mri_labels_short <- c(
+  "cpvf"  = "ChPV",
+  "pvsvf" = "PVSV",
+  "mfwi"  = "FWI",
+  "alps"  = "ALPS"
+)
+
+condition_labels <- c(
+  "NS" = "Normal Sleep",
+  "SD" = "Sleep Deprivation",
+  "SR" = "Sleep Restriction"
+)
+```
+
+Create a function for plotting a binned timecourse:
+
+```{r}
+plot_binned_timecourse <- function(condition_name, df) {
+  
+  # Prepare binned raw data 
+  binned_df <- df |>
+    filter(condition == condition_name) |>
+    mutate(
+      time_sec  = as.numeric(time_sec),
+      value_z   = ifelse(index == "alps", -value_z, value_z),
+      time_bin  = floor(time_sec / 1800) * 1800,
+      bin_start = time_bin,
+      bin_end   = time_bin + 1800,
+      index     = factor(index, levels = c("cpvf", "pvsvf", "mfwi", "alps"))
+    )
+  
+  # Bin means for plotting
+  bin_means <- binned_df |>
+    group_by(index, bin_start, bin_end) |>
+    summarise(
+      mean_z = mean(value_z, na.rm = TRUE),
+      .groups = "drop"
+    )
+  
+  # Bin-wise tests vs baseline (0)
+  bin_tests <- binned_df |>
+    group_by(index, bin_start, bin_end) |>
+    summarise(
+      n      = sum(!is.na(value_z)),
+      mean_z = mean(value_z, na.rm = TRUE),
+      p_val  = ifelse(
+        n >= 2,
+        t.test(value_z, mu = 0)$p.value,
+        NA_real_
+      ),
+      .groups = "drop"
+    ) |>
+    filter(!is.na(p_val), p_val < 0.05) |>
+    mutate(
+      x_star = (bin_start + bin_end) / 2,
+      y_star = mean_z + ifelse(mean_z >= 0, 0.12, -0.32)
+    )
+  
+  # Plot
+  ggplot(bin_means) +
+    
+    # Filled bins
+    geom_rect(
+      aes(
+        xmin = bin_start,
+        xmax = bin_end,
+        ymin = pmin(mean_z, 0),
+        ymax = pmax(mean_z, 0),
+        fill = index
+      ),
+      alpha = 0.25,
+      color = NA
+    ) +
+    
+    # Stepwise mean line
+    geom_step(
+      aes(x = bin_start, y = mean_z, color = index, group = index),
+      linewidth = 1.4,
+      direction = "hv"
+    ) +
+    
+    # Significance markers
+    geom_text(
+      data = bin_tests,
+      aes(x = x_star, y = y_star, label = "*", color = index),
+      size = 10,
+      show.legend = FALSE
+    ) +
+    
+    # Baseline
+    geom_hline(yintercept = 0, linetype = "dotted", color = "black") +
+    
+    scale_fill_manual(
+      values = index_colors,
+      breaks = mri_vars,
+      labels = mri_labels_short
+    ) +
+
+    scale_color_manual(
+      values = index_colors,
+      breaks = mri_vars,
+      labels = mri_labels_short
+    ) +
+    
+    scale_x_continuous(
+      limits = c(6 * 3600, 22 * 3600),
+      labels = function(x)
+        format(as.POSIXct(x, origin = "1970-01-01", tz = "UTC"), "%H:%M"),
+      breaks = seq(0, 24 * 3600, by = 2 * 3600)
+    ) +
+    scale_y_continuous(limits = c(-2, 2)) +
+    
+    labs(
+      x = "Time of Day",
+      y = "Mean Z-Normalized Index",
+      fill = "Index",
+      color = "Index",
+      title = condition_labels[condition_name]
+    ) +
+    
+    theme_minimal(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+}
+```
+
+The distribution of acquisition times is similar between NS and SD. Let's compare these two conditions.
+
+```{r}
+# Generate NS and SD plots
+
+plot_NS <- plot_binned_timecourse("NS", lme_df)
+plot_SD <- plot_binned_timecourse("SD", lme_df)
+
+
+# Stack vertically (shared x-axis)
+
+combined_plot <-
+  (plot_NS / plot_SD) +
+  plot_layout(guides = "collect") &     
+  theme(legend.position = "right")
+
+combined_plot
+
+ggsave(
+  filename = glue::glue("{output}/time_plot.png"),
+  plot = combined_plot,
+  width = 10,
+  height = 8,
+  dpi = 600
+)
+```
+
+Per-bin sampling for SR is more sparse, so generate this plot separately:
+
+```{r}
+plot_SR <- plot_binned_timecourse("SR", lme_df)
+ggsave(
+  filename = glue::glue("{output}/time_plot_SR.png"),
+  plot = plot_SR,
+  width = 10,
+  height = 6,
+  dpi = 600
+)
+```
+
+### 12. Acute vs. Chronic SR 
+
+Although acute SR (1 night) and chronic SR (3-5 nights) were grouped in the main analyses (to allow for balanced group comparisons)
+We should see if separating them yields any different results.
+
+Due to insufficient contrasts, we can only look at ChPV and PVSV:
+
+```{r}
+fit_rlme_sr <- function(sr_df) {
+  # Ensure condition factor levels 
+  sr_df <- sr_df |>
+    dplyr::filter(index %in% c("cpvf", "pvsvf")) |>
+    dplyr::mutate(
+      condition = factor(condition, levels = c("NS", "aSR", "cSR"))
+    )
+  
+  # Fit robust linear mixed-effects model 
+  model_robust <- robustlmm::rlmer(
+    value_z ~ condition * index + age + sex_male + time_sec +
+      (1 | participant_id) + (1 | site),
+    data = sr_df
+  )
+  
+  # Model summary
+  print(summary(model_robust))
+  
+  # Tidy output
+  report <- broom.mixed::tidy(model_robust)
+  print(report)
+  
+  # Assumption checks 
+  par(mfrow = c(2, 2))  # 4-panel layout
+  
+  # Residuals vs Fitted
+  plot(fitted(model_robust), resid(model_robust),
+       xlab = "Fitted values", ylab = "Residuals",
+       main = "Residuals vs Fitted")
+  abline(h = 0, col = "red")
+  
+  # Q-Q plot of residuals
+  qqnorm(resid(model_robust), main = "Q-Q plot of residuals")
+  qqline(resid(model_robust))
+  
+  # Q-Q plot of random effects (intercepts)
+  ranef_df <- ranef(model_robust)[[1]]
+  ranef_vals <- ranef_df[, 1]
+  qqnorm(ranef_vals, main = "Q-Q plot of random effects (intercepts)")
+  qqline(ranef_vals)
+  
+  # ACF of residuals
+  acf(resid(model_robust), main = "ACF of residuals")
+  
+  par(mfrow = c(1, 1))  # reset layout
+  
+  # Shapiro-Wilk test
+  cat("\nShapiro-Wilk normality test on residuals:\n")
+  print(shapiro.test(resid(model_robust)))
+  
+  # Effects plot
+  tryCatch({
+    eff_obj <- effects::allEffects(model_robust)
+    plot(eff_obj)
+  }, error = function(e) {
+    message("⚠️ Could not plot allEffects(): ", e$message)
+  })
+  
+  # Estimated marginal means and contrasts 
+  emm <- emmeans::emmeans(model_robust, ~ condition | index)
+  emm_df <- as.data.frame(emm)
+  
+  # Generate pairwise contrasts for all condition combinations
+  contrasts <- emmeans::contrast(emm, method = "revpairwise", adjust = "fdr") |>
+    as.data.frame()
+  
+  print(contrasts)
+  
+  # Assess model performance
+  performance <- model_performance(model_robust)
+  
+  # Return results 
+  return(list(
+    model = model_robust,
+    report = report,
+    performance = performance,
+    emm = emm_df,
+    contrasts = contrasts
+  ))
+}
+
+```
+
+Fit RLME:
+
+```{r}
+results_sr <- fit_rlme_sr(sr_df)
+```
+
+Show results:
+
+```{r}
+results_sr$contrasts
+```
+
+Calculate effect sizes:
+
+```{r}
+contrasts_sr <- as.data.frame(results_sr$contrasts)
+contrasts_sr$d <- contrasts_sr$estimate / sigma(results_sr$model)
+contrasts_sr
+```
+
+Adapt the plotting function to work with these data:
+
+```{r}
+plot_rlme3 <- function(lme_df, emm_df, contrasts) {
+  
+  conditions_to_keep <- c("NS", "aSR", "cSR")
+  indices_to_keep <- c("cpvf", "pvsvf")
+  
+  # Filter data frames 
+  lme_plot <- lme_df |>
+    dplyr::filter(
+      condition %in% conditions_to_keep,
+      index %in% indices_to_keep
+    ) |>
+    dplyr::mutate(value_plot = value_z)
+  
+  emm_plot <- emm_df |>
+    dplyr::filter(
+      condition %in% conditions_to_keep,
+      index %in% indices_to_keep
+    ) |>
+    dplyr::mutate(
+      emmean_plot = emmean,
+      asymp.LCL_plot = asymp.LCL,
+      asymp.UCL_plot = asymp.UCL
+    )
+  
+  # significance labels 
+  get_sig_label <- function(p) {
+    if (p < 0.001) "***"
+    else if (p < 0.01) "**"
+    else if (p < 0.05) "*"
+    else "ns"
+  }
+  
+  # Prepare contrasts 
+  contrasts_filtered <- contrasts |>
+    tidyr::separate(contrast, into = c("cond1", "cond2"), sep = " - ") |>
+    dplyr::filter(
+      cond1 %in% conditions_to_keep,
+      cond2 %in% conditions_to_keep,
+      index %in% indices_to_keep
+    )
+  
+  # Dynamic y positions per facet 
+  y_max <- lme_plot |>
+    dplyr::group_by(index) |>
+    dplyr::summarise(y = max(value_plot, na.rm = TRUE), .groups = "drop")
+  
+  brackets_df <- contrasts_filtered |>
+    dplyr::left_join(y_max, by = "index") |>
+    dplyr::filter(p.value < 0.05) |>
+    dplyr::mutate(
+      cond1 = factor(cond1, levels = conditions_to_keep),
+      cond2 = factor(cond2, levels = conditions_to_keep),
+      annotation = sapply(p.value, get_sig_label),
+      
+      pair_type = dplyr::case_when(
+        abs(as.numeric(cond1) - as.numeric(cond2)) == 1 ~ 1,
+        abs(as.numeric(cond1) - as.numeric(cond2)) == 2 ~ 2,
+        TRUE ~ 3
+      ),
+      
+      y.position = y + 0.5 * pair_type
+    ) |>
+    dplyr::select(index, cond1, cond2, y.position, annotation)
+  
+  # Factor setup 
+  lme_plot$index <- factor(lme_plot$index, levels = indices_to_keep)
+  emm_plot$index <- factor(emm_plot$index, levels = indices_to_keep)
+  brackets_df$index <- factor(brackets_df$index, levels = indices_to_keep)
+  
+  lme_plot$condition <- factor(lme_plot$condition, levels = conditions_to_keep)
+  emm_plot$condition <- factor(emm_plot$condition, levels = conditions_to_keep)
+  
+  new_labels <- c(
+    cpvf = "ChP Volume",
+    pvsvf = "PVS Volume"
+  )
+  
+  # plot 
+  p <- ggplot() +
+    
+    geom_violin(
+      data = lme_plot,
+      aes(x = condition, y = value_plot, fill = condition),
+      color = "black", alpha = 1
+    ) +
+    
+    geom_boxplot(
+      data = lme_plot,
+      aes(x = condition, y = value_plot),
+      width = 0.05,
+      fill = "black",
+      color = "black",
+      outlier.shape = NA
+    ) +
+    
+    geom_line(
+      data = emm_plot,
+      aes(x = condition, y = emmean_plot, group = 1),
+      color = "darkgrey",
+      linewidth = 1
+    ) +
+    
+    geom_point(
+      data = emm_plot,
+      aes(x = condition, y = emmean_plot),
+      size = 4,
+      shape = 21,
+      fill = "white",
+      color = "black",
+      stroke = 1.2
+    ) +
+    
+    ggsignif::geom_signif(
+      data = brackets_df,
+      aes(
+        xmin = cond1,
+        xmax = cond2,
+        annotations = annotation,
+        y_position = y.position
+      ),
+      manual = TRUE,
+      tip_length = 0.03,
+      textsize = 5,
+      color = "black"
+    ) +
+    
+    facet_wrap(~ index, ncol = 2, labeller = labeller(index = new_labels)) +
+    
+    scale_fill_manual(values = protocolors) +
+    scale_x_discrete(limits = conditions_to_keep) +
+    scale_y_continuous(expand = expansion(mult = c(0.1, 0.2))) +
+    
+    labs(
+      x = "Sleep Condition",
+      y = "Z-Scored Index",
+      title = ""
+    ) +
+    
+    theme_minimal(base_size = 18) +
+    theme(
+      legend.position = "none",
+      axis.title = element_text(face = "bold"),
+      strip.text = element_text(face = "bold"),
+      panel.grid.minor = element_blank()
+    )
+  
+  return(p)
+}
+
+```
+
+Plot:
+
+```{r}
+plot_rlme3(sr_df, results_sr$emm, results_sr$contrasts)
+ggsave(
+  filename = glue::glue("{output}/sr_plot.png"),
+  width = 10,
+  height = 5,
+  dpi = 600
+)
+```
+
+### 13. Brain Parenchymal Index (POST HOC 3)
+
+To what extent can age-related alterations be explained by changes in brain morphology?
+This section plots age alongside the brain parenchymal fraction (GM + WM / ICV)
+
+Run BPF model:
+
+```{r}
+bpf_lme <- nlme::lme(
+    value_z ~ condition * index + age * bpf + sex_male + time_sec_z,
+    random = ~ 1 | participant_id,
+    data = lme_df
+  )
+```
+
+Inspect:
+
+```{r}
+summary(bpf_lme)
+```
+
+Model performance:
+
+```{r}
+model_performance(bpf_lme)
+```
+
+BPF Estimated Marginal Means:
+
+```{r}
+bpf_emm <- emmeans(bpf_lme, ~ condition)
+bpf_contrasts <- pairs(bpf_emm, adjust = "fdr") |>
+  as.data.frame()
+bpf_emm <- bpf_emm |> as.data.frame()
+bpf_contrasts
+```
+
+Create a function for BPF plotting using means and contrasts:
+
+```{r}
+plot_bpf <- function(df, contrasts_df) {
+  
+  condition_levels <- c("NS", "aSR", "cSR", "SD")
+  
+  # Clean raw data 
+  df_plot <- df %>%
+    dplyr::filter(!is.na(bpf), !is.na(condition)) %>%
+    dplyr::mutate(
+      condition = factor(condition, levels = condition_levels),
+      bpf = as.numeric(as.character(bpf))
+    )
+  
+  # Means
+  mean_df <- df_plot %>%
+    dplyr::group_by(condition) %>%
+    dplyr::summarise(
+      mean_bpf = mean(bpf, na.rm = TRUE),
+      se = sd(bpf, na.rm = TRUE) / sqrt(dplyr::n()),
+      .groups = "drop"
+    ) %>%
+    dplyr::mutate(condition = factor(condition, levels = condition_levels))
+  
+  # Significance labels 
+  get_sig_label <- function(p) {
+    if (p < 0.001) "***"
+    else if (p < 0.01) "**"
+    else if (p < 0.05) "*"
+    else "ns"
+  }
+  
+  # Brackets 
+  brackets_df <- contrasts_df %>%
+    tidyr::separate(contrast, into = c("cond1", "cond2"), sep = " - ") %>%
+    dplyr::filter(cond1 %in% condition_levels & cond2 %in% condition_levels) %>%
+    dplyr::mutate(
+      cond1 = factor(cond1, levels = condition_levels),
+      cond2 = factor(cond2, levels = condition_levels),
+      annotation = sapply(p.value, get_sig_label),
+      
+      pair_type = dplyr::case_when(
+        abs(as.numeric(cond1) - as.numeric(cond2)) == 1 ~ 1,
+        abs(as.numeric(cond1) - as.numeric(cond2)) == 2 ~ 2,
+        TRUE ~ 3
+      ),
+      
+      y.position = max(df_plot$bpf, na.rm = TRUE) +
+        0.05 * pair_type
+    ) %>%
+    dplyr::filter(p.value < 0.05)
+  
+  # Plot 
+  p <- ggplot(df_plot) +
+    
+    geom_violin(
+      aes(x = condition, y = bpf, fill = condition),
+      color = "black",
+      alpha = 1
+    ) +
+    
+    geom_boxplot(
+      aes(x = condition, y = bpf),
+      width = 0.05,
+      fill = "black",
+      color = "black",
+      outlier.shape = NA
+    ) +
+    
+    # Mean line
+    geom_line(
+      data = mean_df,
+      aes(x = condition, y = mean_bpf, group = 1),
+      linewidth = 1,
+      color = "grey40"
+    ) +
+    
+    # Mean points
+    geom_point(
+      data = mean_df,
+      aes(x = condition, y = mean_bpf),
+      size = 4,
+      shape = 21,
+      fill = "white",
+      color = "black",
+      stroke = 1.2
+    ) +
+    
+    # Brackets
+    ggsignif::geom_signif(
+      data = brackets_df,
+      aes(
+        xmin = cond1,
+        xmax = cond2,
+        annotations = annotation,
+        y_position = y.position
+      ),
+      manual = TRUE,
+      tip_length = 0.03,
+      textsize = 5,
+      color = "black"
+    ) +
+    
+    scale_fill_manual(values = protocolors) +
+    scale_x_discrete(limits = condition_levels) +
+    scale_y_continuous(expand = expansion(mult = c(0.1, 0.15))) +
+    
+    labs(
+      x = "Sleep Condition",
+      y = "BPF",
+      title = ""
+    ) +
+    
+    theme_minimal(base_size = 18) +
+    theme(
+      legend.position = "none",
+      axis.title = element_text(face = "bold"),
+      panel.grid.minor = element_blank()
+    )
+  
+  return(p)
+}
+```
+
+Plot BPF:
+
+```{r}
+plot_bpf(sr_df, bpf_contrasts)
+ggsave(
+  filename = glue::glue("{output}/bpf.png"),
+  width = 10,
+  height = 5,
+  dpi = 600
+)
+```
+
+We want to see whether age-related changes are also associated with morphological alterations.
+In this case, we should those changes alongside changes in the bpf and see if trajectories line up:
+
+```{r}
+plot_age_trends <- function(lme_df) {
+  
+  df <- lme_df %>%
+    dplyr::mutate(
+      bpf_z = as.numeric(scale(bpf))
+    )
+  
+  # Plot
+  p <- ggplot(df, aes(x = age)) +
+    
+    # BPF scatter
+    geom_point(
+      aes(y = bpf_z),
+      color = "#1b9e77",
+      alpha = 0.6,
+      size = 2
+    ) +
+    
+    # BPF smooth
+    geom_smooth(
+      aes(y = bpf_z),
+      color = "black",
+      se = TRUE,
+      linewidth = 1
+    ) +
+    
+    # Index scatter
+    geom_point(
+      aes(y = value_z, color = index),
+      alpha = 0.6,
+      size = 2
+    ) +
+    
+    # Index smooth
+    geom_smooth(
+      aes(y = value_z),
+      color = "black",
+      se = TRUE,
+      linewidth = 1
+    ) +
+    
+    scale_color_manual(values = index_colors) +
+    
+    labs(
+      x = "Age",
+      y = "Standardized value",
+      color = "Index"
+    ) +
+    
+    theme_minimal(base_size = 16) +
+    theme(
+      axis.title = element_text(face = "bold"),
+      legend.position = "right",
+      panel.grid.minor = element_blank()
+    )
+  
+  return(p)
+}
+```
+
+Plot:
+
+```{r}
+ggscatterstats(
+  data = lme_df,
+  x = age,
+  y = bpf,
+  xlab = "Age",
+  ylab = "Brain Parenchymal Fraction",
+  type = "parametric",
+  conf.level = 0.95,
+  bf.message = FALSE,
+)
+ggsave(
+  filename = glue::glue("{output}/bpf_age.png"),
+  width = 8,
+  height = ,
+  dpi = 600
+)
 ```
 
