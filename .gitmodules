@@ -1,64 +1,64 @@
 [submodule "oslo-bids"]
 	path = oslo-bids
-	url = ./oslo-bids
+	url = https://github.com/jdelberse/enigma-sd-oslo-bids.git
 	datalad-id = 36a3a837-3fa0-4e41-9ced-27cc4ab9b10f
 [submodule "bruxelles-bids"]
 	path = bruxelles-bids
-	url = ./bruxelles-bids
+	url = https://github.com/jdelberse/enigma-sd-bruxelles-bids.git
 	datalad-id = 9e697ab6-5174-44fa-bf68-1f5351c90e21
 [submodule "stockholm-bids"]
 	path = stockholm-bids
-	url = /data/project/sleep_ADNI_Insomnia/glymSD_pilot/sleepybrains
+	url = https://github.com/jdelberse/enigma-sd-stockholm-bids.git
 	datalad-id = d7c9cd1c-89f8-11e8-ad8e-0242ac120013
 [submodule "montreal-bids"]
 	path = montreal-bids
-	url = ./montreal-bids
+	url = https://github.com/jdelberse/enigma-sd-montreal-bids.git
 	datalad-id = 0698985b-977d-4a0f-9c6c-d5521eb5bc7a
 [submodule "juelich-somnosafe-bids"]
 	path = juelich-somnosafe-bids
-	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/Somnosafe_BIDS
+	url = https://github.com/jdelberse/enigma-sd-juelich-somnosafe-bids.git
 	datalad-id = 4cc7d2a4-42f3-442c-b0a6-e3f2b66b4d77
 [submodule "juelich-petcoffee-bids"]
 	path = juelich-petcoffee-bids
-	url = /data/project/sleep_ENIGMA_deprivation/dataladstore/alias/PETcoffee_BIDS
+	url = https://github.com/jdelberse/enigma-sd-juelich-petcoffee-bids.git
 	datalad-id = e1b39adb-55d0-4102-b9c4-115e575bc4b5
 [submodule "melbourne-bids"]
 	path = melbourne-bids
-	url = ./melbourne-bids
+	url = https://github.com/jdelberse/enigma-sd-melbourne-bids.git
 	datalad-id = c5dfa93d-dc99-42b2-87ff-a95be3f668db
 [submodule "zurich-bids"]
 	path = zurich-bids
-	url = ./zurich-bids
+	url = https://github.com/jdelberse/enigma-sd-zurich-bids.git
 	datalad-id = cce4691f-ebf6-4ff1-b72b-b2375c34e84c
 [submodule "juelich-sleepless-bids"]
 	path = juelich-sleepless-bids
-	url = ./juelich-sleepless-bids
+	url = https://github.com/jdelberse/enigma-sd-juelich-sleepless-bids.git
 	datalad-id = 621bfeb3-8241-4bd0-9b66-23669cc269cd
 [submodule "ntnu-bids"]
 	path = ntnu-bids
-	url = ./ntnu-bids
+	url = https://github.com/jdelberse/enigma-sd-ntnu-bids.git
 	datalad-id = 42e9f2e8-7895-48d2-8949-2d9fcf18bfe4
 [submodule "code/containers"]
 	path = code/containers
-	url = https://datasets.datalad.org/repronim/containers/.git
+	url = https://github.com/ReproNim/containers.git
 	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
 	datalad-url = ///repronim/containers
 [submodule "singapore-alfie-bids"]
 	path = singapore-alfie-bids
-	url = ./singapore-alfie-bids
+	url = https://github.com/jdelberse/enigma-sd-singapore-alfie-bids.git
 	datalad-id = 068b37d7-b45b-4740-89c8-9c003a60d8b3
 [submodule "code/shiva"]
 	path = code/shiva
-	url = https://github.com/pboutinaud/SHIVA_PVS
+	url = https://github.com/pboutinaud/SHiVAi.git
 	datalad-url = https://github.com/pboutinaud/SHIVA_PVS
 [submodule "singapore-cheevul-bids"]
 	path = singapore-cheevul-bids
-	url = ./singapore-cheevul-bids
+	url = https://github.com/jdelberse/enigma-sd-singapore-cheevul-bids.git
 	datalad-id = 97d87813-d62c-4fb7-bb62-9cb77785b3dc
 [submodule "singapore-effo2-bids"]
 	path = singapore-effo2-bids
-	url = ./singapore-effo2-bids
+	url = https://github.com/jdelberse/enigma-sd-singapore-effo2-bids.git
 	datalad-id = 497dc195-e727-4dbf-a9ee-662dde278393
 [submodule "code/alps"]
 	path = code/alps
-	url = https://github.com/gbarisano/alps
+	url = https://github.com/gbarisano/alps.git
