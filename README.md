@@ -10,22 +10,22 @@ The dataset is managed with DataLad (git and git-annex). File contents are store
 
 ## Samples and subdatasets
 
-| Sample | Subdataset(s) | Site | Country | N | Age, mean (SD) | Male (%) | Protocol | Images |
-|---|---|---|---|---|---|---|---|---|
-| Bruxelles | `bruxelles-bids` | ULB Neurosciences Institute | Belgium | 21 | 21.2 (2.5) | 47.6 | SD (22 h) | T1w, dMRI |
-| Christchurch | `melbourne-bids` | New Zealand Brain Research Institute | New Zealand | 16 | 24.8 (5.1) | 50.0 | SR (3 h TIB) | T1w |
-| Cologne | `juelich-somnosafe-bids`, `juelich-petcoffee-bids` | German Aerospace Center | Germany | 48 | 27.5 (4.9) | 60.4 | SD (24 h), SR (5 h TIB) | T1w |
-| Juelich | `juelich-sleepless-bids` | Forschungszentrum Juelich | Germany | 39 | 27.9 (6.2) | 33.3 | SD (24 h) | T1w, dMRI |
-| Montreal | `montreal-bids` | Concordia University | Canada | 18 | 21.1 (2.7) | 38.9 | SD (36 h) | T1w |
-| Oslo | `oslo-bids` | Oslo University Hospital | Norway | 36 | 26.5 (6.9) | 38.9 | SD (32 h) | T1w, dMRI |
-| Singapore | `singapore-alfie-bids`, `singapore-cheevul-bids`, `singapore-effo2-bids` | National University of Singapore | Singapore | 66 | 22.0 (2.3) | 50.0 | SD (24 h) | T1w |
-| Stockholm | `stockholm-bids` | Karolinska Institutet | Sweden | 81 | 46.1 (22.6) | 49.4 | SR (3 h TIB) | T1w |
-| Trondheim | `ntnu-bids` | Norwegian University of Science and Technology | Norway | 73 | 27.8 (5.3) | 47.9 | SR (-3 h TIB) | T1w, dMRI |
-| Zurich | `zurich-bids` | University of Zurich | Switzerland | 31 | 36.7 (19.0) | 100 | SD (40 h) | T1w |
+| Sample | Subdataset(s) | Site | Country | N | Protocol | Images |
+|---|---|---|---|---|---|---|
+| Bruxelles | `bruxelles-bids` | ULB Neurosciences Institute | Belgium | 21 | SD (22 h) | T1w, dMRI |
+| Christchurch | `melbourne-bids` | New Zealand Brain Research Institute | New Zealand | 16 | SR (3 h TIB) | T1w |
+| Cologne | `juelich-somnosafe-bids`, `juelich-petcoffee-bids` | German Aerospace Center | Germany | 48 | SD (24 h), SR (5 h TIB) | T1w |
+| Juelich | `juelich-sleepless-bids` | Forschungszentrum Juelich | Germany | 39 | SD (24 h) | T1w, dMRI |
+| Montreal | `montreal-bids` | Concordia University | Canada | 18 | SD (36 h) | T1w |
+| Oslo | `oslo-bids` | Oslo University Hospital | Norway | 36 | SD (32 h) | T1w, dMRI |
+| Singapore | `singapore-alfie-bids`, `singapore-cheevul-bids`, `singapore-effo2-bids` | National University of Singapore | Singapore | 66 | SD (24 h) | T1w |
+| Stockholm | `stockholm-bids` | Karolinska Institutet | Sweden | 81 | SR (3 h TIB) | T1w |
+| Trondheim | `ntnu-bids` | Norwegian University of Science and Technology | Norway | 73 | SR (-3 h TIB) | T1w, dMRI |
+| Zurich | `zurich-bids` | University of Zurich | Switzerland | 31 | SD (40 h) | T1w |
 
 SD: total sleep deprivation. SR: sleep restriction. TIB: time in bed.
 
-Four samples (Bruxelles, Juelich, Oslo, Trondheim) include diffusion MRI, which is required for ALPS and the free water index. All samples include T1-weighted images, which are used for perivascular space (PVS) and choroid plexus segmentation.
+Four samples (Bruxelles, Juelich, Oslo, Trondheim) include diffusion MRI, which is required for FWI and ALPS. All samples include T1-weighted images, which are used for PVS and ChP segmentation.
 
 ## Session labels
 
