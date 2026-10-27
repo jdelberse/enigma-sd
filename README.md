@@ -12,16 +12,16 @@ The dataset is managed with DataLad (git and git-annex). File contents are store
 
 | Sample | Subdataset(s) | Site | Country | N | Protocol | Images |
 |---|---|---|---|---|---|---|
-| Bruxelles | `bruxelles-bids` | ULB Neurosciences Institute | Belgium | 21 | SD (22 h) | T1w, dMRI |
-| Christchurch | `melbourne-bids` | New Zealand Brain Research Institute | New Zealand | 16 | SR (3 h TIB) | T1w |
-| Cologne | `juelich-somnosafe-bids`, `juelich-petcoffee-bids` | German Aerospace Center | Germany | 48 | SD (24 h), SR (5 h TIB) | T1w |
-| Juelich | `juelich-sleepless-bids` | Forschungszentrum Juelich | Germany | 39 | SD (24 h) | T1w, dMRI |
-| Montreal | `montreal-bids` | Concordia University | Canada | 18 | SD (36 h) | T1w |
-| Oslo | `oslo-bids` | Oslo University Hospital | Norway | 36 | SD (32 h) | T1w, dMRI |
-| Singapore | `singapore-alfie-bids`, `singapore-cheevul-bids`, `singapore-effo2-bids` | National University of Singapore | Singapore | 66 | SD (24 h) | T1w |
-| Stockholm | `stockholm-bids` | Karolinska Institutet | Sweden | 81 | SR (3 h TIB) | T1w |
-| Trondheim | `ntnu-bids` | Norwegian University of Science and Technology | Norway | 73 | SR (-3 h TIB) | T1w, dMRI |
-| Zurich | `zurich-bids` | University of Zurich | Switzerland | 31 | SD (40 h) | T1w |
+| Bruxelles | `bruxelles-bids` | ULB Neurosciences Institute | Belgium | 21 | SD (22h) | T1w, dMRI |
+| Christchurch | `melbourne-bids` | New Zealand Brain Research Institute | New Zealand | 16 | SR (3h TIB) | T1w |
+| Cologne | `juelich-somnosafe-bids`, `juelich-petcoffee-bids` | German Aerospace Center | Germany | 48 | SD (24h), SR (5h TIB) | T1w |
+| Juelich | `juelich-sleepless-bids` | Forschungszentrum Juelich | Germany | 39 | SD (24h) | T1w, dMRI |
+| Montreal | `montreal-bids` | Concordia University | Canada | 18 | SD (36h) | T1w |
+| Oslo | `oslo-bids` | Oslo University Hospital | Norway | 36 | SD (32h) | T1w, dMRI |
+| Singapore | `singapore-alfie-bids`, `singapore-cheevul-bids`, `singapore-effo2-bids` | National University of Singapore | Singapore | 66 | SD (24h) | T1w |
+| Stockholm | `stockholm-bids` | Karolinska Institutet | Sweden | 81 | SR (3h TIB) | T1w |
+| Trondheim | `ntnu-bids` | Norwegian University of Science and Technology | Norway | 73 | SR (-3h TIB) | T1w, dMRI |
+| Zurich | `zurich-bids` | University of Zurich | Switzerland | 31 | SD (40h) | T1w |
 
 SD: total sleep deprivation. SR: sleep restriction. TIB: time in bed.
 
