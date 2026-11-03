@@ -66,6 +66,7 @@ enigma-sd/
 │   ├── logs/                        HTCondor logs, organized by dataset
 │   ├── preproc/                     BIDS filter files
 │   ├── shiva/                       PVS segmentation (clone of pboutinaud/SHiVAi)
+│   ├── venvs/                       virtual environments  
 │   ├── glymphatic_analyses.ipynb    main analysis pipeline
 │   └── statistical_analyses.Rmd     statistical analyses and raw figures
 └── outputs/
@@ -120,6 +121,10 @@ BIDS filter files used to select the images passed to the preprocessing pipeline
 ### `code/shiva`
 
 Clone of the SHiVAi repository ([github.com/pboutinaud/SHiVAi](https://github.com/pboutinaud/SHiVAi)), used for PVS segmentation on T1-weighted images. It builds on the SHIVA-PVS model.
+
+### `code/venvs`
+
+Virtual environments used for BIDS conversion, PVS segmentation, and the main glymphatic analyses.
 
 - Boutinaud, P., Tsuchida, A., Laurent, A., et al. (2021). 3D segmentation of perivascular spaces on T1-weighted 3 Tesla MR images with a convolutional autoencoder and a U-shaped neural network. *Frontiers in Neuroinformatics*. [https://doi.org/10.3389/fninf.2021.641600](https://doi.org/10.3389/fninf.2021.641600)
 
